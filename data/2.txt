@@ -1,0 +1,10 @@
+Figure 1: An overview of JoLT. Given a time-series and an optional textual prompt as input, JoLT
+produces text as output. We pre-train a Transformer using the masked time-series reconstruction
+objective to use as an encoder, and the pre-trained language model as the decoder. The Q-Former
+is trained to align time-series and text representations. Learnable query tokens are used to extract
+time-series features conditioned on textual prompts.Broken assumptions. For our ablation experiments, we hypothesized that: (1) Language models
+with more parameters will be better at text generation than smaller models, and (2) models pre-trained
+on clinical data (BioGPT, BiomedLM) will be better than those trained on general text data (GPT-2).
+However, our experiments did not support any of these hypothesis. The former can be partly explained
+by the fact that clinical interpretations are terse and do not require fluent large language models. We
+believe that further experiments are necessary to conclusively accept or reject the latter hypothesis.

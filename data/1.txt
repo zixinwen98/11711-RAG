@@ -1,0 +1,23 @@
+Time-series and text data is prevalent in healthcare and frequently exist in tandem,
+for e.g., in electrocardiogram (ECG) interpretation reports. Yet, these modalities
+are typically modeled independently. Even studies that jointly model time-series
+and text do so by converting time-series to images or graphs. We hypothesize
+that explicitly modeling time-series jointly with text can improve tasks such as
+summarization and question answering for time-series data, which have received
+little attention so far. To address this gap, we introduce JoLT to jointly learn desired
+representations from pre-trained time-series and text models. JoLT utilizes a
+Querying Transformer (Q-Former) to align the time-series and text representations.
+Our experiments on a large real-world electrocardiography dataset for medical timeseries summarization show that JoLT outperforms state-of-the-art image captioning
+and medical question-answering approaches, and that the decoder architecture, size,
+and pre-training data can vary the performance on said tasks.Time-series and text data is prevalent in healthcare and frequently exist in tandem,
+for e.g., in electrocardiogram (ECG) interpretation reports. Yet, these modalities
+are typically modeled independently. Even studies that jointly model time-series
+and text do so by converting time-series to images or graphs. We hypothesize
+that explicitly modeling time-series jointly with text can improve tasks such as
+summarization and question answering for time-series data, which have received
+little attention so far. To address this gap, we introduce JoLT to jointly learn desired
+representations from pre-trained time-series and text models. JoLT utilizes a
+Querying Transformer (Q-Former) to align the time-series and text representations.
+Our experiments on a large real-world electrocardiography dataset for medical timeseries summarization show that JoLT outperforms state-of-the-art image captioning
+and medical question-answering approaches, and that the decoder architecture, size,
+and pre-training data can vary the performance on said tasks.
