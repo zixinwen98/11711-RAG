@@ -7,12 +7,12 @@ import transformers
 @dataclass
 class InferenceArguments:
     "containing args used only in inference"
-    max_length: int = field(default=256, metadata={"help": "max sequence length of generation"})
+    max_length: int = field(default=512, metadata={"help": "max sequence length of generation"})
 
 @dataclass
 class ModelArguments:
     "containing args for retriever model and generation model"
-    qa_model_name_or_path: str = field(default='google/flan-t5-base')
+    qa_model_name_or_path: str = field(default='microsoft/phi-2')
     doc_encoder_model_name_or_path: str = field(default='facebook/contriever')
     query_model_max_length: int = field(
         default=512,
@@ -33,7 +33,7 @@ class TrainingArguments(transformers.TrainingArguments):
 @dataclass 
 class DataArguments:
     "containing args used in data loading"
-    document_path: Optional[str] = field(default='/data', 
+    document_path: Optional[str] = field(default='data/', 
                                metadata={'help':'path to the document folder of .txt files'})
     test_question_path: Optional[str]= field(default=None,
                                    metadata={'help':'path to a .txt file with one question per line'})

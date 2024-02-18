@@ -3,8 +3,8 @@ from transformers import (AutoTokenizer,
                           AutoModel, 
                           AutoModelForCausalLM) #TODO: depend on support
 from utils import load_documents
-from langchain.embeddings import HuggingFaceEmbeddings
-from langchain.vectorstores import FAISS
+from langchain_community.embeddings import HuggingFaceEmbeddings
+from langchain_community.vectorstores import FAISS
 
 '''
 what should config have 
@@ -13,8 +13,9 @@ query_retriver: huggingface card/local
 decoder: huggingface card/local 
 data_path: path to .txt path
 '''
-class RetrieverModel(nn.module):
+class RetrieverModel(nn.Module):
     def __init__(self, config, data_config):
+        super().__init__()
         self.config = config 
         self.data_config = data_config
         self.text_retriever = config.doc_encoder_model_name_or_path

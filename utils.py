@@ -25,5 +25,5 @@ def load_documents(text_path, chunk_size=1000, chunk_overlap=150):
     loader = DirectoryLoader(text_path, glob="**/*.txt")
     data = loader.load()
     text_splitter = RecursiveCharacterTextSplitter(chunk_size=chunk_size, chunk_overlap=chunk_overlap)
-    docs = text_splitter.split_documents(docs)
+    docs = text_splitter.split_documents(data)
     return docs
