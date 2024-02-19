@@ -10,6 +10,8 @@ from transformers import (
 )
 import numpy as np
 from tqdm import tqdm 
+import json
+from utils import jload
 
 # Load From Local
 from model import RetrieverModel
@@ -51,13 +53,21 @@ def main():
     # Documents
     database = retriever_model.create_vector_store() #TODO: implement the database, assume to be list of strings
 
-    # load question and answer pairs
-    with open(data_args.test_question_path, 'r') as file:
-        questions = file.readlines()
+    # # load question and answer pairs
+    # with open(data_args.test_question_path, 'r') as file:
+    #     questions = file.readlines()
     
-    with open(data_args.test_answer_path, 'r') as file:
-        answers = file.readlines()
-        answers = [answer.split(';') for answer in answers]
+    # with open(data_args.test_answer_path, 'r') as file:
+    #     answers = file.readlines()
+    #     answers = [answer.split(';') for answer in answers]
+    # with open(data_args.test_data_path, 'r') as json_file:
+    #     loaded_data = json.load(json_file)
+    loaded_data = jload(data_args.test_data_path)
+    
+    answers, questions = [], []
+    for d in loaded_data:
+        questions.append(d['question'])
+        answers.append(d['answer'].split(';'))
 
     #generate result path
     result_name = data_args.result_path + data_args.test_question_path.split('/')[-2] + '.txt'

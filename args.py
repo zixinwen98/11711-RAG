@@ -39,5 +39,7 @@ class DataArguments:
                                    metadata={'help':'path to a .txt file with one question per line'})
     test_answer_path: Optional[str]= field(default='/zfsauton2/home/yifuc/11711-RAG/data/databrick_qa/answers.txt',
                                    metadata={'help':'path to a .txt file with multiple answers (seperated by ;) per line'})
+    test_data_path: Optional[str]= field(default='/zfsauton2/home/yifuc/11711-RAG/data/databrick_qa/databrick_test.json',
+                                   metadata={'help':'path to a .json file with list of qa pairs stored in dict'})
     result_path: Optional[str]= field(default='/zfsauton2/home/yifuc/11711-RAG/result/',
                                    metadata={'help':'folder to save various result'})
