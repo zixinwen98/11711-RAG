@@ -61,12 +61,13 @@ def main():
         context.append(d['context'])
 
     #generate result path
-    result_name = data_args.result_path + data_args.test_question_path.split('/')[-2] + '.txt'
+    result_name = data_args.result_path + data_args.test_question_path.split('/')[-2] + f'_{data_args.chunk_size}' + f'_{data_args.overlap}' + f'_{data_args.retriever_topk}' + '.txt'
 
     #TODO: let's check whether we can vectorize this 
     f1_all = []
     recall_all = []
-    for idx, question in tqdm(enumerate(questions)):
+    retrieval_acc = []
+    for idx, question in tqdm(enumerate(questions), total= len(questions)):
         related_documents = retriever_model.retrieve(question, database)
         model_answer, related_doc = retrieval_augmented_answer(question, related_documents, 
                                             model=qa_model, 
@@ -85,6 +86,7 @@ def main():
         exact_match = False
         f1 = []
         recall = []
+        retrieval_acc.append(retrieved)
         model_answer = model_answer[0].split('\n')
         model_answer = [m for m in model_answer if 'Output' in m][0][7:]
         
@@ -123,6 +125,7 @@ def main():
         overall_result = ''
         overall_result += f'f1: {np.mean(f1_all)}\n'
         overall_result += f'recall: {np.mean(recall_all)}\n'
+        overall_result += f'retrieval_acc: {np.mean(retrieval_acc)}'
         f.write(overall_result)
 
 if __name__ == "__main__":

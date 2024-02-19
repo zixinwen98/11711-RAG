@@ -33,7 +33,9 @@ class RetrieverModel(nn.Module):
         return: 
         langchain vector store object
         '''
-        docs = load_documents(self.document_path)
+        docs = load_documents(self.document_path, 
+                              chunk_size=int(self.data_config.chunk_size), 
+                              chunk_overlap=int(self.data_config.overlap))
         embeddings = HuggingFaceEmbeddings(
                                         model_name=self.text_retriever,     # Provide the pre-trained model's path
                                         # model_kwargs=model_kwargs, # TODO: create device based on config 
@@ -49,5 +51,5 @@ class RetrieverModel(nn.Module):
         return:
         a list of document string
         '''
-        related_documents = database.similarity_search(question)
+        related_documents = database.similarity_search(question, k=int(self.data_config.retriever_topk))
         return [doc.page_content for doc in related_documents]

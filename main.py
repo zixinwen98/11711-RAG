@@ -38,7 +38,7 @@ def retrieval_augmented_answer(question, related_docs, model, tokenizer, generat
     
     inputs_with_doc = prompt_formatting(question, related_docs, model_name=model_args.qa_model_name_or_path)
     inputs_with_doc = tokenizer(inputs_with_doc, return_tensors="pt", return_attention_mask=False).to(model.device)
-    answers = model.generate(**inputs_with_doc, generation_config=generation_config)
+    answers = model.generate(**inputs_with_doc, pad_token_id=tokenizer.eos_token_id, generation_config=generation_config)
     answers = tokenizer.batch_decode(answers)
     
     if return_doc:

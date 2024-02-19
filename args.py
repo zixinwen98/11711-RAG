@@ -41,5 +41,11 @@ class DataArguments:
                                    metadata={'help':'path to a .txt file with multiple answers (seperated by ;) per line'})
     test_data_path: Optional[str]= field(default='/zfsauton2/home/yifuc/11711-RAG/data/databrick_qa/databrick_test.json',
                                    metadata={'help':'path to a .json file with list of qa pairs stored in dict'})
+    chunk_size: Optional[str]= field(default=1000,
+                                   metadata={'help':'number of tokens to chunk the document'})
+    overlap: Optional[str]= field(default=150,
+                                   metadata={'help':'number of tokens to overlapping between chunks'})
+    retriever_topk: Optional[str]= field(default=5,
+                                   metadata={'help':'number of related text retrieved'})
     result_path: Optional[str]= field(default='/zfsauton2/home/yifuc/11711-RAG/result/',
                                    metadata={'help':'folder to save various result'})
