@@ -33,9 +33,11 @@ class TrainingArguments(transformers.TrainingArguments):
 @dataclass 
 class DataArguments:
     "containing args used in data loading"
-    document_path: Optional[str] = field(default='data/', 
+    document_path: Optional[str] = field(default='/zfsauton2/home/yifuc/11711-RAG/data/databrick_qa/documents', 
                                metadata={'help':'path to the document folder of .txt files'})
-    test_question_path: Optional[str]= field(default=None,
+    test_question_path: Optional[str]= field(default='/zfsauton2/home/yifuc/11711-RAG/data/databrick_qa/questions.txt',
                                    metadata={'help':'path to a .txt file with one question per line'})
-    test_answer_path: Optional[str]= field(default=None,
+    test_answer_path: Optional[str]= field(default='/zfsauton2/home/yifuc/11711-RAG/data/databrick_qa/answers.txt',
                                    metadata={'help':'path to a .txt file with multiple answers (seperated by ;) per line'})
+    result_path: Optional[str]= field(default='/zfsauton2/home/yifuc/11711-RAG/result/',
+                                   metadata={'help':'folder to save various result'})

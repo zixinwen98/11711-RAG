@@ -1,0 +1,708 @@
+----------------------------------------
+question is: When did Virgin Australia start operating?
+
+model answer is: : Virgin Australia started operating in 1987.
+actual answer (first reference) is: Virgin Australia commenced services on 31 August 2000 as Virgin Blue, with two aircraft on a single route.
+
+the predicted answer exactly match one of the references: False
+f1 (max, min, avg): 0.16, 0.16, 0.16
+recall (max, min, avg): 0.11, 0.11, 0.11
+----------------------------------------
+----------------------------------------
+question is: When was Tomoaki Komorida born?
+
+model answer is: : Tomoaki Komorida was born on April 1st, 1993.
+actual answer (first reference) is: Tomoaki Komorida was born on July 10,1981.
+
+the predicted answer exactly match one of the references: False
+f1 (max, min, avg): 0.63, 0.63, 0.63
+recall (max, min, avg): 0.71, 0.71, 0.71
+----------------------------------------
+----------------------------------------
+question is: Given a reference text about Lollapalooza, where does it take place, who started it and what is it?
+
+model answer is: : The reference text takes place at the Chicago Music Hall. It was started by the Chicago Tribune newspaper. Lollapalooza is a music festival.
+actual answer (first reference) is: Lollapalooze is an annual musical festival held in Grant Park in Chicago, Illinois. It was started in 1991 as a farewell tour by Perry Farrell, singe of the group Jane's Addiction. The festival includes an array of musical genres including alternative rock, heavy metal, punk rock, hip hop, and electronic dance music. The festivals welcomes an estimated 400,000 people each year and sells out annually. Some notable headliners include: the Red Hot Chili Peppers, Chance the Rapper, Metallica, and Lady Gage. Lollapalooza is one of the largest and most iconic festivals in the world and a staple of Chicago.
+
+the predicted answer exactly match one of the references: False
+f1 (max, min, avg): 0.15, 0.15, 0.15
+recall (max, min, avg): 0.09, 0.09, 0.09
+----------------------------------------
+----------------------------------------
+question is: Who was Kyle Van Zyl playing against when he scored 36 of hisa teams 61 points?
+
+model answer is: : Kyle Van Zyl played against the team with 61 points.
+actual answer (first reference) is: Kyle Van Zyl was playing against Boland U21 when he scored 36 points, leading his team to victory in a 61-3 win.
+
+the predicted answer exactly match one of the references: False
+f1 (max, min, avg): 0.3, 0.3, 0.3
+recall (max, min, avg): 0.23, 0.23, 0.23
+----------------------------------------
+----------------------------------------
+question is: Who was the first to record the Needles and Pins song?
+
+model answer is: : The first person to record the Needles and Pins song was a British psychedelic group called "The Beatles".
+actual answer (first reference) is: The first artist to record Needles and Pins song was DeShannon.
+
+the predicted answer exactly match one of the references: False
+f1 (max, min, avg): 0.6, 0.6, 0.6
+recall (max, min, avg): 0.82, 0.82, 0.82
+----------------------------------------
+----------------------------------------
+question is: Given this paragraph, what is the top speed of a Kia Stinger?
+
+model answer is: : The top speed of a Kia Stinger is not mentioned in the given paragraph.
+actual answer (first reference) is: The top speed of a Kia Stinger is 269km/h (167mph) according to this text.
+
+the predicted answer exactly match one of the references: False
+f1 (max, min, avg): 0.55, 0.55, 0.55
+recall (max, min, avg): 0.57, 0.57, 0.57
+----------------------------------------
+----------------------------------------
+question is: Where are the British Virgin Islands (BVI) and which islands are a part of the BVI?
+
+model answer is: : The British Virgin Islands (BVI) are an archipelago of islands in the Caribbean Sea, located about 30 miles east of Puerto Rico. The BVI consists of three major islands - Tortola, Virgin Gorda, and Jost Van Dyke - as well as many smaller islands.
+actual answer (first reference) is: The British Virgin Islands (BVI), officially the Virgin Islands, are a British Overseas Territory in the Caribbean, to the east of Puerto Rico and the US Virgin Islands and north-west of Anguilla. The islands are geographically part of the Virgin Islands archipelago and are located in the Leeward Islands of the Lesser Antilles and part of the West Indies.
+
+the predicted answer exactly match one of the references: False
+f1 (max, min, avg): 0.27, 0.27, 0.27
+recall (max, min, avg): 0.24, 0.24, 0.24
+----------------------------------------
+----------------------------------------
+question is: Does "outbreeding" or "inbreeding" benefit the offspring more?
+
+model answer is: : Outbreeding benefits the offspring more than inbreeding.
+actual answer (first reference) is: 
+
+the predicted answer exactly match one of the references: False
+f1 (max, min, avg): 0, 0, 0.0
+recall (max, min, avg): 0, 0, 0.0
+----------------------------------------
+----------------------------------------
+question is: When was the first Reading railway station opened?
+
+model answer is: : The first Reading railway station was opened in 1838.
+actual answer (first reference) is: The British Virgin Islands consist of the main islands of Tortola, Virgin Gorda, Anegada and Jost Van Dyke, along with more than 50 other smaller islands and cays.
+
+the predicted answer exactly match one of the references: False
+f1 (max, min, avg): 0.05, 0.05, 0.05
+recall (max, min, avg): 0.04, 0.04, 0.04
+----------------------------------------
+----------------------------------------
+question is: Given this paragraph about Billie Eilish, tell me who produced her debut single, also tell me what is her chart-topping single?
+
+model answer is: : The producer of Billie Eilish's debut single is Finneas O'Connell. Her chart-topping single is "Bad Guy".
+actual answer (first reference) is: "Outbreeding" is more beneficial to the offspring as it reduces the risk of inheriting defective genes, increasing the offspring's ability to reproduce.
+
+the predicted answer exactly match one of the references: False
+f1 (max, min, avg): 0.1, 0.1, 0.1
+recall (max, min, avg): 0.09, 0.09, 0.09
+----------------------------------------
+----------------------------------------
+question is: How many managers have Arsenal had?
+
+model answer is: : Arsenal have had 22 managers since they were founded in 1886.
+actual answer (first reference) is: The first Reading railway station was opened on the 30th of March, 1840.
+
+the predicted answer exactly match one of the references: False
+f1 (max, min, avg): 0, 0, 0.0
+recall (max, min, avg): 0, 0, 0.0
+----------------------------------------
+----------------------------------------
+question is: What is SVM?
+
+model answer is: : Support Vector Machine (SVM) is a supervised machine learning algorithm used for classification and regression analysis. It is a type of linear model that finds the best hyperplane to separate data points of different classes.
+actual answer (first reference) is: Her brother Finneas O'Connell produced her debut single "Ocean Eyes", and her chart topping single is "Bad Guy"
+
+the predicted answer exactly match one of the references: False
+f1 (max, min, avg): 0.07, 0.07, 0.07
+recall (max, min, avg): 0.11, 0.11, 0.11
+----------------------------------------
+----------------------------------------
+question is: Who scored first in Austin FC's first victory in a home game in the 2021 MLS season?
+
+model answer is: : Austin FC scored first in their first home game of the 2021 MLS season.
+actual answer (first reference) is: Arsenal have had twenty permanent and eight caretake managers.
+
+the predicted answer exactly match one of the references: False
+f1 (max, min, avg): 0, 0, 0.0
+recall (max, min, avg): 0, 0, 0.0
+----------------------------------------
+----------------------------------------
+question is: How long does it take for a mustard seed to germinate?
+
+model answer is: : It takes about 2 weeks for a mustard seed to germinate.
+actual answer (first reference) is: SVM stands for ""support vector machine". It is a machine learning model for supervised learning tasks. It was popular in the 1990s and early 2000s, before deep learning take off. The classic use case is binary classification, but its extension can also do multi-label classification as we as regression. Kernel methods greatly enhanced SVM's capability to perform non-linear machine learning tasks.
+
+the predicted answer exactly match one of the references: False
+f1 (max, min, avg): 0.11, 0.11, 0.11
+recall (max, min, avg): 0.07, 0.07, 0.07
+----------------------------------------
+----------------------------------------
+question is: What is the origin of the name of the herb Rosemary?
+
+model answer is: : The origin of the name of the herb Rosemary is unknown.
+actual answer (first reference) is: Jon Gallagher scored the first goal in Austin FC's first win at home, over the Portland Timbers.
+
+the predicted answer exactly match one of the references: False
+f1 (max, min, avg): 0.07, 0.07, 0.07
+recall (max, min, avg): 0.06, 0.06, 0.06
+----------------------------------------
+----------------------------------------
+question is: Who coined the phrase "Bike-shedding" and when?
+
+model answer is: : The phrase "Bike-shedding" was coined by John Pucher and Ralph Buehler in their book "Bicycling and Urban Form" published in 2000.
+actual answer (first reference) is: Mustard seeds generally take eight to ten days to germinate if placed under the proper conditions, which include a cold atmosphere and relatively moist soil.
+
+the predicted answer exactly match one of the references: False
+f1 (max, min, avg): 0.04, 0.04, 0.04
+recall (max, min, avg): 0.04, 0.04, 0.04
+----------------------------------------
+----------------------------------------
+question is: Given a reference text about Run Towards the Danger, tell me how many essays are part of the collection.
+
+model answer is: : There are 5 essays in the collection "Run Towards the Danger".
+actual answer (first reference) is: The name "rosemary" derives from Latin ros marinus.
+
+the predicted answer exactly match one of the references: False
+f1 (max, min, avg): 0, 0, 0.0
+recall (max, min, avg): 0, 0, 0.0
+----------------------------------------
+----------------------------------------
+question is: Who tends to participates in hackathons?
+
+model answer is: : The participants of hackathons are typically developers, designers, engineers, and other tech professionals who come together to work on innovative solutions to problems or create new products.
+actual answer (first reference) is: The phrase "bike-shedding" was introduced in 1957 by C. Northcote Parkinson.
+
+the predicted answer exactly match one of the references: False
+f1 (max, min, avg): 0.05, 0.05, 0.05
+recall (max, min, avg): 0.09, 0.09, 0.09
+----------------------------------------
+----------------------------------------
+question is: What is Marketing Automation?
+
+model answer is: : 
+actual answer (first reference) is: Six essays are part of the Run Towards the Danger essay collection.
+
+the predicted answer exactly match one of the references: False
+f1 (max, min, avg): 0, 0, 0.0
+recall (max, min, avg): 0, 0, 0.0
+----------------------------------------
+----------------------------------------
+question is: Which American president spoke Dutch as their first language?
+
+model answer is: : None of the above. The correct answer is George Washington. He was born in Westmoreland County, Virginia, which was part of the British colony of Virginia at the time. He learned English as a child, but also knew some Dutch from his father's side of the family. He used Dutch in official correspondence with the Dutch Republic during the French and Indian War, and later served as an ambassador to France.
+actual answer (first reference) is: Computer programmers and others involved in software development, including graphic designers, interface designers, product managers, project managers, domain experts, and others tend to participate in hackathons.
+
+the predicted answer exactly match one of the references: False
+f1 (max, min, avg): 0.06, 0.06, 0.06
+recall (max, min, avg): 0.12, 0.12, 0.12
+----------------------------------------
+----------------------------------------
+question is: Given this reference text about the consumption of peanut butter, when is national peanut butter day?
+
+model answer is: : National Peanut Butter Day is celebrated on May 5th.
+actual answer (first reference) is: 
+
+the predicted answer exactly match one of the references: False
+f1 (max, min, avg): 0, 0, 0.0
+recall (max, min, avg): 0, 0, 0.0
+----------------------------------------
+----------------------------------------
+question is: What does fasting mean?
+
+model answer is: : Fasting is an act of voluntarily abstaining from food or drink for a period of time, usually as part of a religious or spiritual practice.
+actual answer (first reference) is: They collaborate intensively on engineering projects, such as software engineering with the goal of creating functioning software or hardware by the end of the event.
+
+the predicted answer exactly match one of the references: False
+f1 (max, min, avg): 0.12, 0.12, 0.12
+recall (max, min, avg): 0.12, 0.12, 0.12
+----------------------------------------
+----------------------------------------
+question is: Was Furze Hill an established community in the 19th century?
+
+model answer is: : No, Furze Hill was not an established community in the 19th century.
+actual answer (first reference) is: Marketing Automation is software that helps marketers to do create efficient online and offline campaigns. It's part of CRM suite and people usually integrate it with their salesforce application and marketing website. The Marketing Automation platform allows marketers to automate and simplify customer communication by managing multi communication channels. This includes personalized email, dynamic web pages, digital banners, social media and more. People use it for lead generation, segmentation and nurturing and lead scoring. Post-sales marketers also use Marketing Automation for cross-sell, upsell and retention marketing. In
+
+the predicted answer exactly match one of the references: False
+f1 (max, min, avg): 0, 0, 0.0
+recall (max, min, avg): 0, 0, 0.0
+----------------------------------------
+----------------------------------------
+question is: What is wine?
+
+model answer is: : Wine is an alcoholic beverage made from fermented grapes. It can range from pale yellow to red, depending on the variety of grape and the production process.
+actual answer (first reference) is: President Van Buren spoke Dutch as his first language. He is the only president of the United States of America who spoke English as a second language.
+
+the predicted answer exactly match one of the references: False
+f1 (max, min, avg): 0.11, 0.11, 0.11
+recall (max, min, avg): 0.11, 0.11, 0.11
+----------------------------------------
+----------------------------------------
+question is: What is the last festival celebrated in Tihar and how long does the festival last?
+
+model answer is: : The last festival celebrated in Tihar is Diwali which lasts for five days.
+actual answer (first reference) is: National Peanut Butter Day takes place on January 24th in the United States.
+
+the predicted answer exactly match one of the references: False
+f1 (max, min, avg): 0.07, 0.07, 0.07
+recall (max, min, avg): 0.08, 0.08, 0.08
+----------------------------------------
+----------------------------------------
+question is: What event John Johnstone won as a rider?
+
+model answer is: : John Johnstone won the Tour de France in 1998.
+actual answer (first reference) is: Fasting is the abstention from eating and sometimes drinking.
+
+the predicted answer exactly match one of the references: False
+f1 (max, min, avg): 0.11, 0.11, 0.11
+recall (max, min, avg): 0.11, 0.11, 0.11
+----------------------------------------
+----------------------------------------
+question is: Based on this paragraph, how many younger siblings did Kennedy have?
+
+model answer is: : Kennedy had two younger siblings.
+actual answer (first reference) is: No, it was not an established community until the 20th century.
+
+the predicted answer exactly match one of the references: False
+f1 (max, min, avg): 0, 0, 0.0
+recall (max, min, avg): 0, 0, 0.0
+----------------------------------------
+----------------------------------------
+question is: Can you tell me something about Stanley J. Goldberg
+
+model answer is: : Stanley J. Goldberg is an American film producer who has worked on many successful movies such as The Last Samurai, The Da Vinci Code, and The Bourne Ultimatum. He is also known for producing the popular TV show Lost.
+actual answer (first reference) is: Wine is an alcoholic drink typically made from fermented grapes.
+
+the predicted answer exactly match one of the references: False
+f1 (max, min, avg): 0.08, 0.08, 0.08
+recall (max, min, avg): 0.2, 0.2, 0.2
+----------------------------------------
+----------------------------------------
+question is: Given a reference text about Jen Shah, what is she famous from, when was she criminally charged, what was the verdict, and when was she sentenced.
+
+model answer is: : She is famous for being a singer and songwriter. She was criminally charged in 2018 for allegedly assaulting her husband. The verdict was guilty. She was sentenced to three years in prison.
+actual answer (first reference) is: The festival lasts for 5 days and Bhai Tika is the last festival.
+
+the predicted answer exactly match one of the references: False
+f1 (max, min, avg): 0.17, 0.17, 0.17
+recall (max, min, avg): 0.31, 0.31, 0.31
+----------------------------------------
+----------------------------------------
+question is: What types of problems in government could AI be used to solve
+
+model answer is: : AI could be used to solve resource allocation problems, large datasets, experts shortages, predictable scenarios, and small-scale problems.
+actual answer (first reference) is: John Johnstone won the Jockey Cup on a horse named Ben-y-Gloe.
+
+the predicted answer exactly match one of the references: False
+f1 (max, min, avg): 0, 0, 0.0
+recall (max, min, avg): 0, 0, 0.0
+----------------------------------------
+----------------------------------------
+question is: Given this paragraph, how many public high schools are in Arlington, Virginia?
+
+model answer is: : There are three public high schools in Arlington, Virginia.
+actual answer (first reference) is: Based on this paragraph, Kennedy had no younger siblings, as he was the youngest of nine children.
+
+the predicted answer exactly match one of the references: False
+f1 (max, min, avg): 0, 0, 0.0
+recall (max, min, avg): 0, 0, 0.0
+----------------------------------------
+----------------------------------------
+question is: Given the reference text about the Cy Young Award, please describe what the award is and why it is awarded.
+
+model answer is: : The Cy Young Award is an annual award given to the best pitcher in Major League Baseball (MLB). It was established in 1919 by the National Baseball Hall of Fame and Museum in Cooperstown, New York. The award is named after Cy Young, who was a professional baseball player and manager in the late 19th and early 20th centuries. He was known for his exceptional pitching skills and was considered one of the greatest pitchers of all time. The award is presented to the pitcher with the lowest earned run average (ERA) over a season, which means that he allows the fewest runs per nine innings pitched. The winner is chosen by a panel of sportswriters and broadcasters who vote on the top three candidates based on their performance throughout the season. The Cy Young Award is considered one of the most prestigious awards in MLB and winning it is often seen as a measure of a pitcher's success and skill.
+actual answer (first reference) is: Stanley J. Goldberg (born Maryland, 1939) is a special trial judge of the United States Tax Court.
+
+the predicted answer exactly match one of the references: False
+f1 (max, min, avg): 0.04, 0.04, 0.04
+recall (max, min, avg): 0.24, 0.24, 0.24
+----------------------------------------
+----------------------------------------
+question is: Based on the provided text, place the following books in chronological order: 
+
+model answer is: : 1. The Great Gatsby
+actual answer (first reference) is: 
+
+the predicted answer exactly match one of the references: False
+f1 (max, min, avg): 0, 0, 0.0
+recall (max, min, avg): 0, 0, 0.0
+----------------------------------------
+----------------------------------------
+question is: The Fox in the Attic, In Hazard: A Sea Story, A High Wind in Jamaica, and The Wooden Shepherdess
+
+model answer is: : 
+actual answer (first reference) is: Goldberg attended public schools in Baltimore, MD. He earned a B.S. from the University of Maryland, School of Business and Public Administration in 1960 and an LL.B. from the University of Maryland School of Law in 1964. He did graduate work in Federal Income Taxation at New York University. Goldberg was admitted to practice in Maryland and New Jersey, 1964 and 1967, and Federal District Court. 
+
+the predicted answer exactly match one of the references: False
+f1 (max, min, avg): 0, 0, 0.0
+recall (max, min, avg): 0, 0, 0.0
+----------------------------------------
+----------------------------------------
+question is: What are the official languages of the United Nations?
+
+model answer is: : The official languages of the United Nations are Arabic, Chinese, English, French, Russian, and Spanish.
+actual answer (first reference) is: 
+
+the predicted answer exactly match one of the references: False
+f1 (max, min, avg): 0, 0, 0.0
+recall (max, min, avg): 0, 0, 0.0
+----------------------------------------
+----------------------------------------
+question is: What's the game engine used by Bethesda before Creation Engine? And what's the last game make with it?
+
+model answer is: : The game engine used by Bethesda before Creation Engine is called "Bethesda Game Studios". The last game made with this engine is "The Elder Scrolls V: Skyrim" released in 2011.
+actual answer (first reference) is: He began his career as a Tax Attorney in January 1965 with the United States Department of Treasury, Office of Chief Counsel, Internal Revenue Service, in New York City and was initially assigned to the General Litigation function. In 1967, he was reassigned to the Tax Litigation function. In 1976, he was promoted to Special Trial Attorney, and then to Assistant District Counsel in 1984. He was appointed a Special Trial Judge of the United States Tax Court on August 4, 1985.
+
+the predicted answer exactly match one of the references: False
+f1 (max, min, avg): 0.04, 0.04, 0.04
+recall (max, min, avg): 0.02, 0.02, 0.02
+----------------------------------------
+----------------------------------------
+question is: What is the old name for The Go Between Bridge?
+
+model answer is: : The old name for The Go Between Bridge is The Go Between Bridge.
+actual answer (first reference) is: 
+
+the predicted answer exactly match one of the references: False
+f1 (max, min, avg): 0, 0, 0.0
+recall (max, min, avg): 0, 0, 0.0
+----------------------------------------
+----------------------------------------
+question is: Based on the reference text about Bitcoin, how many countries have banned Bitcoin?
+
+model answer is: : The paragraph does not mention any specific number of countries that have banned Bitcoin.
+actual answer (first reference) is: In 1992, Goldberg commented on the trend of tax protester arguments being brought before the Tax Court and dismissed with penalties.
+
+the predicted answer exactly match one of the references: False
+f1 (max, min, avg): 0.06, 0.06, 0.06
+recall (max, min, avg): 0.05, 0.05, 0.05
+----------------------------------------
+----------------------------------------
+question is: What was the Underground Railroad?
+
+model answer is: : The Underground Railroad was a network of secret routes and safe houses that helped enslaved African Americans escape to free states or Canada during the 19th century. It was named after the phrase "underground railroad", which refers to the hidden tracks and signals that guided the fugitives. The Underground Railroad was inspired by the abolitionist movement and the religious beliefs of some Christians who opposed slavery. It operated mainly in the northern and midwestern regions of the United States, but also reached parts of the South and the West. Some of the most famous conductors of the Underground Railroad were Harriet Tubman, Frederick Douglass, John Brown, and William Still. They risked their lives to help hundreds of thousands of slaves reach freedom.
+actual answer (first reference) is: Jen Shah came into the spotlight in November 2020 when The Real Housewives of Salt Lake City aired. In March 2021 she was charged with conspiracy to commit money laundering as well as wire fraud. She pled not guilty, but then come July 2022 she plead guilty to commit wire fraud. January of 2023 she was sentenced to 6.5 years in prison and her sentence began in February.
+
+the predicted answer exactly match one of the references: False
+f1 (max, min, avg): 0.08, 0.08, 0.08
+recall (max, min, avg): 0.12, 0.12, 0.12
+----------------------------------------
+----------------------------------------
+question is: Given this paragraph on LeBron James' early career, when did he win his first NBA MVP?
+
+model answer is: : LeBron James won his first NBA MVP award in 2003.
+actual answer (first reference) is: The potential uses of AI in government are wide and varied but some appropriate areas to consider AI applications include: Resource allocation
+the predicted answer exactly match one of the references: False
+f1 (max, min, avg): 0.06, 0, 0.01
+recall (max, min, avg): 0.05, 0, 0.008333333333333333
+----------------------------------------
+----------------------------------------
+question is: If each client was served by the same number of professionals, how many professionals (round to one decimal place) would each client be served by?
+
+model answer is: : Each client would be served by 0.5 professionals. 
+actual answer (first reference) is: There are 3 public high schools in Arlington, Va.
+
+the predicted answer exactly match one of the references: False
+f1 (max, min, avg): 0, 0, 0.0
+recall (max, min, avg): 0, 0, 0.0
+----------------------------------------
+----------------------------------------
+question is: When was Lamb Air operating
+
+model answer is: : Lamb Air operated from 1946 until 1954.
+actual answer (first reference) is: The Cy Young Award is given to the best pitches in the American and National leagues of Major League Baseball, for their achievements that exceed those of their peers.
+
+the predicted answer exactly match one of the references: False
+f1 (max, min, avg): 0, 0, 0.0
+recall (max, min, avg): 0, 0, 0.0
+----------------------------------------
+----------------------------------------
+question is: Which river can you hike in Utah?
+
+model answer is: : The Colorado River.
+actual answer (first reference) is: The order of the books are as follows:
+
+the predicted answer exactly match one of the references: False
+f1 (max, min, avg): 0.17, 0.17, 0.17
+recall (max, min, avg): 0.12, 0.12, 0.12
+----------------------------------------
+----------------------------------------
+question is: What does Cisco specialize in, what technology markets do they address, and what are their most successful products?
+
+model answer is: : Cisco specializes in networking hardware and services for enterprise networks. They address various technology markets, including data centers, cloud computing, internet of things (IoT), and security. Some of their most successful products include routers, switches, firewalls, and network management systems.
+actual answer (first reference) is: 1) A High Wind in Jamaica
+
+the predicted answer exactly match one of the references: False
+f1 (max, min, avg): 0.04, 0.04, 0.04
+recall (max, min, avg): 0.17, 0.17, 0.17
+----------------------------------------
+----------------------------------------
+question is: What are the causes for Sensory processing disorder?
+
+model answer is: : The exact cause of sensory processing disorder is unknown. However, it is believed that there are several factors that can contribute to its development, including genetics, brain injury, exposure to toxins during pregnancy, and certain medical conditions. Additionally, some researchers believe that sensory processing disorder may be related to differences in how the brain processes information from the senses.
+actual answer (first reference) is: 2) In Hazard: A Sea Story
+
+the predicted answer exactly match one of the references: False
+f1 (max, min, avg): 0, 0, 0.0
+recall (max, min, avg): 0, 0, 0.0
+----------------------------------------
+----------------------------------------
+question is: According to this text, when did Disney become a public company?
+
+model answer is: : In 2012, Disney became a public company after acquiring Lucasfilm for $4 billion.
+actual answer (first reference) is: 3) The Fox in the Attic
+
+the predicted answer exactly match one of the references: False
+f1 (max, min, avg): 0, 0, 0.0
+recall (max, min, avg): 0, 0, 0.0
+----------------------------------------
+----------------------------------------
+question is: Where did Gretel attend primary school?
+
+model answer is: : Gretel attended primary school at the local elementary school.
+actual answer (first reference) is: 4) The Wooden Shepherdess
+
+the predicted answer exactly match one of the references: False
+f1 (max, min, avg): 0, 0, 0.0
+recall (max, min, avg): 0, 0, 0.0
+----------------------------------------
+----------------------------------------
+question is: Given a reference text about Psychiatry: An Industry of Death, tell me when it opened and and who owns and operates it.
+
+model answer is: : The reference text about Psychiatry: An Industry of Death opened in 1975 and is owned and operated by George Lucas.
+actual answer (first reference) is: Arabic, Mandarin Chinese, English, French, Russian, Spanish
+
+the predicted answer exactly match one of the references: False
+f1 (max, min, avg): 0, 0, 0.0
+recall (max, min, avg): 0, 0, 0.0
+----------------------------------------
+----------------------------------------
+question is: What is Magical Thinking?
+
+model answer is: : "Magical thinking" refers to the belief in supernatural powers or forces that can affect events or outcomes without any logical explanation. It is a common phenomenon among children but can persist into adulthood.
+actual answer (first reference) is: Gamebryo was the engine used by Bethesda before Creation Engine. It is developed by Gamebase Cot., Ltd and Gamebase USA. Gamebryo is used by numerous companies within the gaming industry.
+
+the predicted answer exactly match one of the references: False
+f1 (max, min, avg): 0.09, 0.09, 0.09
+recall (max, min, avg): 0.1, 0.1, 0.1
+----------------------------------------
+----------------------------------------
+question is: Based on this paragraph, how many times has Joe Biden run for president and what characteristics make him unique among all past presidents?
+
+model answer is: : Joe Biden has not yet run for president. However, based on the information provided, he is unique among all past presidents because he is the first president to have been born after
+actual answer (first reference) is: 
+
+the predicted answer exactly match one of the references: False
+f1 (max, min, avg): 0, 0, 0.0
+recall (max, min, avg): 0, 0, 0.0
+----------------------------------------
+----------------------------------------
+question is: Which of the 10 largest earthquakes was the deadliest?
+
+model answer is: : The deadliest earthquake was the one that occurred in Sumatra, Indonesia on 28 March 2005 with a magnitude of 8.6. It caused 1313 deaths and over 400 injuries.
+actual answer (first reference) is: Bethesda decided that Gamebryo's capabilities were becoming too outdated and began work on the Creation Engine for their next game, The Elder Scrolls V: Skyrim, by forking the codebase used for Fallout 3.
+
+the predicted answer exactly match one of the references: False
+f1 (max, min, avg): 0.16, 0.16, 0.16
+recall (max, min, avg): 0.15, 0.15, 0.15
+----------------------------------------
+----------------------------------------
+question is: Given this paragraph about the Cold War, why did the Soviets pull out of their war in Afghanistan?
+
+model answer is: : The Soviets pulled out of their war in Afghanistan because they faced growing nationalist sentiment within their own country that threatened to break it apart. This led to the unsuccessful August Coup against Gorbachev in 1991, which ultimately resulted in the dissolution of the Soviet Union. As a result, the Soviets had no choice but to withdraw from their involvement in the war in Afghanistan.
+actual answer (first reference) is: 
+
+the predicted answer exactly match one of the references: False
+f1 (max, min, avg): 0, 0, 0.0
+recall (max, min, avg): 0, 0, 0.0
+----------------------------------------
+----------------------------------------
+question is: According to the text below about UVA, name the UVA alumni that have won the Pulitzer Prize.
+
+model answer is: : There are no UVA alumni mentioned in the text who have won the Pulitzer Prize.
+actual answer (first reference) is: The last game from Bethesda made with Gamebryo engine is Fallout 3 (2008).
+
+the predicted answer exactly match one of the references: False
+f1 (max, min, avg): 0, 0, 0.0
+recall (max, min, avg): 0, 0, 0.0
+----------------------------------------
+----------------------------------------
+question is: Given a reference text about Gennady Petrovich Lyachin, tell me when he joined the navy and when he was decommissioned.
+
+model answer is: : Lyachin joined the navy in 1972 and was decommissioned in 1991.
+actual answer (first reference) is: Hale Street Link
+
+the predicted answer exactly match one of the references: False
+f1 (max, min, avg): 0, 0, 0.0
+recall (max, min, avg): 0, 0, 0.0
+----------------------------------------
+----------------------------------------
+question is: Who is the 'sole Survivor' on the TV Show Survivor?
+
+model answer is: : The'sole survivor' on the TV show Survivor is not mentioned in the given information.
+actual answer (first reference) is: As of November 2021, 42 countries have implicitly banned and 9 countries have fully banned the use of Bitcoin.
+
+the predicted answer exactly match one of the references: False
+f1 (max, min, avg): 0.06, 0.06, 0.06
+recall (max, min, avg): 0.05, 0.05, 0.05
+----------------------------------------
+----------------------------------------
+question is: Which is longest road or highway or motorway in the world
+
+model answer is: : The longest road in the world is the Pan-American Highway which stretches over 19,000 km (12,278 mi) from Prudhoe Bay, Alaska to Punta Arenas, Chile. This route passes through Canada, the United States, Mexico, Guatemala, Belize, Costa Rica, Panama, Colombia, Ecuador, Peru, Bolivia, Paraguay, Argentina, and Brazil.
+actual answer (first reference) is: The Underground Railroad was a secret network of routes and safe houses in the United States established in the early 19th century that led to free states, Canada, Mexico and other overseas areas. Black slaves used the Underground Railroad to escape from slavery. It is estimated that by 1850, about 100,000 slaves had escaped to freedom by the "Railroad".
+
+the predicted answer exactly match one of the references: False
+f1 (max, min, avg): 0.17, 0.17, 0.17
+recall (max, min, avg): 0.15, 0.15, 0.15
+----------------------------------------
+----------------------------------------
+question is: Given this paragraph about WWII, how many fatalities happened?
+
+model answer is: : Approximately 70-85 million fatalities occurred during World War II.
+actual answer (first reference) is: LeBron James won his first NBA MVP in 2009.
+
+the predicted answer exactly match one of the references: False
+f1 (max, min, avg): 0, 0, 0.0
+recall (max, min, avg): 0, 0, 0.0
+----------------------------------------
+----------------------------------------
+question is: Who invented the radio?
+
+model answer is: : The radio was invented by Guglielmo Marconi.
+actual answer (first reference) is: 3283 professionals and 1700 clients, so 3283/1700 = 1.9 professionals serving each client.
+
+the predicted answer exactly match one of the references: False
+f1 (max, min, avg): 0, 0, 0.0
+recall (max, min, avg): 0, 0, 0.0
+----------------------------------------
+----------------------------------------
+question is: Given this paragraph about bicycle manufacturer Colnago, what Italian automobile company did Colnago work with to develop new carbon fiber technology?
+
+model answer is: : Colnago worked with Ferrari to develop new carbon fiber technology. 
+actual answer (first reference) is: Lamb Air Ltd. was a Canadian airline that began operations in 1934 in The Pas, Manitoba, and went out of business in 1981.
+
+the predicted answer exactly match one of the references: False
+f1 (max, min, avg): 0, 0, 0.0
+recall (max, min, avg): 0, 0, 0.0
+----------------------------------------
+----------------------------------------
+question is: When was Rhual constructed?
+
+model answer is: : Rhual was constructed in the year 2175. <|endoftext|>
+actual answer (first reference) is: 
+
+the predicted answer exactly match one of the references: False
+f1 (max, min, avg): 0, 0, 0.0
+recall (max, min, avg): 0, 0, 0.0
+----------------------------------------
+----------------------------------------
+question is: Given a reference text about the Spellenspektakel, tell me where it takes place and what games are played.
+
+model answer is: : The Spellenspektakel is held in the Netherlands and features traditional strategy boardgames, collectible card games, pen-and-paper role-playing games and miniatures wargames.
+actual answer (first reference) is: History
+
+the predicted answer exactly match one of the references: False
+f1 (max, min, avg): 0, 0, 0.0
+recall (max, min, avg): 0, 0, 0.0
+----------------------------------------
+----------------------------------------
+question is: How many awards did the film The Walrus and the Whistleblower win per this entry of information?
+
+model answer is: : 1 award
+actual answer (first reference) is: Tom Lamb was the son of Thomas Henry Peacock (THP) Lamb, who had emigrated from England in the late 19th century. THP Lamb turned from school teacher to fur trader and in 1900, started Lamb's Store in Moose Lake, Manitoba. Tom and his brothers and sisters grew up in northern Manitoba and worked for their father.
+
+the predicted answer exactly match one of the references: False
+f1 (max, min, avg): 0, 0, 0.0
+recall (max, min, avg): 0, 0, 0.0
+----------------------------------------
+----------------------------------------
+question is: Given this paragraph about Sam Baker, what is the Outland Trophy?
+
+model answer is: : The Outland Trophy is an award given to the best interior lineman in college football. 
+actual answer (first reference) is: 
+
+the predicted answer exactly match one of the references: False
+f1 (max, min, avg): 0, 0, 0.0
+recall (max, min, avg): 0, 0, 0.0
+----------------------------------------
+----------------------------------------
+question is: Based on the reference text, what was the start date and the expected completion date of the reconstruction project on the Howard Frankland bridge.
+
+model answer is: : The start date of the reconstruction project on the Howard Frankland bridge was originally planned for January 7, 2021 but it has been postponed to January 16, 2021. The expected completion date of the project is not mentioned in the given information.
+actual answer (first reference) is: Tom Lamb left school before finishing grade 3. Later in life, he would make the comment, while giving his acceptance speech when receiving his honorary Doctorate of law from the University of Manitoba, "If I had only gotten to grade 4". At the age of 10, Tom, who had his own team of horses and sleigh, was competing with grown men in the fish hauling business. He would have to use fish boxes to step up on to be able to load his sleigh.
+
+the predicted answer exactly match one of the references: False
+f1 (max, min, avg): 0.09, 0.09, 0.09
+recall (max, min, avg): 0.07, 0.07, 0.07
+----------------------------------------
+----------------------------------------
+question is: Given this reference text about Jimmy John's, how many Jimmy John's locations are there?
+
+model answer is: : There are over 1,000 Jimmy John's locations worldwide. 
+actual answer (first reference) is: 
+
+the predicted answer exactly match one of the references: False
+f1 (max, min, avg): 0, 0, 0.0
+recall (max, min, avg): 0, 0, 0.0
+----------------------------------------
+----------------------------------------
+question is: Given this paragraph about the M26, tell me how many times Hunt finished in the top 3, and explain your reasoning.
+
+model answer is: : Hunt finished in the top 3 twice. In the first race, she placed second behind her teammate, and in the second race, she won the pole position and went on to win the race. This means that she finished in the top 3 both times. 
+actual answer (first reference) is: One of the Lamb family's businesses was "logistics and transportation". Fish, lumber, trees, fur and supplies needed to be hauled by any and all means. Dog teams, horses, boats, trucks and tractors were used. In the 1930s there was a transportation revolution happening. The aircraft was making its way into northern Canada. The first time Tom Lamb saw an aircraft he realized its potential. In 1930, Tom bought his first aircraft - a Stinson SR8. In 1930, Tom Lamb travelled to Winnipeg to learn to fly. To keep costs to a minimum, he lived in a tent behind the Winnipeg Flying Club. When he returned to The Pas and checked himself out on the Stinson.
+
+the predicted answer exactly match one of the references: False
+f1 (max, min, avg): 0.1, 0.1, 0.1
+recall (max, min, avg): 0.07, 0.07, 0.07
+----------------------------------------
+----------------------------------------
+question is: When was The White Mandigos band formed?
+
+model answer is: : The White Mandogos band was formed in 1969.
+actual answer (first reference) is: 
+
+the predicted answer exactly match one of the references: False
+f1 (max, min, avg): 0, 0, 0.0
+recall (max, min, avg): 0, 0, 0.0
+----------------------------------------
+----------------------------------------
+question is: Who was Luis Gonzalez de Ubieta
+
+model answer is: : Luis Gonzalez de Ubieta was an admiral of the Spanish Republican Navy during the Spanish Civil War. He died in exile as the captain of the Panamanian merchant vessel Chiriqui, refusing to be rescued when the ship under his command sank in the Caribbean Sea not far from Barranquilla.
+actual answer (first reference) is: In 1935, Tom incorporated Lamb Airways Limited. The airline had some name changes throughout the years and Tom became one of the best known Manitobans, if not Canadians, in the world. His adventures have been documented in books, a television documentary and even a song.
+
+the predicted answer exactly match one of the references: False
+f1 (max, min, avg): 0.08, 0.08, 0.08
+recall (max, min, avg): 0.09, 0.09, 0.09
+----------------------------------------
+----------------------------------------
+question is: List 10 highest-grossing actors in the world.
+
+model answer is: : 
+actual answer (first reference) is: The Narrows at Zion National Park
+
+the predicted answer exactly match one of the references: False
+f1 (max, min, avg): 0, 0, 0.0
+recall (max, min, avg): 0, 0, 0.0
+----------------------------------------
+----------------------------------------
+question is: What shape are Philodendron leaves?
+
+model answer is: : The leaves of a Philodendron are typically heart-shaped when they are young. As the plant matures, the leaves become larger and take on a more juvenile leaf shape. Later in its life, the plant produces adult leaves that have a very different shape from the juvenile leaves. The adult leaves are often much larger than the juvenile leaves and can have a variety of shapes, including oval, lanceolate, or even palmate. The color of the leaves can also vary, ranging from green to reddish. The stem of the plant is usually white, yellow, or red, and the leaves themselves are composed mainly of magnetite, with small amounts of other minerals such as titanium, silica, manganese, calcium, and vanadium. Hydrogen, known as white hydrogen, is a natural element found on or in Earth. It is distinguished from other forms of hydrogen by its purity and lack of pollution. White hydrogen can be produced from renewable energy sources, making it an environmentally friendly option. It is also less expensive to produce than industrial hydrogen, which is typically derived from fossil fuels or generated through the electrolysis of
+actual answer (first reference) is: Cisco develops, manufactures, and sells networking hardware, software, telecommunications equipment and other high-technology services and products. Cisco specializes in specific tech markets, such as the Internet of Things (IoT), domain security, videoconferencing, and energy management with leading products including Webex, OpenDNS, Jabber, Duo Security, and Jasper.
+
+the predicted answer exactly match one of the references: False
+f1 (max, min, avg): 0.09, 0.09, 0.09
+recall (max, min, avg): 0.22, 0.22, 0.22
+----------------------------------------
+----------------------------------------
+question is: Given this paragraph about Pittsford, New York, what year was the town settled?
+
+model answer is: : The town of Pittsford, New York was settled in 1793.
+actual answer (first reference) is: The exact cause of Sensory processing disorder is not known. However, it is known that the midbrain and brainstem regions of the central nervous system are early centers in the processing pathway for multisensory integration
+the predicted answer exactly match one of the references: False
+f1 (max, min, avg): 0.13, 0.06, 0.095
+recall (max, min, avg): 0.09, 0.03, 0.06
+----------------------------------------

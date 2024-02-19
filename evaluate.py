@@ -5,10 +5,11 @@ from transformers import (
     AutoModelForCausalLM,
     AutoTokenizer,
     Trainer,
-    HFArgumentParser,
+    HfArgumentParser,
     GenerationConfig,
 )
 import numpy as np
+from tqdm import tqdm 
 
 # Load From Local
 from model import RetrieverModel
@@ -21,13 +22,13 @@ def compute_metrics(prediction, truth):
     
     # if either the prediction or the truth is no-answer then f1 = 1 if they agree, 0 otherwise
     if len(pred_tokens) == 0 or len(truth_tokens) == 0:
-        return int(pred_tokens == truth_tokens)
+        return int(pred_tokens == truth_tokens), int(pred_tokens == truth_tokens)
     
     common_tokens = set(pred_tokens) & set(truth_tokens)
     
     # if there are no common tokens then f1 = 0
     if len(common_tokens) == 0:
-        return 0
+        return 0, 0
     
     prec = len(common_tokens) / len(pred_tokens)
     rec = len(common_tokens) / len(truth_tokens)
@@ -35,12 +36,12 @@ def compute_metrics(prediction, truth):
     return f1, rec
 
 def main():
-    data_args, inference_args, model_args = HFArgumentParser((DataArguments, InferenceArguments, ModelArguments))
+    data_args, inference_args, model_args = HfArgumentParser((DataArguments, InferenceArguments, ModelArguments)).parse_args_into_dataclasses()
 
     retriever_model = RetrieverModel(model_args, data_args) # TODO: Use HF models or define in a different file
     tokenizer = AutoTokenizer.from_pretrained(model_args.qa_model_name_or_path, trust_remote_code=True) # TODO: Add tokenizer
 
-    qa_model = AutoModelForCausalLM.from_pretrained(model_args.qa_model_name_or_path, trust_remote_code=True)
+    qa_model = AutoModelForCausalLM.from_pretrained(model_args.qa_model_name_or_path, trust_remote_code=True, torch_dtype=torch.bfloat16).to('cuda')
     generation_config = GenerationConfig(
         max_length=inference_args.max_length, temperature=0.01, top_p=0.95, repetition_penalty=1.1,
         do_sample=True, use_cache=True,
@@ -58,10 +59,13 @@ def main():
         answers = file.readlines()
         answers = [answer.split(';') for answer in answers]
 
-    assert(len(questions) == len(answers), 'length of questions and answers must be the same')
+    #generate result path
+    result_name = data_args.result_path + data_args.test_question_path.split('/')[-2] + '.txt'
 
     #TODO: let's check whether we can vectorize this 
-    for idx, question in enumerate(questions):
+    f1_all = []
+    recall_all = []
+    for idx, question in tqdm(enumerate(questions)):
         related_documents = retriever_model.retrieve(question, database)
         model_answer = retrieval_augmented_answer(question, related_documents, 
                                             model=qa_model, 
@@ -71,19 +75,43 @@ def main():
         exact_match = False
         f1 = []
         recall = []
+        model_answer = model_answer[0].split('\n')
+        model_answer = [m for m in model_answer if 'Output' in m][0][7:]
+        
+        evaluate_str = ''
         for answer in answers[idx]:
             if answer.lower() == model_answer.lower():
                 exact_match = True
             f, r = compute_metrics(model_answer, answer)
-            f1.append(f)
-            recall.append(r)
-        print('----------------------------------------')
-        print(f'question is: {question}')
-        print(f"answer is: {model_answer}")
-        print(f"the predicted answer exactly match one of the references: {exact_match}")
-        print(f'max f1 among reference answer is {max(f1)}, min is {min(f1)}, average is {np.mean(f1)}')
-        print(f'max f1 among reference answer is {max(recall)}, min is {min(recall)}, average is {np.mean(recall)}')
-        print('----------------------------------------')
+            f1.append(round(f, 2))
+            recall.append(round(r, 2))
 
+        #append to calculate final test set performance
+        f1_all.append(np.mean(f1))
+        recall_all.append(np.mean(recall))
 
+        evaluate_str += '----------------------------------------\n'
+        evaluate_str += f'question is: {question}\n'
+        evaluate_str += f'model answer is: {model_answer}\n'
+        evaluate_str += f"actual answer (first reference) is: {answers[idx][0]}\n"
+        evaluate_str += f"the predicted answer exactly match one of the references: {exact_match}\n"
+        evaluate_str += f'f1 (max, min, avg): {max(f1)}, {min(f1)}, {np.mean(f1)}\n'
+        evaluate_str += f'recall (max, min, avg): {max(recall)}, {min(recall)}, {np.mean(recall)}\n'
+        evaluate_str += '----------------------------------------\n'
+
+        if idx == 0:
+            with open(result_name, 'w') as f:
+                f.write(evaluate_str)
+        else:
+            with open(result_name, 'a') as f:
+                f.write(evaluate_str)
+
+    with open(result_name, 'a') as f:
+        overall_result = ''
+        overall_result += f'f1: {np.mean(f1_all)}\n'
+        overall_result += f'recall: {np.mean(recall_all)}\n'
+        f.write(overall_result)
+
+if __name__ == "__main__":
+    main()
 
