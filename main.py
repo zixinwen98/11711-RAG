@@ -26,6 +26,8 @@ PROMPT_DICT = {
         }
 
 def prompt_formatting(question, documents, model_name):
+    '''Formats the prompt for the model to generate the answer'''
+
     documents = ''.join(documents) if isinstance(documents, list) else documents
     if 'phi-2' in model_name:
         return f"Background Information: {documents}\nInstruct: {question}\n Output:"
@@ -35,7 +37,11 @@ def prompt_formatting(question, documents, model_name):
         raise NotImplementedError
 
 def retrieval_augmented_answer(question, related_docs, model, tokenizer, generation_config, model_args, return_doc=False):
-    
+    '''
+    Generates an answer to the question using the related documents as context 
+    using .generate() api of the model.
+    '''
+
     inputs_with_doc = prompt_formatting(question, related_docs, model_name=model_args.qa_model_name_or_path)
     inputs_with_doc = tokenizer(inputs_with_doc, return_tensors="pt", return_attention_mask=False).to(model.device)
     answers = model.generate(**inputs_with_doc, pad_token_id=tokenizer.eos_token_id, generation_config=generation_config)
@@ -48,11 +54,12 @@ def retrieval_augmented_answer(question, related_docs, model, tokenizer, generat
 def main():
     data_args, inference_args, model_args = HfArgumentParser((DataArguments, InferenceArguments, ModelArguments)).parse_args_into_dataclasses()
 
-    retriever_model = RetrieverModel(model_args, data_args) # TODO: Use HF models or define in a different file
+    retriever_model = RetrieverModel(model_args, data_args) 
 
-    tokenizer = AutoTokenizer.from_pretrained(model_args.qa_model_name_or_path, trust_remote_code=True) # TODO: Add tokenizer
-
-    qa_model = AutoModelForCausalLM.from_pretrained(model_args.qa_model_name_or_path, trust_remote_code=True, torch_dtype=torch.bfloat16).to('cuda')
+    tokenizer = AutoTokenizer.from_pretrained(model_args.qa_model_name_or_path, trust_remote_code=True) 
+    qa_model = AutoModelForCausalLM.from_pretrained(model_args.qa_model_name_or_path, 
+                                                    trust_remote_code=True,
+                                                    torch_dtype=model_args.qa_model_dtype).to(model_args.qa_model_device)
 
     generation_config = GenerationConfig(
         max_length=inference_args.max_length, temperature=0.01, top_p=0.95,
@@ -61,8 +68,8 @@ def main():
     )
 
     # Documents
-    database = retriever_model.create_vector_store() #TODO: implement the database, assume to be list of strings
-    print("haha")
+    database = retriever_model.create_vector_store() 
+
     # question
     input_question = str(input("Enter your question after the colon, enter 'quit' to quit the program: ")) #TODO
     while input_question != 'quit':

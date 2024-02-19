@@ -3,6 +3,7 @@ import os
 from typing import Optional, Dict, Sequence
 from dataclasses import dataclass, field
 import transformers
+import torch
 
 @dataclass
 class InferenceArguments:
@@ -13,6 +14,8 @@ class InferenceArguments:
 class ModelArguments:
     "containing args for retriever model and generation model"
     qa_model_name_or_path: str = field(default='microsoft/phi-2')
+    qa_model_dtype : torch.dtype = field(default=torch.bfloat16)
+    qa_model_device: str = field(default='cuda')
     doc_encoder_model_name_or_path: str = field(default='facebook/contriever')
     query_model_max_length: int = field(
         default=512,

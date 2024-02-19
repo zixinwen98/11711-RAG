@@ -19,6 +19,12 @@ from args import *
 from main import retrieval_augmented_answer, prompt_formatting
 
 def compute_metrics(prediction, truth):
+    '''
+    prediction: string
+    truth: string
+    return:
+    f1 and recall between prediction and string
+    '''
     pred_tokens = prediction.split()
     truth_tokens = truth.split()
     
@@ -43,7 +49,9 @@ def main():
     retriever_model = RetrieverModel(model_args, data_args) # TODO: Use HF models or define in a different file
     tokenizer = AutoTokenizer.from_pretrained(model_args.qa_model_name_or_path, trust_remote_code=True) # TODO: Add tokenizer
 
-    qa_model = AutoModelForCausalLM.from_pretrained(model_args.qa_model_name_or_path, trust_remote_code=True, torch_dtype=torch.bfloat16).to('cuda')
+    qa_model = AutoModelForCausalLM.from_pretrained(model_args.qa_model_name_or_path, 
+                                                    trust_remote_code=True, 
+                                                    torch_dtype=model_args.qa_model_dtype).to(model_args.qa_model_device)
     generation_config = GenerationConfig(
         max_length=inference_args.max_length, temperature=0.01, top_p=0.95, repetition_penalty=1.1,
         do_sample=True, use_cache=True,
@@ -51,7 +59,7 @@ def main():
     )
 
     # Documents
-    database = retriever_model.create_vector_store() #TODO: implement the database, assume to be list of strings
+    database = retriever_model.create_vector_store() 
     loaded_data = jload(data_args.test_data_path)
     
     answers, questions, context = [], [], []
@@ -75,6 +83,8 @@ def main():
                                             generation_config=generation_config, 
                                             model_args=model_args,
                                             return_doc=True)
+        
+        #check whether the retrieved document contains the actual context
         related_doc_str = '|'.join(related_doc)
         retrieved = False
         for doc in related_doc:
@@ -83,6 +93,7 @@ def main():
                     retrieved = True 
                     break
         
+        #check whether the model answer exactly match one of the references
         exact_match = False
         f1 = []
         recall = []
