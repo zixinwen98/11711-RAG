@@ -52,22 +52,13 @@ def main():
 
     # Documents
     database = retriever_model.create_vector_store() #TODO: implement the database, assume to be list of strings
-
-    # # load question and answer pairs
-    # with open(data_args.test_question_path, 'r') as file:
-    #     questions = file.readlines()
-    
-    # with open(data_args.test_answer_path, 'r') as file:
-    #     answers = file.readlines()
-    #     answers = [answer.split(';') for answer in answers]
-    # with open(data_args.test_data_path, 'r') as json_file:
-    #     loaded_data = json.load(json_file)
     loaded_data = jload(data_args.test_data_path)
     
-    answers, questions = [], []
+    answers, questions, context = [], [], []
     for d in loaded_data:
         questions.append(d['question'])
         answers.append(d['answer'].split(';'))
+        context.append(d['context'])
 
     #generate result path
     result_name = data_args.result_path + data_args.test_question_path.split('/')[-2] + '.txt'
@@ -77,11 +68,20 @@ def main():
     recall_all = []
     for idx, question in tqdm(enumerate(questions)):
         related_documents = retriever_model.retrieve(question, database)
-        model_answer = retrieval_augmented_answer(question, related_documents, 
+        model_answer, related_doc = retrieval_augmented_answer(question, related_documents, 
                                             model=qa_model, 
                                             tokenizer=tokenizer, 
                                             generation_config=generation_config, 
-                                            model_args=model_args)
+                                            model_args=model_args,
+                                            return_doc=True)
+        related_doc_str = '|'.join(related_doc)
+        retrieved = False
+        for doc in related_doc:
+            for d in doc.split('|'):
+                if d in context[idx]:
+                    retrieved = True 
+                    break
+        
         exact_match = False
         f1 = []
         recall = []
@@ -102,6 +102,9 @@ def main():
 
         evaluate_str += '----------------------------------------\n'
         evaluate_str += f'question is: {question}\n'
+        evaluate_str += f'actual context: {context[idx]}\n'
+        evaluate_str += f'related doc (| concat): {related_doc_str}\n'
+        evaluate_str += f'at least retrieve certain relevant part: {retrieved}\n'
         evaluate_str += f'model answer is: {model_answer}\n'
         evaluate_str += f"actual answer (first reference) is: {answers[idx][0]}\n"
         evaluate_str += f"the predicted answer exactly match one of the references: {exact_match}\n"

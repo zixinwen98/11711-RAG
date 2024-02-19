@@ -34,12 +34,15 @@ def prompt_formatting(question, documents, model_name):
     else: 
         raise NotImplementedError
 
-def retrieval_augmented_answer(question, related_docs, model, tokenizer, generation_config, model_args):
+def retrieval_augmented_answer(question, related_docs, model, tokenizer, generation_config, model_args, return_doc=False):
     
     inputs_with_doc = prompt_formatting(question, related_docs, model_name=model_args.qa_model_name_or_path)
     inputs_with_doc = tokenizer(inputs_with_doc, return_tensors="pt", return_attention_mask=False).to(model.device)
     answers = model.generate(**inputs_with_doc, generation_config=generation_config)
     answers = tokenizer.batch_decode(answers)
+    
+    if return_doc:
+        return answers, related_docs
     return answers
 
 def main():
