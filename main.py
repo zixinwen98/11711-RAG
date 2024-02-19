@@ -37,8 +37,7 @@ def prompt_formatting(question, documents, model_name):
 def retrieval_augmented_answer(question, related_docs, model, tokenizer, generation_config, model_args):
     
     inputs_with_doc = prompt_formatting(question, related_docs, model_name=model_args.qa_model_name_or_path)
-    inputs_with_doc = tokenizer(inputs_with_doc, return_tensors="pt", return_attention_mask=False)
-
+    inputs_with_doc = tokenizer(inputs_with_doc, return_tensors="pt", return_attention_mask=False).to(model.device)
     answers = model.generate(**inputs_with_doc, generation_config=generation_config)
     answers = tokenizer.batch_decode(answers)
     return answers
@@ -50,7 +49,7 @@ def main():
 
     tokenizer = AutoTokenizer.from_pretrained(model_args.qa_model_name_or_path, trust_remote_code=True) # TODO: Add tokenizer
 
-    qa_model = AutoModelForCausalLM.from_pretrained(model_args.qa_model_name_or_path, trust_remote_code=True)
+    qa_model = AutoModelForCausalLM.from_pretrained(model_args.qa_model_name_or_path, trust_remote_code=True, torch_dtype=torch.bfloat16).to('cuda')
 
     generation_config = GenerationConfig(
         max_length=inference_args.max_length, temperature=0.01, top_p=0.95,
