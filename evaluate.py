@@ -10,8 +10,7 @@ from transformers import (
 )
 import numpy as np
 from tqdm import tqdm 
-import json
-from utils import jload
+from utils import *
 
 # Load From Local
 from model import RetrieverModel
@@ -44,6 +43,7 @@ def compute_metrics(prediction, truth):
     return f1, rec
 
 def main():
+    seed_everything()
     data_args, inference_args, model_args = HfArgumentParser((DataArguments, InferenceArguments, ModelArguments)).parse_args_into_dataclasses()
 
     retriever_model = RetrieverModel(model_args, data_args) # TODO: Use HF models or define in a different file

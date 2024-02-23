@@ -14,6 +14,7 @@ from transformers import (
 
 from model import RetrieverModel
 from args import *
+from utils import *
 
 PROMPT_DICT = {
             "phi-2" : ("Background Information: {documents}\nInstruct: {question}\n Output:"),
@@ -52,6 +53,7 @@ def retrieval_augmented_answer(question, related_docs, model, tokenizer, generat
     return answers
 
 def main():
+    seed_everything()
     data_args, inference_args, model_args = HfArgumentParser((DataArguments, InferenceArguments, ModelArguments)).parse_args_into_dataclasses()
 
     retriever_model = RetrieverModel(model_args, data_args) 

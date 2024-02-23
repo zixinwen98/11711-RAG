@@ -4,8 +4,18 @@ import io
 from langchain.prompts import PromptTemplate
 from langchain_community.document_loaders import DirectoryLoader
 from langchain.text_splitter import RecursiveCharacterTextSplitter
-
+import random, numpy as np, torch
 from os import listdir
+
+def seed_everything(seed = 11711):
+    random.seed(seed)
+    os.environ['PYTHONHASHSEED'] = str(seed)
+    np.random.seed(seed)
+    torch.manual_seed(seed)
+    torch.cuda.manual_seed(seed)
+    torch.backends.cudnn.deterministic = True
+    torch.backends.cudnn.benchmark = False
+
 
 def prompt_engineer(context, question):
     '''
