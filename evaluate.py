@@ -69,12 +69,14 @@ def main():
         context.append(d['context'])
 
     #generate result path
-    result_name = data_args.result_path + data_args.test_question_path.split('/')[-2] + f'_{data_args.chunk_size}' + f'_{data_args.overlap}' + f'_{data_args.retriever_topk}' + '.txt'
+    #d
+    result_name = data_args.result_path + data_args.test_data_path.split('/')[-1].split('.')[0] + f'_{data_args.chunk_size}' + f'_{data_args.overlap}' + f'_{data_args.retriever_topk}' + '.json'
 
     #TODO: let's check whether we can vectorize this 
     f1_all = []
     recall_all = []
     retrieval_acc = []
+    evaluate_output = []
     for idx, question in tqdm(enumerate(questions), total= len(questions)):
         related_documents = retriever_model.retrieve(question, database)
         model_answer, related_doc = retrieval_augmented_answer(question, related_documents, 
@@ -102,6 +104,7 @@ def main():
         model_answer = [m for m in model_answer if 'Output' in m][0][7:]
         
         evaluate_str = ''
+        evaluate_dict = dict()
         for answer in answers[idx]:
             if answer.lower() == model_answer.lower():
                 exact_match = True
@@ -113,31 +116,48 @@ def main():
         f1_all.append(np.mean(f1))
         recall_all.append(np.mean(recall))
 
-        evaluate_str += '----------------------------------------\n'
-        evaluate_str += f'question is: {question}\n'
-        evaluate_str += f'actual context: {context[idx]}\n'
-        evaluate_str += f'related doc (| concat): {related_doc_str}\n'
-        evaluate_str += f'at least retrieve certain relevant part: {retrieved}\n'
-        evaluate_str += f'model answer is: {model_answer}\n'
-        evaluate_str += f"actual answer (first reference) is: {answers[idx][0]}\n"
-        evaluate_str += f"the predicted answer exactly match one of the references: {exact_match}\n"
-        evaluate_str += f'f1 (max, min, avg): {max(f1)}, {min(f1)}, {np.mean(f1)}\n'
-        evaluate_str += f'recall (max, min, avg): {max(recall)}, {min(recall)}, {np.mean(recall)}\n'
-        evaluate_str += '----------------------------------------\n'
+        # evaluate_str += '----------------------------------------\n'
+        # evaluate_str += f'question is: {question}\n'
+        # evaluate_str += f'actual context: {context[idx]}\n'
+        # evaluate_str += f'related doc (| concat): {related_doc_str}\n'
+        # evaluate_str += f'at least retrieve certain relevant part: {retrieved}\n'
+        # evaluate_str += f'model answer is: {model_answer}\n'
+        # evaluate_str += f"actual answer (first reference) is: {answers[idx][0]}\n"
+        # evaluate_str += f"the predicted answer exactly match one of the references: {exact_match}\n"
+        # evaluate_str += f'f1 (max, min, avg): {max(f1)}, {min(f1)}, {np.mean(f1)}\n'
+        # evaluate_str += f'recall (max, min, avg): {max(recall)}, {min(recall)}, {np.mean(recall)}\n'
+        # evaluate_str += '----------------------------------------\n'
+        evaluate_dict['question'] = question
+        evaluate_dict['context'] = context[idx]
+        evaluate_dict['retrieved_doc'] = related_doc_str
+        evaluate_dict['retrieved_relevant_part'] = retrieved
+        evaluate_dict['model_answer'] = model_answer
+        evaluate_dict['actual_answer'] = answers[idx][0]
+        evaluate_dict['exact_match'] = exact_match
+        evaluate_dict['f1_max_min_avg'] = (max(f1), min(f1), np.mean(f1))
+        evaluate_dict['recall_max_min_avg'] = (max(recall), min(recall), np.mean(recall))
+        evaluate_output.append(evaluate_dict)
 
-        if idx == 0:
-            with open(result_name, 'w') as f:
-                f.write(evaluate_str)
-        else:
-            with open(result_name, 'a') as f:
-                f.write(evaluate_str)
+        # if idx == 0:
+        #     with open(result_name, 'w') as f:
+        #         f.write(evaluate_str)
+        # else:
+        #     with open(result_name, 'a') as f:
+        #         f.write(evaluate_str)
 
-    with open(result_name, 'a') as f:
-        overall_result = ''
-        overall_result += f'f1: {np.mean(f1_all)}\n'
-        overall_result += f'recall: {np.mean(recall_all)}\n'
-        overall_result += f'retrieval_acc: {np.mean(retrieval_acc)}'
-        f.write(overall_result)
+    # with open(result_name, 'a') as f:
+    #     overall_result = ''
+    #     overall_result += f'f1: {np.mean(f1_all)}\n'
+    #     overall_result += f'recall: {np.mean(recall_all)}\n'
+    #     overall_result += f'retrieval_acc: {np.mean(retrieval_acc)}'
+    #     f.write(overall_result)
+    overall_result = dict()
+    overall_result['f1'] = np.mean(f1_all)
+    overall_result['recall'] = np.mean(recall_all)
+    overall_result['retrieval_acc'] = np.mean(retrieval_acc)
+    evaluate_output.append(overall_result)
+
+    jdump(evaluate_output, result_name)
 
 if __name__ == "__main__":
     main()
