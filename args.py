@@ -36,17 +36,13 @@ class TrainingArguments(transformers.TrainingArguments):
 @dataclass 
 class DataArguments:
     "containing args used in data loading"
-    document_path: Optional[str] = field(default='/zfsauton2/home/yifuc/11711-RAG/data/databrick_qa/documents', 
-                               metadata={'help':'path to the document folder of .txt files'})
-    test_question_path: Optional[str]= field(default='/zfsauton2/home/yifuc/11711-RAG/data/databrick_qa/questions.txt',
-                                   metadata={'help':'path to a .txt file with one question per line'})
-    test_answer_path: Optional[str]= field(default='/zfsauton2/home/yifuc/11711-RAG/data/databrick_qa/answers.txt',
-                                   metadata={'help':'path to a .txt file with multiple answers (seperated by ;) per line'})
-    test_data_path: Optional[str]= field(default='/zfsauton2/home/yifuc/11711-RAG/data/databrick_qa/databrick_test.json',
+    document_path: Optional[str] = field(default='/zfsauton2/home/yifuc/11711-RAG/data/cmu', 
+                               metadata={'help':'path to the document folder of .txt/.json files'})
+    test_data_path: Optional[str]= field(default='/zfsauton2/home/yifuc/11711-RAG/data/automated_questions.json',
                                    metadata={'help':'path to a .json file with list of qa pairs stored in dict'})
-    chunk_size: Optional[str]= field(default=1000,
+    chunk_size: Optional[str]= field(default=250,
                                    metadata={'help':'number of tokens to chunk the document'})
-    overlap: Optional[str]= field(default=150,
+    overlap: Optional[str]= field(default=50,
                                    metadata={'help':'number of tokens to overlapping between chunks'})
     retriever_topk: Optional[str]= field(default=5,
                                    metadata={'help':'number of related text retrieved'})

@@ -4,6 +4,7 @@ import io
 from langchain.prompts import PromptTemplate
 from langchain_community.document_loaders import DirectoryLoader
 from langchain.text_splitter import RecursiveCharacterTextSplitter
+from langchain.docstore.document import Document
 import random, numpy as np, torch
 from os import listdir
 
@@ -35,11 +36,29 @@ def load_documents(text_path, chunk_size=1000, chunk_overlap=150):
     return: 
     langchain document format (a list of trucated document)
     '''
-    loader = DirectoryLoader(text_path, glob="**/*.txt")
-    data = loader.load()
-    text_splitter = RecursiveCharacterTextSplitter(chunk_size=chunk_size, chunk_overlap=chunk_overlap)
-    docs = text_splitter.split_documents(data)
-    return docs
+    if 'databrick' in text_path:
+        loader = DirectoryLoader(text_path, glob="**/*.txt")
+        data = loader.load()
+        text_splitter = RecursiveCharacterTextSplitter(chunk_size=chunk_size, chunk_overlap=chunk_overlap)
+        docs = text_splitter.split_documents(data)
+        return docs
+    elif 'cmu' in text_path:
+        docs = []
+        #files that need to be truncated
+        truncate_files = ['buggy_history.json', 'cmu_history.json', 'handbook_text.json', 'kiltie_band_fact.json',
+                          'scotty_fact.json', 'tartan_fact.json']
+        files = listdir(text_path)
+        docs = []
+        for file in files:
+            doc = jload(text_path + '/' + file)
+            doc = [Document(page_content = s) for s in doc]
+            if file not in truncate_files:
+                docs.extend(doc)
+            else:
+                text_splitter = RecursiveCharacterTextSplitter(chunk_size=chunk_size, chunk_overlap=chunk_overlap)
+                doc = text_splitter.split_documents(doc)
+                docs.extend(doc)
+        return docs
 
 
 def _make_w_io_base(f, mode: str):
