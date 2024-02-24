@@ -4,7 +4,7 @@ from transformers import (AutoTokenizer,
                           AutoModelForCausalLM) #TODO: depend on support
 from utils import load_documents
 from langchain_community.embeddings import HuggingFaceEmbeddings
-from langchain_community.vectorstores import FAISS
+from langchain_community.vectorstores import FAISS, Chroma
 
 '''
 what should config have 
@@ -40,8 +40,14 @@ class RetrieverModel(nn.Module):
                                         model_name=self.text_retriever,     # Provide the pre-trained model's path
                                         # model_kwargs=model_kwargs, # TODO: create device based on config 
                                         # encode_kwargs=encode_kwargs # TODO: write for normalize embedding 
+                                        model_kwargs={'device': self.config.qa_model_device},
                                         )
-        vector_database = FAISS.from_documents(docs, embeddings)
+        if self.config.vector_db_name_or_path == 'FAISS':
+            vector_database = FAISS.from_documents(docs, embeddings)
+        elif self.config.vector_db_name_or_path == 'Chroma':
+            vector_database = Chroma.from_documents(docs, embeddings)
+        else:
+            raise ValueError('Invalid vector store name')
         return vector_database
     
     def retrieve(self, question:str, database):

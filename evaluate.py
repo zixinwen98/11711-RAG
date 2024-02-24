@@ -70,7 +70,14 @@ def main():
 
     #generate result path
     #d
-    result_name = data_args.result_path + data_args.test_data_path.split('/')[-1].split('.')[0] + f'_{data_args.chunk_size}' + f'_{data_args.overlap}' + f'_{data_args.retriever_topk}' + '.json'
+    result_name = data_args.result_path +\
+        data_args.test_data_path.split('/')[-1].split('.')[0] +\
+        f'_{model_args.qa_model_name_or_path.split("/")[-1]}' +\
+        f'_{model_args.vector_db_name_or_path}' +\
+        f'_{model_args.doc_encoder_model_name_or_path.split("/")[-1]}' +\
+        f'_{data_args.chunk_size}' +\
+        f'_{data_args.overlap}' +\
+        f'_{data_args.retriever_topk}' + '.json'
 
     #TODO: let's check whether we can vectorize this 
     f1_all = []
@@ -90,10 +97,9 @@ def main():
         related_doc_str = '|'.join(related_doc)
         retrieved = False
         for doc in related_doc:
-            for d in doc.split('|'):
-                if d in context[idx]:
-                    retrieved = True 
-                    break
+            if doc in context[idx]:
+                retrieved = True 
+                break
         
         #check whether the model answer exactly match one of the references
         exact_match = False

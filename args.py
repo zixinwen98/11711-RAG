@@ -16,7 +16,7 @@ class ModelArguments:
     qa_model_name_or_path: str = field(default='microsoft/phi-2')
     qa_model_dtype : torch.dtype = field(default=torch.bfloat16)
     qa_model_device: str = field(default='cuda')
-    doc_encoder_model_name_or_path: str = field(default='facebook/contriever')
+    doc_encoder_model_name_or_path: str = field(default='facebook/contriever') #WhereIsAI/UAE-Large-V1
     query_model_max_length: int = field(
         default=512,
         metadata={"help": "Query model maximum sequence length."},
@@ -25,6 +25,7 @@ class ModelArguments:
         default=512,
         metadata={"help": "Key model maximum sequence length."},
     )
+    vector_db_name_or_path: str = field(default='FAISS')
 
 @dataclass
 class TrainingArguments(transformers.TrainingArguments):
@@ -38,7 +39,7 @@ class DataArguments:
     "containing args used in data loading"
     document_path: Optional[str] = field(default='/zfsauton2/home/yifuc/11711-RAG/data/cmu', 
                                metadata={'help':'path to the document folder of .txt/.json files'})
-    test_data_path: Optional[str]= field(default='/zfsauton2/home/yifuc/11711-RAG/data/automated_questions.json',
+    test_data_path: Optional[str]= field(default='/zfsauton2/home/yifuc/11711-RAG/data/questions.json',
                                    metadata={'help':'path to a .json file with list of qa pairs stored in dict'})
     chunk_size: Optional[str]= field(default=250,
                                    metadata={'help':'number of tokens to chunk the document'})
