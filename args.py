@@ -16,7 +16,8 @@ class ModelArguments:
 
     qa_model_name_or_path: str = field(default='microsoft/phi-2')
     qa_model_dtype : torch.dtype = field(default=torch.bfloat16)
-    qa_model_device: str = field(default='cuda')
+    qa_model_device: str = field(default='cuda:1')
+    doc_encoder_model_device: str = field(default='cuda:0')
     doc_encoder_model_name_or_path: str = field(default='facebook/contriever') #WhereIsAI/UAE-Large-V1
     query_model_max_length: int = field(
         default=512,

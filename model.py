@@ -19,8 +19,8 @@ class RetrieverModel(nn.Module):
         self.config = config 
         self.data_config = data_config
         self.text_retriever = config.doc_encoder_model_name_or_path
-        self.text_encoder_tokenizer = AutoTokenizer.from_pretrained(self.text_retriever)
-        self.text_encoder = AutoModel.from_pretrained(self.text_retriever)
+        # self.text_encoder_tokenizer = AutoTokenizer.from_pretrained(self.text_retriever)
+        # self.text_encoder = AutoModel.from_pretrained(self.text_retriever)
 
         #retriver module 
         #self.vector_databse = self.create_vector_store()
@@ -40,7 +40,7 @@ class RetrieverModel(nn.Module):
                                         model_name=self.text_retriever,     # Provide the pre-trained model's path
                                         # model_kwargs=model_kwargs, # TODO: create device based on config 
                                         # encode_kwargs=encode_kwargs # TODO: write for normalize embedding 
-                                        model_kwargs={'device': self.config.qa_model_device},
+                                        model_kwargs={'device': self.config.doc_encoder_model_device},
                                         )
         if self.config.vector_db_name_or_path == 'FAISS':
             vector_database = FAISS.from_documents(docs, embeddings)

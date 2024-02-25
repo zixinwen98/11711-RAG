@@ -15,7 +15,46 @@ from utils import *
 # Load From Local
 from model import RetrieverModel
 from args import *
-from main import retrieval_augmented_answer, prompt_formatting
+
+
+PROMPT_DICT = {
+            "phi-2" : ("Background Information: {documents}\nInstruct: {question}\n Output:"),
+            "alpaca": (
+                "Below is an question, paired with an document to supply important information. "
+                "Write an response that appropriately answers the question.\n\n"
+                "### Instruction:\n{question}\n\n### Input:\n{documents}\n\n### Response:"
+            ),
+            "microsoft/phi-2": "Background Information: {documents}\nInstruct: {question}\n Output:",
+            "mistralai/Mistral-7B-Instruct-v0.2": "<s>[INST]You are asked to answer a question by extracting related facts from a given context.\nIt is very important to keep the generated answer to include only the facts that have appeared in the context. Below is the context and the question.\n Context: {context}\nQuestion: {question}\n Output: [/INST]",
+        }
+
+def prompt_formatting(question, documents, model_name):
+    '''Formats the prompt for the model to generate the answer'''
+
+    documents = ''.join(documents) if isinstance(documents, list) else documents
+    if 'phi-2' in model_name:
+        return f"Background Information: {documents}\nInstruct: {question}\n Output:"
+    elif 'alpaca' in model_name:
+        return PROMPT_DICT["alpaca"].format_map({"question":question, "documents":documents})
+    elif 'mistral' in model_name:
+        return PROMPT_DICT["mistralai/Mistral-7B-Instruct-v0.2"].format_map({"question":question, "documents":documents})
+    else: 
+        raise NotImplementedError
+
+def retrieval_augmented_answer(question, related_docs, model, tokenizer, generation_config, model_args, return_doc=False):
+    '''
+    Generates an answer to the question using the related documents as context 
+    using .generate() api of the model.
+    '''
+
+    inputs_with_doc = prompt_formatting(question, related_docs, model_name=model_args.qa_model_name_or_path)
+    inputs_with_doc = tokenizer(inputs_with_doc, return_tensors="pt", return_attention_mask=False).to(model.device)
+    answers = model.generate(**inputs_with_doc, pad_token_id=tokenizer.eos_token_id, generation_config=generation_config)
+    answers = tokenizer.batch_decode(answers)
+    
+    if return_doc:
+        return answers, related_docs
+    return answers
 
 def compute_metrics(prediction, truth):
     '''
@@ -52,6 +91,7 @@ def main():
     qa_model = AutoModelForCausalLM.from_pretrained(model_args.qa_model_name_or_path, 
                                                     trust_remote_code=True, 
                                                     torch_dtype=model_args.qa_model_dtype).to(model_args.qa_model_device)
+    
     generation_config = GenerationConfig(
         max_length=inference_args.max_length, temperature=0.01, top_p=0.95, repetition_penalty=1.1,
         do_sample=True, use_cache=True,
@@ -85,6 +125,7 @@ def main():
     retrieval_acc = []
     evaluate_output = []
     for idx, question in tqdm(enumerate(questions), total= len(questions)):
+        
         related_documents = retriever_model.retrieve(question, database)
         question = query_engineer(question, model_args.doc_encoder_model_name_or_path)
         model_answer, related_doc = retrieval_augmented_answer(question, related_documents, 
