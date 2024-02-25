@@ -21,6 +21,7 @@ from transformers import (
     DataCollatorWithPadding,
     default_data_collator,
 )
+from peft import get_peft_config, get_peft_model, LoraConfig, TaskType
 
 ### Import from local files
 from args import * 
@@ -41,6 +42,7 @@ PROMPT_DICT = {
         "### Instruction:\n{instruction}\n\n### Input:\n{input}\n\n### Response:"
     ),
     "microsoft/phi-2": "Background Information: {context}\nInstruct: {question}\n Output: ",
+    "mistralai/Mistral-7B-Instruct-v0.2": "<s>[INST]Context: {context}\nQuestion: {question}\n Output: [/INST]"
 }
 
 def add_special_token(tokenizer):
@@ -97,6 +99,12 @@ def train():
 
     data_collator = FactualQADataCollator(tokenizer=tokenizer)
 
+    if model_args.apply_lora:
+        peft_config = LoraConfig(
+        task_type=TaskType.CAUSAL_LM, inference_mode=False, r=8, lora_alpha=16, lora_dropout=0.1
+        )
+        model = get_peft_model(model, peft_config)
+        model.print_trainable_parameters()
     
 
     trainer = Trainer(

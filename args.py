@@ -13,6 +13,7 @@ class InferenceArguments:
 @dataclass
 class ModelArguments:
     "containing args for retriever model and generation model"
+
     qa_model_name_or_path: str = field(default='microsoft/phi-2')
     qa_model_dtype : torch.dtype = field(default=torch.bfloat16)
     qa_model_device: str = field(default='cuda')
@@ -26,6 +27,7 @@ class ModelArguments:
         metadata={"help": "Key model maximum sequence length."},
     )
     vector_db_name_or_path: str = field(default='FAISS')
+    apply_lora: Optional[bool] = field(default=False)
 
 @dataclass
 class TrainingArguments(transformers.TrainingArguments):
