@@ -1,0 +1,30 @@
+[
+    [
+        {
+            "question": "Many MLT graduates continue on to Ph.D. programs at CMU and other top institutions.",
+            "answer": "How long does the MLT program last?",
+            "context": " \nMaster of Language Technologies: The MLT program prepares students for a research career in academia or industry. In this program, you\u2019ll be immersed in research for two full years. During the academic year, your time will be evenly split between taking courses and doing research with your faculty advisor. Your summer will be devoted entirely to research. Many MLT grads continue on to Ph.D. programs at CMU and other top institutions, while others pursue careers at companies emphasizing research and rapid innovation.\n"
+        }
+    ],
+    [
+        {
+            "question": "Students spend their first year in Portugal and their last two years in Portugal.",
+            "answer": "How long does it take to complete the coursework for the Dual-Degree Ph.D. in Language and Information Technologies program?",
+            "context": " \nDual-Degree Ph.D. in Language and Information Technologies (Portugal Partnership) Requirments: Students participating in the dual-degree program will spend their first year in Portugal, followed by two years in Pittsburgh to complete their coursework. They will complete a maximum of eight courses with a proper balance of focus areas (linguistics, computer science, statistical/learning and task orientation). After that, they will return to Portugal for their last two years, pursuing research and completing their dissertation. For more, see the Carnegie Mellon | Portugal page.\n"
+        }
+    ],
+    [
+        {
+            "question": "At least 72 units of LTI courses are required to complete a Ph.D. in Language and Information Technologies.",
+            "answer": "What is the minimum number of lab courses required in different research areas for a Ph.D. in Language and Information Technologies?",
+            "context": " \nPh.D. in Language and Information Technology Curriculum: In order to obtain your Ph.D. in Language and Information Technologies, you need to pass 96 units (generally, eight courses) of graduate courses that fulfill these requirements:\n\n    At least 72 units of LTI courses: Must include one class in each LTI focus area.\n    At least 24 units of SCS courses.\n    At least two lab courses in two different research areas.\n"
+        }
+    ],
+    [
+        {
+            "question": "The Master of Science in Intelligent Information Systems program focuses on recognizing and extracting meaning from text, spoken language, and video.",
+            "answer": "What professional experience does an MIIS student gain as part of the program?",
+            "context": " \nMaster of Science in Intelligent Information Systems (MIIS): The Master's in Intelligent Information Systems degree focuses on recognizing and extracting meaning from text, spoken language and video. As an MIIS student, you\u2019ll receive the department\u2019s deepest exposure to content analysis and machine learning. In addition to completing the program\u2019s coursework, you\u2019ll work on directed study projects with your faculty advisor for two semesters; participate in a summer internship; and collaborate with your peers on a semester-long, group-oriented capstone project. This combination of classroom instruction, professional experience, and using new skills in significant projects with world-class colleagues will help prepare you for a successful career in industry or government. Our alumni have gone on to exciting careers at places like Apple, IBM and Google, and most have job offers within six weeks of graduation.\n"
+        }
+    ]
+]
