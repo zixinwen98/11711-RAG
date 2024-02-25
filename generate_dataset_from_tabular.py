@@ -316,7 +316,6 @@ def faculty_publication(data, num_samples=50, verbose_p=0.5):
     template = {
         "Which LTI faculty published the paper [title] in [year]?":"author",
         "Who is the author of the LTI paper [title] published in [year]?":"author",
-        "What is the title of the paper published by LTI faculty [author] in [year]?":"title",
         "What is the abstract of the paper [title] published by LTI faculty [author] in [year]?":"abstract",
         "Who are the coauthors of the paper [title] published by LTI faculty [author] in [year]?":"coauthor",
     }
