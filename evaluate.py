@@ -86,6 +86,7 @@ def main():
     evaluate_output = []
     for idx, question in tqdm(enumerate(questions), total= len(questions)):
         related_documents = retriever_model.retrieve(question, database)
+        question = query_engineer(question, model_args.doc_encoder_model_name_or_path)
         model_answer, related_doc = retrieval_augmented_answer(question, related_documents, 
                                             model=qa_model, 
                                             tokenizer=tokenizer, 

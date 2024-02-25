@@ -8,6 +8,7 @@ from typing import Optional, Dict, Sequence
 from dataclasses import dataclass, field
 import numpy as np
 import torch
+import wandb
 import torch.nn as nn
 from torch.utils.data import Dataset
 import transformers
@@ -23,7 +24,10 @@ from transformers import (
 
 ### Import from local files
 from args import * 
-from dataset import FactualQuestionAnsweringDataset, RetrievalDataCollator
+from dataset import FactualQuestionAnsweringDataset, FactualQADataCollator
+
+#os.environ["WANDB_PROJECT"] = "11711-RAG"  # name your W&B project
+#os.environ["WANDB_LOG_MODEL"] = "checkpoint"
 
 DEFAULT_PAD_TOKEN = "[PAD]"
 DEFAULT_EOS_TOKEN = "</s>"
@@ -36,7 +40,7 @@ PROMPT_DICT = {
         "Write an response that appropriately answers the question.\n\n"
         "### Instruction:\n{instruction}\n\n### Input:\n{input}\n\n### Response:"
     ),
-    "microsoft/phi-2": "Background Information: {documents}\nInstruct: {question}\n Output:",
+    "microsoft/phi-2": "Background Information: {context}\nInstruct: {question}\n Output: ",
 }
 
 def add_special_token(tokenizer):
@@ -51,33 +55,56 @@ def add_special_token(tokenizer):
 
 def train():
     model_args, data_args, training_args = transformers.HfArgumentParser((ModelArguments, DataArguments, TrainingArguments)).parse_args_into_dataclasses()
+    if training_args.report_to == "wandb":
+        wandb.init(project="11711-RAG", config=training_args, reinit=True)
+        wandb.login()
 
+    #accelerator = setup_accelerator()
+    #deepspeed_states = AcceleratorState().deepspeed_plugin
+    #deepspeed_states.deepspeed_config['train_micro_batch_size_per_gpu'] = opt.batch_size
+    #deepspeed_states.deepspeed_config['checkpoint'] = {'use_node_local_storage': True}
+
+    # logging.basicConfig(
+    #         format='%(asctime)s - ' + f'Rank: {accelerator.process_index}' + ' - %(levelname)s - %(message)s',
+    #         datefmt='%Y-%m-%d %H:%M:%S',
+    #         level=logging.INFO
+    #         )
+    logger = logging.getLogger(__name__)
+
+    # random.seed(opt.seed)
+    # np.random.seed(opt.seed)
+    # torch.manual_seed(opt.seed)
+    # torch.cuda.manual_seed(opt.seed)
 
     model = transformers.AutoModelForCausalLM.from_pretrained(
         model_args.qa_model_name_or_path,
+        trust_remote_code=True,
         cache_dir=training_args.cache_dir,
     )
 
     tokenizer = transformers.AutoTokenizer.from_pretrained(
         model_args.qa_model_name_or_path,
         cache_dir=training_args.cache_dir,
-        model_max_length=tokenizer.model_max_length,
+        model_max_length=model_args.model_max_length,
         padding_side="right",
         use_fast=False,
     )
     add_special_token(tokenizer)
     
 
-    train_dataset = FactualQuestionAnsweringDataset(data_path=data_args.qa_train_data_path, tokenizer=tokenizer)
+    train_dataset = FactualQuestionAnsweringDataset(data_path=data_args.train_data_path, tokenizer=tokenizer, prompt_template=PROMPT_DICT[f'{model_args.qa_model_name_or_path}'])
+    eval_dataset = FactualQuestionAnsweringDataset(data_path=data_args.eval_data_path, tokenizer=tokenizer, prompt_template=PROMPT_DICT[f'{model_args.qa_model_name_or_path}'])
 
-    data_collator = RetrievalDataCollator(tokenizer=tokenizer)
+    data_collator = FactualQADataCollator(tokenizer=tokenizer)
+
+    
 
     trainer = Trainer(
         model=model, 
         tokenizer=tokenizer, 
         args=training_args, 
         train_dataset=train_dataset,
-        eval_dataset=None,
+        eval_dataset=eval_dataset,
         data_collator=data_collator,
     )
     trainer.train()

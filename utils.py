@@ -8,6 +8,13 @@ from langchain.docstore.document import Document
 import random, numpy as np, torch
 from os import listdir
 
+def query_engineer(question, model):
+    if 'mistral' in model.lower():
+        task_description = 'Given a search query, retrieve relevant passages that answer the query'
+        return f'Instruct: {task_description}\nQuery: {question}'
+    else:
+        return question
+
 def seed_everything(seed = 11711):
     random.seed(seed)
     os.environ['PYTHONHASHSEED'] = str(seed)

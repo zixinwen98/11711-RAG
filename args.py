@@ -21,7 +21,7 @@ class ModelArguments:
         default=512,
         metadata={"help": "Query model maximum sequence length."},
     )
-    doc_model_max_length: int = field(
+    model_max_length: int = field(
         default=512,
         metadata={"help": "Key model maximum sequence length."},
     )
@@ -32,11 +32,17 @@ class TrainingArguments(transformers.TrainingArguments):
     "training arguments"
     cache_dir: Optional[str] = field(default=None)
     optim: str = field(default="adamw_torch")
+    local_rank: Optional[int] = field(default=None, metadata={'help': 'deepspeed config'})
+    config_file: Optional[str] = field(default=None)
 
 
 @dataclass 
 class DataArguments:
     "containing args used in data loading"
+    train_data_path: Optional[str]= field(default=None,
+                                   metadata={'help':'path to a .json file with list of qa pairs stored in dict'})
+    eval_data_path: Optional[str]= field(default=None,
+                                   metadata={'help':'path to a .json file with list of qa pairs stored in dict'})
     document_path: Optional[str] = field(default='/zfsauton2/home/yifuc/11711-RAG/data/cmu', 
                                metadata={'help':'path to the document folder of .txt/.json files'})
     test_data_path: Optional[str]= field(default='/zfsauton2/home/yifuc/11711-RAG/data/questions.json',

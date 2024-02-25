@@ -1,12 +1,12 @@
 from dataclasses import dataclass
 from typing import Optional, Dict, Sequence
-
+import copy
 import torch
 from torch.utils.data import Dataset
 import transformers
 import utils
 
-from logging import logging
+import logging
 
 IGNORE_INDEX = -100
 
@@ -51,17 +51,17 @@ def preprocess(
 class FactualQuestionAnsweringDataset(Dataset):
     """Dataset for supervised fine-tuning."""
 
-    def __init__(self, data_path: str, tokenizer: transformers.PreTrainedTokenizer):
+    def __init__(self, data_path: str, tokenizer: transformers.PreTrainedTokenizer, prompt_template:str = None):
         super().__init__()
         logging.warning("Loading data with documents...")
         list_data_dict = utils.jload(data_path)
 
-        prompt_input, prompt_no_input = PROMPT_DICT["prompt_input"], PROMPT_DICT["prompt_no_input"]
+        assert prompt_template is not None
         sources = [
-            prompt_input.format_map(example) if example.get("input", "") != "" else prompt_no_input.format_map(example)
+            prompt_template.format_map(example) 
             for example in list_data_dict
         ]
-        targets = [f"{example['output']}{tokenizer.eos_token}" for example in list_data_dict]
+        targets = [f"{example['answer']}{tokenizer.eos_token}" for example in list_data_dict]
 
         logging.warning("Tokenizing inputs... This may take some time...")
         data_dict = preprocess(sources, targets, tokenizer)
@@ -74,9 +74,8 @@ class FactualQuestionAnsweringDataset(Dataset):
 
     def __getitem__(self, i) -> Dict[str, torch.Tensor]:
         return dict(input_ids=self.input_ids[i], labels=self.labels[i])
-    
 @dataclass
-class RetrievalDataCollator(object):
+class FactualQADataCollator(object):
     """Collate examples for supervised fine-tuning."""
 
     tokenizer: transformers.PreTrainedTokenizer
