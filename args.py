@@ -8,13 +8,14 @@ import torch
 @dataclass
 class InferenceArguments:
     "containing args used only in inference"
-    max_length: int = field(default=512, metadata={"help": "max sequence length of generation"})
+    max_length: int = field(default=1024, metadata={"help": "max sequence length of generation"})
 
 @dataclass
 class ModelArguments:
     "containing args for retriever model and generation model"
 
     qa_model_name_or_path: str = field(default='microsoft/phi-2')
+    tokenizer_path: Optional[str] = field(default='mistralai/Mistral-7B-Instruct-v0.2')
     qa_model_dtype : torch.dtype = field(default=torch.bfloat16)
     qa_model_device: str = field(default='cuda:1')
     doc_encoder_model_device: str = field(default='cuda:0')

@@ -1,0 +1,748 @@
+[
+    {
+        "question": "Where can a mural celebrating Buggy be found within CMU, and what does it depict?",
+        "context": "Fairings have been a key feature for the Fringe team in recent years, which is celebrating its 50th anniversary of Buggy.\n We have a reputation of being the quietest on the course, said Diya Nuxoll, who wrapped up her bachelor's degree in mechanical engineering in December and is working on an advanced studies master's degree in design and manufacturing. Nuxoll leads the Fringe team as one of two head mechanics.\nAn mural celebrating Buggy can be found in\u00a0CMU's\u00a0Stever House. The artwork is part of a larger installation showcasing Sweepstakes and its traditions.\nSweepstakes Slang\nBuggy: Vehicle being raced and also a nickname for the competition. ",
+        "retrieved_doc": "one of two head mechanics. An mural celebrating Buggy can be found in CMU's Stever House. The artwork is part of a larger installation showcasing Sweepstakes and its traditions. Sweepstakes Slang Buggy: Vehicle being raced and also a nickname for|racing, allowed a rare visit into its shop for a behind-the-scenes tour. This year Fringe is planning to roll four different vehicles, built and maintained in the Fringe workshop in the basement of the East Campus Garage, known as the \"Froom.\"|You can find our official tartan on various items in the University Store. Source: \"Tartan: Romancing the Plaid,\" by Jeffrey Banks and Doria De La Chapelle Official Mascot? More than a century after Carnegie Mellon University opened its doors, an",
+        "retrieved_relevant_part": false,
+        "model_answer": ":  A mural celebrating Buggy can be found in CMU's Stever House. The mural is part of a larger installation showcasing Sweepstakes and its traditions. Buggy is both a nickname for racing and the vehicle being raced at CMU",
+        "actual_answer": "A mural celebrating Buggy can be found in CMU's Stever House. It is part of a larger installation showcasing Sweepstakes and its traditions",
+        "exact_match": false,
+        "f1_max_min_avg": [
+            0.68,
+            0.68,
+            0.68
+        ],
+        "recall_max_min_avg": [
+            0.91,
+            0.91,
+            0.91
+        ]
+    },
+    {
+        "question": "What role does the driver play in controlling the buggy's movement?",
+        "context": "where buggies make the sharp righthand turn from Schenley Drive onto Frew Street. Chute Flagger: Team member who provides a signal for buggy drivers to know when to start the right-hand turn from Schenley Drive onto Frew Street. Driver: Person who travels with a buggy and controls the vehicles via steering and braking systems. Pushbar: Structure attached to a buggy that a person pushes to propel that buggy forward. Pusher: Person who propels a buggy via a pushbar along one of the five hills of the buggy course. Shell: Entire outer structure or covering of a buggy that determines that buggy's aerodynamic characteristics.",
+        "retrieved_doc": "Drive onto Frew Street. Driver: Person who travels with a buggy and controls the vehicles via steering and braking systems. Pushbar: Structure attached to a buggy that a person pushes to propel that buggy forward. Pusher: Person who propels a buggy|buggy forward. Pusher: Person who propels a buggy via a pushbar along one of the five hills of the buggy course. Shell: Entire outer structure or covering of a buggy that determines that buggy's aerodynamic characteristics. Transition: Procedure|where buggies make the sharp righthand turn from Schenley Drive onto Frew Street. Chute Flagger: Team member who provides a signal for buggy drivers to know when to start the right-hand turn from Schenley Drive onto Frew Street. Driver: Person who",
+        "retrieved_relevant_part": true,
+        "model_answer": ":  The driver is the person who controls the buggy's movement using the steering and braking systems",
+        "actual_answer": "The driver controls the buggy's movement via steering and braking systems.",
+        "exact_match": false,
+        "f1_max_min_avg": [
+            0.64,
+            0.64,
+            0.64
+        ],
+        "recall_max_min_avg": [
+            0.82,
+            0.82,
+            0.82
+        ]
+    },
+    {
+        "question": "Can you describe the role and responsibilities of a pusher in a buggy race?",
+        "context": "Pusher: Person who propels a buggy via a pushbar along one of the five hills of the buggy course. Shell: Entire outer structure or covering of a buggy that determines that buggy's aerodynamic characteristics. Transition: Procedure whereby one pusher finishes pushing a buggy and the next pusher in sequence starts to push that same buggy. \n Members of Fringe, celebrating their 50th year of Buggy racing,\u00a0allowed a rare visit into its shop for a behind-the-scenes tour. \n \n This year Fringe is planning to roll four different vehicles, built and maintained in the Fringe workshop in the basement of the East Campus Garage, known as the \"Froom.\\n\"We're used to saying everything with 'fr' in front of it but when we say something in front of other people, it gets them confused,\" said Fringe head mechanic Dave Singh,",
+        "retrieved_doc": "buggy forward. Pusher: Person who propels a buggy via a pushbar along one of the five hills of the buggy course. Shell: Entire outer structure or covering of a buggy that determines that buggy's aerodynamic characteristics. Transition: Procedure|Drive onto Frew Street. Driver: Person who travels with a buggy and controls the vehicles via steering and braking systems. Pushbar: Structure attached to a buggy that a person pushes to propel that buggy forward. Pusher: Person who propels a buggy|of contact to the body of the buggy, gloves and a helmet. And during practice runs and races, flaggers man the course to let drivers know if it's safe to proceed. The streets of the race course haven't changed, but the condition of the course varies",
+        "retrieved_relevant_part": false,
+        "model_answer": ":  A pusher is a person who propels a buggy forward by pushing on the pushbar attached to the buggy. They play an essential role in helping to move the buggy during the race, especially during uphill sections where the driver may need assistance. The pusher should wear appropriate safety gear, including gloves and a helmet, for contact with the body of the buggy. During practice runs and races, flaggers manage the course to ensure it's safe for the drivers to proceed. The streets of the race course remain the same, but the condition of the course can vary",
+        "actual_answer": "The pusher is the person who propels the buggy along one of the five hills of the buggy course using a pushbar.",
+        "exact_match": false,
+        "f1_max_min_avg": [
+            0.18,
+            0.18,
+            0.18
+        ],
+        "recall_max_min_avg": [
+            0.5,
+            0.5,
+            0.5
+        ]
+    },
+    {
+        "question": "How does the transition process work during a buggy race?",
+        "context": "Shell: Entire outer structure or covering of a buggy that determines that buggy's aerodynamic characteristics. Transition: Procedure whereby one pusher finishes pushing a buggy and the next pusher in sequence starts to push that same buggy.\n            \n Members of Fringe, celebrating their 50th year of Buggy racing,\u00a0allowed a rare visit into its shop for a behind-the-scenes tour. \n \n This year Fringe is planning to roll four different vehicles, built and maintained in the Fringe workshop in the basement of the East Campus Garage, known as the \"Froom.\"\n\"We're used to saying everything with 'fr' ",
+        "retrieved_doc": "characteristics. Transition: Procedure whereby one pusher finishes pushing a buggy and the next pusher in sequence starts to push that same buggy. Members of Fringe, celebrating their 50th year of Buggy racing, allowed a rare visit into its shop for|buggy forward. Pusher: Person who propels a buggy via a pushbar along one of the five hills of the buggy course. Shell: Entire outer structure or covering of a buggy that determines that buggy's aerodynamic characteristics. Transition: Procedure|course's hills, dozens of people are needed to make a successful race happen. A year of planning goes into just over two minutes of racing. The Machine The basics of a buggy are straightforward, but teams are often secretive in how they build the",
+        "retrieved_relevant_part": false,
+        "model_answer": ":  During a buggy race, the transition process involves one pusher finishing the push of a buggy and the next pusher in sequence starting to push the same buggy. This procedure helps ensure a continuous flow of movement as the buggies navigate through the course's hills. Dozens of people are required to make the race successful, and a year of planning goes into the event, resulting in just over two minutes of actual racing time",
+        "actual_answer": "The transition process in a buggy race involves one pusher finishing their push, and then the next pusher takes over to continue propelling the buggy along the course.",
+        "exact_match": false,
+        "f1_max_min_avg": [
+            0.29,
+            0.29,
+            0.29
+        ],
+        "recall_max_min_avg": [
+            0.54,
+            0.54,
+            0.54
+        ]
+    },
+    {
+        "question": "How does the pushbar contribute to the propulsion of the buggy during the race?",
+        "context": "Drive onto Frew Street. Driver: Person who travels with a buggy and controls the vehicles via steering and braking systems. Pushbar: Structure attached to a buggy that a person pushes to propel that buggy forward. Pusher: Person who propels a buggy via a pushbar along one of the five hills of the buggy course. Shell:  ",
+        "retrieved_doc": "Drive onto Frew Street. Driver: Person who travels with a buggy and controls the vehicles via steering and braking systems. Pushbar: Structure attached to a buggy that a person pushes to propel that buggy forward. Pusher: Person who propels a buggy|buggy forward. Pusher: Person who propels a buggy via a pushbar along one of the five hills of the buggy course. Shell: Entire outer structure or covering of a buggy that determines that buggy's aerodynamic characteristics. Transition: Procedure|buggies up close. Dave Singh explains how Fringe builds its buggies. Each team keeps its actual processes a secret, but each buggy has certain features such as a body, pushbar, wheels and driving and braking mechanisms. Behind Singh are other",
+        "retrieved_relevant_part": true,
+        "model_answer": ":  The pushbar is a structure attached to the buggy that a pusher uses to propel the buggy forward during the race",
+        "actual_answer": "The pushbar contributes to the propulsion of the buggy by providing a structure that a person can use to propel the buggy forward.",
+        "exact_match": false,
+        "f1_max_min_avg": [
+            0.4,
+            0.4,
+            0.4
+        ],
+        "recall_max_min_avg": [
+            0.39,
+            0.39,
+            0.39
+        ]
+    },
+    {
+        "question": "What are the five pieces of safety gear required for all drivers in the race?",
+        "context": "All drivers are required to have five pieces of safety gear: mouth guard, goggles, a harness that includes three points of contact to the body of the buggy, gloves and a helmet. And during practice runs and races, flaggers man the course to let drivers know if it's safe to proceed.\nThe streets of the race course haven't changed, but the condition of the course varies due to potholes, which can make or break a fast run. The last course records were set in 2017, but this year potholes are making for some challenging conditions, said Amy Chen, a senior in psychology who has been driving for four years.\nWith the vehicles just inches from the ground, \"even poorly filled potholes makes it dangerous to drive,\" she added.\n",
+        "retrieved_doc": "inside of Boson, a Fringe buggy built in 2016. Safety is a top priority for teams. All drivers are required to have five pieces of safety gear: mouth guard, goggles, a harness that includes three points of contact to the body of the buggy, gloves|hills, wheels, a safety harness and driving and braking mechanisms. Some also include fairings, a type of housing around the wheels that help reduce drag, make the vehicle quieter and just looks cool. Fairings have been a key feature for the Fringe|slick, torpedo-like vessels carrying drivers with nerves of steel are a far cry from the two-man teams that once changed places halfway through a race and rode in everything from rain barrels with bicycle wheels to three-wheeled ash cans 99 years",
+        "retrieved_relevant_part": false,
+        "model_answer": ":  The five pieces of safety gear required for all drivers in the race are a mouth guard, goggles, a harness with three points of contact to the body of the buggy, gloves, and a safety harness",
+        "actual_answer": "The five pieces of safety gear required for all drivers in the race are a mouth guard, goggles, a harness that includes three points of contact to the body of the buggy, gloves, and a helmet.",
+        "exact_match": false,
+        "f1_max_min_avg": [
+            0.74,
+            0.74,
+            0.74
+        ],
+        "recall_max_min_avg": [
+            0.75,
+            0.75,
+            0.75
+        ]
+    },
+    {
+        "question": "What types of materials are showcased in the exhibition in carnival events?",
+        "context": "ands of projects and the work of hundreds of designers. The exhibition highlights the wide diversity of materials from preliminary sketches to presentation renderings to specifications and photographs to publications and select architectural models which help piece together the rich history of the built environment of Pittsburgh and the region. Note: No registration required. No event fee. This event is open to the entire CMU community and their guests. April 10, 2024: Event Name: Inventing Shakespeare: Text, Technology and The Four Folios 8:00 AM-6:00 PMET Open to entire CMU community Inventing Sh",
+        "retrieved_doc": "racing, allowed a rare visit into its shop for a behind-the-scenes tour. This year Fringe is planning to roll four different vehicles, built and maintained in the Fringe workshop in the basement of the East Campus Garage, known as the \"Froom.\"|one of two head mechanics. An mural celebrating Buggy can be found in CMU's Stever House. The artwork is part of a larger installation showcasing Sweepstakes and its traditions. Sweepstakes Slang Buggy: Vehicle being raced and also a nickname for|hills, wheels, a safety harness and driving and braking mechanisms. Some also include fairings, a type of housing around the wheels that help reduce drag, make the vehicle quieter and just looks cool. Fairings have been a key feature for the Fringe",
+        "retrieved_relevant_part": false,
+        "model_answer": ":  Based on the context provided, there is no mention of specific materials being showcased in the exhibition related to cars or carnival events. The context focuses on the Fringe team and their vehicles, as well as an artwork celebrating Buggy traditions at CMU",
+        "actual_answer": "The materials showcased include preliminary sketches, presentation renderings, specifications, photographs, publications, and select architectural models.",
+        "exact_match": false,
+        "f1_max_min_avg": [
+            0.14,
+            0.14,
+            0.14
+        ],
+        "recall_max_min_avg": [
+            0.27,
+            0.27,
+            0.27
+        ]
+    },
+    {
+        "question": "What is the time and format of the WRCT Radio Buggy Preview event on April 10, 2024?",
+        "context": "Objects in the exhibit range from a fully immersive VR tour of a reconstructed Shakespearean playhouse, a 1960s-era mechanical collator designed to compare multiple copies of the First Folio, and fragments of the folios themselves. Note: No registration required. No event fee. This event is open to the entire CMU community and their guests. April 10, 2024: Event Name: WRCT Radio Buggy Preview 3:00 PM-4:00 PMET Virtual Event: Open to All",
+        "retrieved_doc": "April 10, 2024: Event Name: WRCT Radio Buggy Preview 3:00 PM-4:00 PMET Virtual Event: Open to All Tune into WRCT at 88.3 FM to hear Buggy Alumni Association (BAA) guest panelists discuss Buggy. Note: Add event during registration for calendar hold. A reminder with link will be sent to registrants 24 hours and one hour prior.|April 12, 2024: Event Name: Mobot Recap Watch Party 3:00 PM-4:00 PMET Open to entire CMU community Join others in the Mobot community for a recap of the 2024 Mobot races. Note: No registration required. No event fee. Open to CMU community and their guests.|April 11, 2024: Event Name: Buggy Showcase 12:00 PM-2:00 PMET Open to entire CMU community Kick off your Carnival Weekend with Buggy! View the latest buggy designs, talk with the teams, enjoy kid-friendly buggy activities and vote for the Buggy People\u2019s Choice Award. Note: No registration required. No event fee. This event is open to the entire CMU community and their guests.",
+        "retrieved_relevant_part": false,
+        "model_answer": ":  The WRCT Radio Buggy Preview event on April 10, 2024, takes place from 3:00 PM to 4:00 PMET. It is a virtual event and open to all. To attend, registrants should tune into WRCT at 88.3 FM",
+        "actual_answer": "The WRCT Radio Buggy Preview event is scheduled for April 10, 2024, from 3:00 PM to 4:00 PM Eastern Time and is a virtual event open to all.",
+        "exact_match": false,
+        "f1_max_min_avg": [
+            0.61,
+            0.61,
+            0.61
+        ],
+        "recall_max_min_avg": [
+            0.71,
+            0.71,
+            0.71
+        ]
+    },
+    {
+        "question": "Who is invited to the Spring Carnival Midway Opening Ceremony?",
+        "context": " to CMU faculty and staff and their guests. Weekend hours: * Thursday: 3-6 p.m. * Friday: 1-4 p.m. April 11, 2024: Event Name: Spring Carnival Midway Opening Ceremony 3:00 PM-3:30 PMET Open to entire CMU community Join the Spring Carnival committee, Pipes & Drums Band and Scotty as we celebrate the opening of Midway! Can't make it back to campus? Sign up for the calendar hold hold - we'll add the livestream link a week prior, as well as send an event reminder with link 24-hours and one-hour prior. Note: No registration required for in-person event. No event fee. This event is open to the entire CMU community and their guests. April 11, 2024: Event Name: Carnival Activities Tent 3:30 PM-7:00 PMET Open to entire CMU community Featuring entertainment and games for students, alumni",
+        "retrieved_doc": "April 13, 2024: Event Name: Spring Carnival Parents and Families Hospitality Suite 1:30 PM-3:00 PMET Open to parents and families All families are welcome to drop in to our hospitality lounge to take a break, grab some snacks, take a photo, mingle with fellow families and chat with staff. Note: No registration required. No event fee. This event is open to parents and families of current students.|April 12, 2024: Event Name: Tartans Got Talent 8:30 PM-10:00 PMET Open to entire CMU community Join the Spring Carnival Committee (SCC) in celebrating talented students with the annual \"Tartans Got Talent!\" show. Note: No registration required. No event fee. This event is open to the entire CMU community and their guests.|April 13, 2024: Event Name: Crafting with the Spring Carnival Committee 2:00 PM-4:00 PMET Open to entire CMU community The Spring Carnival Committee (SCC) invites the CMU community to join them in some fun crafting projects. Note: Registration not required. No event fee.",
+        "retrieved_relevant_part": false,
+        "model_answer": ":  Based on the context provided, there is no information about a Spring Carnival Midway Opening Ceremony or who is invited to it. Therefore, I cannot generate an answer for this question as the context does not contain the necessary facts",
+        "actual_answer": "The Spring Carnival Midway Opening Ceremony is open to the entire CMU community.",
+        "exact_match": false,
+        "f1_max_min_avg": [
+            0.3,
+            0.3,
+            0.3
+        ],
+        "recall_max_min_avg": [
+            0.62,
+            0.62,
+            0.62
+        ]
+    },
+    {
+        "question": "Who sponsors the Carnival Activities Tent event?",
+        "context": "April 11, 2024: Event Name: Carnival Activities Tent 3:30 PM-7:00 PMET Open to entire CMU community Featuring entertainment and games for students, alumni, faculty and staff throughout the entire weekend. Full schedule coming in March. Sponsored by the Spring Carnival Committee and the CMU Alumni Association. Note: No registration required. No event fee. This event is open to students, faculty, staff and alumni",
+        "retrieved_doc": "April 13, 2024: Event Name: Crafting with the Spring Carnival Committee 2:00 PM-4:00 PMET Open to entire CMU community The Spring Carnival Committee (SCC) invites the CMU community to join them in some fun crafting projects. Note: Registration not required. No event fee.|April 12, 2024: Event Name: Tartans Got Talent 8:30 PM-10:00 PMET Open to entire CMU community Join the Spring Carnival Committee (SCC) in celebrating talented students with the annual \"Tartans Got Talent!\" show. Note: No registration required. No event fee. This event is open to the entire CMU community and their guests.|football season, the Kiltie Concert Band plays a holiday concert and two spring concerts, including a performance at Carnegie Mellon's Spring Carnival. Additionally, a part of the band gets together and acts as a pep band for the basketball teams.",
+        "retrieved_relevant_part": false,
+        "model_answer": ":  The Spring Carnival Committee (SCC) sponsors the Carnival Activities Tent event, as evidenced by their invitation to the CMU community for the crafting project on April 13, 2024",
+        "actual_answer": "The Carnival Activities Tent event is sponsored by the Spring Carnival Committee and the CMU Alumni Association.",
+        "exact_match": false,
+        "f1_max_min_avg": [
+            0.39,
+            0.39,
+            0.39
+        ],
+        "recall_max_min_avg": [
+            0.53,
+            0.53,
+            0.53
+        ]
+    },
+    {
+        "question": "Where will the Material Science and Engineering (MSE) Alumni Deck Party take place on April 12, 2024?",
+        "context": "April 12, 2024: Event Name: Material Science and Engineering (MSE) Alumni Deck Party 3:30 PM-5:30 PMET Open to MSE alumni Alumni of the Materials Science and Engineering Department (and their guests) are invited to catch up with the faculty and staff on the MSE Deck for a happy hour. Note: Registration required. Walk-ins are welcome as space permits. No event fee.",
+        "retrieved_doc": "April 12, 2024: Event Name: Material Science and Engineering (MSE) Alumni Deck Party 3:30 PM-5:30 PMET Open to MSE alumni Alumni of the Materials Science and Engineering Department (and their guests) are invited to catch up with the faculty and staff on the MSE Deck for a happy hour. Note: Registration required. Walk-ins are welcome as space permits. No event fee. This event is open to the alumni and guests of the MSE community.|Spring 2024: Date: 2024-03-02 Day: Sa Event: Mini-3 Faculty Course Evaluations close|Fall 2023: Date: 2023-10-14 Day: Sa Event: Mini-1 Faculty Course Evaluations close",
+        "retrieved_relevant_part": false,
+        "model_answer": ":  The Material Science and Engineering (MSE) Alumni Deck Party will take place on the MSE Deck on April 12, 2024",
+        "actual_answer": "The Material Science and Engineering (MSE) Alumni Deck Party will take place on the MSE Deck.",
+        "exact_match": false,
+        "f1_max_min_avg": [
+            0.81,
+            0.81,
+            0.81
+        ],
+        "recall_max_min_avg": [
+            0.94,
+            0.94,
+            0.94
+        ]
+    },
+    {
+        "question": "Who donated $1 million for the creation of a technical institute in Pittsburgh in 1900?",
+        "context": "He turned his attention to writing, social activism and philanthropy, determined to establish educational opportunities for the general public where few existed.\nIn 1900, he donated $1 million for the creation of a technical institute for the city of Pittsburgh, envisioning a school where working-class men and women of Pittsburgh could learn practical skills, trades and crafts that would.",
+        "retrieved_doc": "philanthropy, determined to establish educational opportunities for the general public where few existed. In 1900, he donated $1 million for the creation of a technical institute for the city of Pittsburgh, envisioning a school where working-class|Tartan Facts: Who founded Carnegie Mellon University? Carnegie Technical Schools was founded in 1900 by Andrew Carnegie. Twelve years later it became known as the Carnegie Institute of Technology. In 1967, the school merged with Mellon Institute and|19th century. Carnegie Technical Schools At one point the richest man in the world, Carnegie believed that \"to die rich is to die disgraced.\" He turned his attention to writing, social activism and philanthropy, determined to establish educational",
+        "retrieved_relevant_part": false,
+        "model_answer": ":  Andrew Carnegie donated $1 million for the creation of a technical institute in Pittsburgh in 1900",
+        "actual_answer": "Andrew Carnegie.",
+        "exact_match": false,
+        "f1_max_min_avg": [
+            0.11,
+            0.11,
+            0.11
+        ],
+        "recall_max_min_avg": [
+            0.5,
+            0.5,
+            0.5
+        ]
+    },
+    {
+        "question": "What statement became part of the official motto of the technical institute?",
+        "context": "he donated $1 million for the creation of a technical institute for the city of Pittsburgh, envisioning a school where working-class men and women of Pittsburgh could learn practical skills, trades and crafts that would enhance their careers, lives and communities.\n\"My heart is in the work,\" he stated, which would become part of the school's official motto.\nThe Carnegie Technical Schools offered two- and three-year certificates in the arts as well as in engineering disciplines and included a college for women, Margaret Morrison Carnegie College.\n \n Carnegie Tech \u2013 Early Years \nSoon faced with the demand for baccalaureate programs, Carnegie Technical Schools began offering bachelor's degrees through its College of Engineering and College of Fine Arts",
+        "retrieved_doc": "work,\" he stated, which would become part of the school's official motto. The Carnegie Technical Schools offered two- and three-year certificates in the arts as well as in engineering disciplines and included a college for women, Margaret Morrison|a Scottish terrier as his pet. Scotty's road from popular icon to official mascot of the university began in 2006. Carnegie Mellon formed a Mascot Identity Task Force in November 2006, which consisted of students, faculty, staff and alumni. The Task|You can find our official tartan on various items in the University Store. Source: \"Tartan: Romancing the Plaid,\" by Jeffrey Banks and Doria De La Chapelle Official Mascot? More than a century after Carnegie Mellon University opened its doors, an",
+        "retrieved_relevant_part": false,
+        "model_answer": ":  The statement \"work\" became part of the official motto of the technical institute (Carnegie Mellon University) as mentioned in the context",
+        "actual_answer": "\"My heart is in the work\" became part of the school's official motto.",
+        "exact_match": false,
+        "f1_max_min_avg": [
+            0.34,
+            0.34,
+            0.34
+        ],
+        "recall_max_min_avg": [
+            0.46,
+            0.46,
+            0.46
+        ]
+    },
+    {
+        "question": "When did Carnegie Tech merge with the Mellon Institute?",
+        "context": "In 1967, Carnegie Tech merged with the Mellon Institute, a science research center founded by the Mellon family of Pittsburgh, to become known as Carnegie Mellon University. The merger built upon a long history of support from the Mellons.\nIt allowed Carnegie Mellon to establish the last of its current pillars: the\u00a0Mellon College of Science\u00a0and the College of Humanities and Social Sciences, now known as\u00a0Marianna Brown Dietrich College of Humanities and Social Sciences.\nIn 2017,",
+        "retrieved_doc": "In 1967, Carnegie Tech merged with the Mellon Institute, a science research center founded by the Mellon family of Pittsburgh, to become known as Carnegie Mellon University. The merger built upon a long history of support from the Mellons. It|public sector. 1986: School of Computer Science, pioneering computing and artificial intelligence, led by interdisciplinary efforts of Allen Newell and Herbert Simon. Carnegie Mellon University In 1967, Carnegie Tech merged with the Mellon|Tartan Facts: Who founded Carnegie Mellon University? Carnegie Technical Schools was founded in 1900 by Andrew Carnegie. Twelve years later it became known as the Carnegie Institute of Technology. In 1967, the school merged with Mellon Institute and",
+        "retrieved_relevant_part": false,
+        "model_answer": ":  The context states that Carnegie Tech merged with the Mellon Institute in 1967",
+        "actual_answer": "Carnegie Tech merged with the Mellon Institute in 1967.",
+        "exact_match": false,
+        "f1_max_min_avg": [
+            0.7,
+            0.7,
+            0.7
+        ],
+        "recall_max_min_avg": [
+            0.89,
+            0.89,
+            0.89
+        ]
+    },
+    {
+        "question": "What is the current name of the College of Humanities and Social Sciences at Carnegie Mellon University?",
+        "context": "\nIt allowed Carnegie Mellon to establish the last of its current pillars: the\u00a0Mellon College of Science\u00a0and the College of Humanities and Social Sciences, now known as\u00a0Marianna Brown Dietrich College of Humanities and Social Sciences.\nIn 2017, Carnegie Mellon celebrated the 50th anniversary of the Carnegie Tech-Mellon Institute merger, revisiting the shared vision of the founders and recognizing the impact it has had, and will continue to have, in the world of higher education, research and discovery.\n \n A Global Impact \nIn its 115 years, Carnegie Mellon has soared to national and international leadership in higher education and research.",
+        "retrieved_doc": "now known as Marianna Brown Dietrich College of Humanities and Social Sciences. In 2017, Carnegie Mellon celebrated the 50th anniversary of the Carnegie Tech-Mellon Institute merger, revisiting the shared vision of the founders and recognizing the|a long history of support from the Mellons. It allowed Carnegie Mellon to establish the last of its current pillars: the Mellon College of Science and the College of Humanities and Social Sciences, now known as Marianna Brown Dietrich College of|In 1967, Carnegie Tech merged with the Mellon Institute, a science research center founded by the Mellon family of Pittsburgh, to become known as Carnegie Mellon University. The merger built upon a long history of support from the Mellons. It",
+        "retrieved_relevant_part": false,
+        "model_answer": ":  The current name of the College of Humanities and Social Sciences at Carnegie Mellon University is Marianna Brown Dietrich College of Humanities and Social Sciences",
+        "actual_answer": "The College of Humanities and Social Sciences is now known as the Marianna Brown Dietrich College of Humanities and Social Sciences.",
+        "exact_match": false,
+        "f1_max_min_avg": [
+            0.51,
+            0.51,
+            0.51
+        ],
+        "recall_max_min_avg": [
+            0.57,
+            0.57,
+            0.57
+        ]
+    },
+    {
+        "question": "How many years has Carnegie Mellon been in existence as of now?",
+        "context": "the shared vision of the founders and recognizing the impact it has had, and will continue to have, in the world of higher education, research and discovery.\n \n A Global Impact \nIn its 115 years, Carnegie Mellon has soared to national and international leadership in higher education and research.",
+        "retrieved_doc": "shared vision of the founders and recognizing the impact it has had, and will continue to have, in the world of higher education, research and discovery. A Global Impact In its 115 years, Carnegie Mellon has soared to national and international|a long history of support from the Mellons. It allowed Carnegie Mellon to establish the last of its current pillars: the Mellon College of Science and the College of Humanities and Social Sciences, now known as Marianna Brown Dietrich College of|now known as Marianna Brown Dietrich College of Humanities and Social Sciences. In 2017, Carnegie Mellon celebrated the 50th anniversary of the Carnegie Tech-Mellon Institute merger, revisiting the shared vision of the founders and recognizing the",
+        "retrieved_relevant_part": false,
+        "model_answer": ":  Carnegie Mellon has been in existence for 115 years as of the context provided",
+        "actual_answer": "Carnegie Mellon has been in existence for 115 years.",
+        "exact_match": false,
+        "f1_max_min_avg": [
+            0.67,
+            0.67,
+            0.67
+        ],
+        "recall_max_min_avg": [
+            0.89,
+            0.89,
+            0.89
+        ]
+    },
+    {
+        "question": "Question: What is the focus of the Ph.D. program in Language and Information Technology (LTI)?",
+        "context": "nPh.D. in Language and Information Technology: The Ph.D. in LTI focuses on developing the next generation of scientific and entrepreneurial leaders. The first two years of the Ph.D. program are similar to our MLT program. After the second year, you will spend most of your time working closely with your faculty advisor on research that advances the state-of-the-art in computer science.\n\nPh.D. students are expected to publish papers about original research in the most competitive scientific journals and international conference proceedings, and to present their research at conferences and workshops. Most of our Ph.D. graduates become professors and research scientists, while a few have started their own companies.\n \nPh.D. in Language and Information Technology Requirements: In general, students pursuing a Ph.D. in Language and Information Technologies must\n\n    Pass at least 96 units of graduate-level courses.\n    Satisfy proficiencies in writing, presentation, programming and teaching; and\n    Propose, write and defend a Ph.D. dissertation (thesis).\n\nStudents must also attend the LTI Colloquium each semester and satisfy our Research Speaking Requirement.\n\nFor a detailed breakdown of the above requirements, download and read the PhD Handbook.\n",
+        "retrieved_doc": "Undergraduate LT Concentration: Human language technologies have become an increasingly central component of computer science. Information retrieval, machine translation and speech technology are used daily by the general public, while text mining, natural language processing and language-based tutoring are common within more specialized professional or educational environments. The LTI prepares students for this world by offering a minor that gives you the opportunity to not only learn about language technologies, but to also apply that knowledge through a directed project.|Ph.D. in Language and Information Technology: The Ph.D. in LTI focuses on developing the next generation of scientific and entrepreneurial leaders. The first two years of the Ph.D. program are similar to our MLT program. After the second year, you will spend most of your time working closely with your faculty advisor on research that advances the state-of-the-art in computer science. Ph.D. students are expected to publish papers about original research in the most competitive scientific journals and international conference proceedings, and to present their research at conferences and workshops. Most of our Ph.D. graduates become professors and research scientists, while a few have started their own companies.|Daniel Fried Assistant Professor Email: dfried@andrew.cmu.edu Research Areas: Natural Language Processing: Language and Code, Conversational AI, Intelligent Agents, and Dialogue, Discourse and Pragmatics, Multimodal AI",
+        "retrieved_relevant_part": false,
+        "model_answer": ":  The Ph.D. program in Language and Information Technology (LTI) focuses on developing the next generation of scientific and entrepreneurial leaders. Students spend the first two years of the program learning about language technologies and applying that knowledge through research, with the expectation of publishing original research in competitive scientific journals and presenting it at conferences and workshops. Graduates typically become professors and research scientists, although some have started their own companies. The research areas for the assistant professor Daniel Fried in the LTI program include Natural Language Processing, specifically in the areas of Language and Code, Conversational AI, Intelligent Agents, Dialogue, Discourse and Pragmatics, and Multimodal AI",
+        "actual_answer": "The Ph.D. program in LTI focuses on developing the next generation of scientific and entrepreneurial leaders in the field.",
+        "exact_match": false,
+        "f1_max_min_avg": [
+            0.24,
+            0.24,
+            0.24
+        ],
+        "recall_max_min_avg": [
+            0.79,
+            0.79,
+            0.79
+        ]
+    },
+    {
+        "question": "How does the Ph.D. program in LTI differ from the MLT program during the first two years?",
+        "context": "nPh.D. in Language and Information Technology: The Ph.D. in LTI focuses on developing the next generation of scientific and entrepreneurial leaders. The first two years of the Ph.D. program are similar to our MLT program. After the second year, you will spend most of your time working closely with your faculty advisor on research that advances the state-of-the-art in computer science.\n\nPh.D. students are expected to publish papers about original research in the most competitive scientific journals and international conference proceedings, and to present their research at conferences and workshops. Most of our Ph.D. graduates become professors and research scientists, while a few have started their own companies.\n \nPh.D. in Language and Information Technology Requirements: In general, students pursuing a Ph.D. in Language and Information Technologies must\n\n    Pass at least 96 units of graduate-level courses.\n    Satisfy proficiencies in writing, presentation, programming and teaching; and\n    Propose, write and defend a Ph.D. dissertation (thesis).\n\nStudents must also attend the LTI Colloquium each semester and satisfy our Research Speaking Requirement.\n\nFor a detailed breakdown of the above requirements, download and read the PhD Handbook.\n",
+        "retrieved_doc": "Master of Language Technologies: The MLT program prepares students for a research career in academia or industry. In this program, you\u2019ll be immersed in research for two full years. During the academic year, your time will be evenly split between taking courses and doing research with your faculty advisor. Your summer will be devoted entirely to research. Many MLT grads continue on to Ph.D. programs at CMU and other top institutions, while others pursue careers at companies emphasizing research and rapid innovation.|Ph.D. in Language and Information Technology: The Ph.D. in LTI focuses on developing the next generation of scientific and entrepreneurial leaders. The first two years of the Ph.D. program are similar to our MLT program. After the second year, you will spend most of your time working closely with your faculty advisor on research that advances the state-of-the-art in computer science. Ph.D. students are expected to publish papers about original research in the most competitive scientific journals and international conference proceedings, and to present their research at conferences and workshops. Most of our Ph.D. graduates become professors and research scientists, while a few have started their own companies.|Master of Language Technologies Requirements: The MLT program lasts two years (24 months), and students must complete two summers of research. Students should usually expect to graduate in August of their second year. MLT students take 120 or more course units (about 10 courses), at least 72 of which are LTI courses, and 24 of which are School of Computer Science (SCS) courses. Most of these are 12-unit courses, although lab courses are typically 6 units. Our courses generally assume knowledge of programming and data structures. The remaining units may also be taken from the LTI, or with approval from the faculty advisor, any other senior- or graduate-level course offered at CMU or Pitt. Directed research is another integral part of the MLT program; MLT students carry out directed research during their studies, with guidance from their faculty advisors. Students may also choose to complete an optional MLT thesis. Guidelines can be found in the PDF iconMLT Handbook.",
+        "retrieved_relevant_part": false,
+        "model_answer": ":  During the first two years, both the MLT and Ph.D. programs in LTI have similarities. Students' time is split between taking courses and conducting research with their faculty advisors. However, after the second year, the Ph.D. program focuses more on research, with students spending most of their time working closely with their advisors to advance the field of computer science. Ph.D. students are expected to publish original research in scientific journals and present it at conferences and workshops. While some MLT graduates continue on to Ph.D. programs, others pursue careers in industry",
+        "actual_answer": "The first two years of the Ph.D. program are similar to the MLT program, after which students primarily engage in research under the guidance of faculty advisors.",
+        "exact_match": false,
+        "f1_max_min_avg": [
+            0.25,
+            0.25,
+            0.25
+        ],
+        "recall_max_min_avg": [
+            0.56,
+            0.56,
+            0.56
+        ]
+    },
+    {
+        "question": "What are the prerequisites for students interested in the language technologies minor?",
+        "context": "Undergraduate LT Concentration Requirements: \n\n\nStudents interested in the language technologies minor must complete our prerequisite courses with an average grade of B (3.0) or better before applying to the program. (Students who do not meet this average must submit a letter of explanation along with their application.) Prerequisites include:\n\n    Principles of Imperative Computation (15-122)\n    Principles of Functional Programming (15-150)\n\nWe also strongly encourage candidates to take\n\n    Differential and Integral Calculus (21-120) and Integration and Approximation (21-122)\n    Matrices and Linear Transformations (21-241) or Matrix Theory (21-242)\n    Probability and Computing (15-259) or Probability (21-325) or Probability Theory for Computer Scientists (36-218) or Introduction to Probability Theory (36-225)",
+        "retrieved_doc": "Ph.D. in Language and Information Technology Requirements: In general, students pursuing a Ph.D. in Language and Information Technologies must Pass at least 96 units of graduate-level courses. Satisfy proficiencies in writing, presentation, programming and teaching; and Propose, write and defend a Ph.D. dissertation (thesis). Students must also attend the LTI Colloquium each semester and satisfy our Research Speaking Requirement. For a detailed breakdown of the above requirements, download and read the PhD Handbook.|Undergraduate LT Concentration Admission: Students interested in earning a minor in language technologies must apply for admission no later than September 30 of their senior year. An admission decision will usually be made within one month. Students may petition the LTI undergraduate program director to be admitted to the minor earlier or later in their undergraduate careers. To apply, contact the program's director, Carolyn Ros\u00e9.|Undergraduate LT Concentration: Human language technologies have become an increasingly central component of computer science. Information retrieval, machine translation and speech technology are used daily by the general public, while text mining, natural language processing and language-based tutoring are common within more specialized professional or educational environments. The LTI prepares students for this world by offering a minor that gives you the opportunity to not only learn about language technologies, but to also apply that knowledge through a directed project.",
+        "retrieved_relevant_part": false,
+        "model_answer": ":  The prerequisite for students interested in the language technologies minor is to apply for admission no later than September 30 of their senior year",
+        "actual_answer": "The prerequisites for the language technologies minor include completing Principles of Imperative Computation (15-122) and Principles of Functional Programming (15-150) with an average grade of B (3.0) or better.",
+        "exact_match": false,
+        "f1_max_min_avg": [
+            0.26,
+            0.26,
+            0.26
+        ],
+        "recall_max_min_avg": [
+            0.24,
+            0.24,
+            0.24
+        ]
+    },
+    {
+        "question": "When does the application period for Fall 2024 admission to the Master of Science in Intelligent Information Systems (MIIS) program at Carnegie Mellon University open?",
+        "context": " \nMaster of Science in Intelligent Information Systems (MIIS) Admission: \n\nCarnegie Mellon's School of Computer Science has a centralized online application process. Applications and all supporting documentation for fall admission to any of the LTI's graduate programs must be received by the application deadline. Incomplete applications will not be considered. The application period for Fall 2024 will open on September 6, 2023.\n\n*Please note, we no longer require mailed, hard versions of transcripts or test scores at the time of application. Do not mail anything to the admissions office. If you are accepted to a program, you will be given instruction to then mail your materials.\n\nFinal Application Deadline\n\nDecember 13, 2023 at 3:00 p.m. EST.\n\nCost\n\n    $100 per program, $80 for applications submitted before November 29, 2023 at 3:00 p.m. EST (early deadline).\n\nFee Waivers\n\nFee waivers may be available in cases of financial hardship, or for participants in select \"pipeline\" programs. For more information, please refer to the School of Computer Science Fee Waiver page.\n\nRequirements\n\nThe School of Computer Science requires the following for all Master's applications.\n\n    GRE scores: MIIS applicants must submit their GRE scores. The scores must be less than five years old. The GRE Subject Test is not required, but is recommended. Our Institution Code is 2074; Department Code is 0402.\n\n    Proof of English Language Proficiency:\n\nIf you will be studying on an F-1 or J-1 visa, and English is not a native language for you (native language\u2026meaning spoken at home and from birth), we are required to formally evaluate your English proficiency. We require applicants who will be studying on an F-1 or J-1 visa, and for whom English is not a native language, to demonstrate English proficiency via one of these standardized tests: TOEFL (preferred), IELTS, or Duolingo.  We discourage the use of the \"TOEFL ITP Plus for China,\" since speaking is not scored.\n\nWe do not issue waivers for non-native speakers of English.  In particular, we do not issue waivers based on previous study at a U.S. high school, college, or university.  We also do not issue waivers based on previous study at an English-language high school, college, or university outside of the United States.  No amount of educational experience in English, regardless of which country it occurred in, will result in a test waiver. Submit valid, recent scores: If as described above you are required to submit proof of English proficiency, your TOEFL, IELTS or Duolingo test scores will be considered valid as follows: If you have not received a bachelor\u2019s degree in the U.S., you will need to submit an English proficiency score no older than two years. (scores from exams taken before Sept. 1, 2021, will not be accepted.)\n\nIf you are currently working on or have received a bachelor's and/or a master's degree in the U.S., you may submit an expired test score up to five years old. (scores from exams taken before Sept. 1, 2018, will not be accepted.)Additional details about English proficiency requirements are provided on the FAQ page.\n\n    Official transcripts from each university you have attended, regardless of whether you received your degree there.\n    Current resume.\n    Statement of Purpose.\n    Three letters of recommendation.\n\nFor more details on these requirements, please see the SCS Master's Admissions page.\n\nIn addition to the SCS guidelines, the MIIS requires:\n\n    A short (1-3 minute) video of yourself. There will be a prompt question that you will respond to. You will have three attempts.\n\nNo incomplete applications will be eligible for consideration.\n\nFor specific application/admissions questions, please contact Brianna Eriksen.\n\n",
+        "retrieved_doc": "Language Technologies Institute / School of Computer Science Graduate Student Handbook Academic Year 2023-2024 Master of Computational Data Science Program Last revision date: July 20, 2023 The information contained in this graduate handbook template focuses on the resources and locations available at the Carnegie Mellon Pittsburgh Campus.|1 Master of Science in Artificial Intelligence and Innovation (MSAII) Student Handbook 2022-2023 Revised: October 2, 2022|Summer 1/Summer All offering: Course: 15639 Title: Independent Study in Computer Science Pedagogy Units: 3-18 Lec/Sec: Section A Days: To be announced Begin: 12:30PM End: 01:50PM Bldg/Room: DNM DNM Location: Pittsburgh, Pennsylvania Instructor(s): O'Hallaron, Eckhardt ",
+        "retrieved_relevant_part": false,
+        "model_answer": ":  I apologize for any confusion, but the context provided does not contain information about the application period for the Master of Science in Intelligent Information Systems (MIIS) program at Carnegie Mellon University. The context only mentions the Master of Computational Data Science program and the Master of Science in Artificial Intelligence and Innovation program, with their respective course offerings and schedules",
+        "actual_answer": "The application period for Fall 2024 admission to the MIIS program at Carnegie Mellon University opens on September 6, 2023.",
+        "exact_match": false,
+        "f1_max_min_avg": [
+            0.22,
+            0.22,
+            0.22
+        ],
+        "recall_max_min_avg": [
+            0.45,
+            0.45,
+            0.45
+        ]
+    },
+    {
+        "question": "What standardized tests are required for MIIS applicants, and what are the English language proficiency requirements?",
+        "context": " \nMaster of Science in Intelligent Information Systems (MIIS) Admission: \n\nCarnegie Mellon's School of Computer Science has a centralized online application process. Applications and all supporting documentation for fall admission to any of the LTI's graduate programs must be received by the application deadline. Incomplete applications will not be considered. The application period for Fall 2024 will open on September 6, 2023.\n\n*Please note, we no longer require mailed, hard versions of transcripts or test scores at the time of application. Do not mail anything to the admissions office. If you are accepted to a program, you will be given instruction to then mail your materials.\n\nFinal Application Deadline\n\nDecember 13, 2023 at 3:00 p.m. EST.\n\nCost\n\n    $100 per program, $80 for applications submitted before November 29, 2023 at 3:00 p.m. EST (early deadline).\n\nFee Waivers\n\nFee waivers may be available in cases of financial hardship, or for participants in select \"pipeline\" programs. For more information, please refer to the School of Computer Science Fee Waiver page.\n\nRequirements\n\nThe School of Computer Science requires the following for all Master's applications.\n\n    GRE scores: MIIS applicants must submit their GRE scores. The scores must be less than five years old. The GRE Subject Test is not required, but is recommended. Our Institution Code is 2074; Department Code is 0402.\n\n    Proof of English Language Proficiency:\n\nIf you will be studying on an F-1 or J-1 visa, and English is not a native language for you (native language\u2026meaning spoken at home and from birth), we are required to formally evaluate your English proficiency. We require applicants who will be studying on an F-1 or J-1 visa, and for whom English is not a native language, to demonstrate English proficiency via one of these standardized tests: TOEFL (preferred), IELTS, or Duolingo.  We discourage the use of the \"TOEFL ITP Plus for China,\" since speaking is not scored.\n\nWe do not issue waivers for non-native speakers of English.  In particular, we do not issue waivers based on previous study at a U.S. high school, college, or university.  We also do not issue waivers based on previous study at an English-language high school, college, or university outside of the United States.  No amount of educational experience in English, regardless of which country it occurred in, will result in a test waiver. Submit valid, recent scores: If as described above you are required to submit proof of English proficiency, your TOEFL, IELTS or Duolingo test scores will be considered valid as follows: If you have not received a bachelor\u2019s degree in the U.S., you will need to submit an English proficiency score no older than two years. (scores from exams taken before Sept. 1, 2021, will not be accepted.)\n\nIf you are currently working on or have received a bachelor's and/or a master's degree in the U.S., you may submit an expired test score up to five years old. (scores from exams taken before Sept. 1, 2018, will not be accepted.)Additional details about English proficiency requirements are provided on the FAQ page.\n\n    Official transcripts from each university you have attended, regardless of whether you received your degree there.\n    Current resume.\n    Statement of Purpose.\n    Three letters of recommendation.\n\nFor more details on these requirements, please see the SCS Master's Admissions page.\n\nIn addition to the SCS guidelines, the MIIS requires:\n\n    A short (1-3 minute) video of yourself. There will be a prompt question that you will respond to. You will have three attempts.\n\nNo incomplete applications will be eligible for consideration.\n\nFor specific application/admissions questions, please contact Brianna Eriksen.\n\n",
+        "retrieved_doc": "Undergraduate LT Concentration: Human language technologies have become an increasingly central component of computer science. Information retrieval, machine translation and speech technology are used daily by the general public, while text mining, natural language processing and language-based tutoring are common within more specialized professional or educational environments. The LTI prepares students for this world by offering a minor that gives you the opportunity to not only learn about language technologies, but to also apply that knowledge through a directed project.|Ph.D. in Language and Information Technology Curriculum: In order to obtain your Ph.D. in Language and Information Technologies, you need to pass 96 units (generally, eight courses) of graduate courses that fulfill these requirements: At least 72 units of LTI courses: Must include one class in each LTI focus area. At least 24 units of SCS courses. At least two lab courses in two different research areas.|Undergraduate LT Concentration Curriculum: The Language Technologies Concentration requires that SCS students complete one core course and their choice of three elective courses of at least 9 units each. The electives can be chosen from a specific set of stand-alone courses. In addition to the four courses, students are required to do an undergraduate research project for at least 9 units to complete their concentration.",
+        "retrieved_relevant_part": false,
+        "model_answer": ":  I apologize for the confusion, but the context provided does not contain information regarding standardized tests or English language proficiency requirements for MIIS (Monterey Institute of International Studies) applicants. The context focuses on the curricula for undergraduate and Ph.D. programs in Language and Information Technologies",
+        "actual_answer": "MIIS applicants must submit GRE scores, and if English is not their native language and they will be studying on an F-1 or J-1 visa, they must demonstrate English proficiency through tests such as TOEFL, IELTS, or Duolingo. Valid test scores should be recent, typically no older than two years for applicants without a U.S. bachelor's degree and up to five years old for applicants with a U.S. degree.",
+        "exact_match": false,
+        "f1_max_min_avg": [
+            0.17,
+            0.17,
+            0.17
+        ],
+        "recall_max_min_avg": [
+            0.14,
+            0.14,
+            0.14
+        ]
+    },
+    {
+        "question": "What is the structure of the dual-degree Ph.D. program in Language and Information Technologies (Portugal Partnership)?",
+        "context": "\nDual-Degree Ph.D. in Language and Information Technologies (Portugal Partnership) Requirments: Students participating in the dual-degree program will spend their first year in Portugal, followed by two years in Pittsburgh to complete their coursework. They will complete a maximum of eight courses with a proper balance of focus areas (linguistics, computer science, statistical/learning and task orientation). After that, they will return to Portugal for their last two years, pursuing research and completing their dissertation. For more, see the Carnegie Mellon | Portugal page.\n",
+        "retrieved_doc": "Dual-Degree Ph.D. in Language and Information Technologies (Portugal Partnership) Requirments: Students participating in the dual-degree program will spend their first year in Portugal, followed by two years in Pittsburgh to complete their coursework. They will complete a maximum of eight courses with a proper balance of focus areas (linguistics, computer science, statistical/learning and task orientation). After that, they will return to Portugal for their last two years, pursuing research and completing their dissertation. For more, see the Carnegie Mellon | Portugal page.|Dual-Degree Ph.D. in Language and Information Technologies (Portugal Partnership): The LTI offers a dual-degree Ph.D. in Language and Information Technologies in cooperation with: Universidade de Aveiro (Ph.D. in Computer Engineering), Universidade do Minho (Ph.D. in Informatics) and the Universidade do Porto (FCUP, Ph.D. in Computer Science and FEUP, Ph.D. in Computer Science) as part of MAPi; Universidade de Lisboa, Faculdade de Ci\u00eancias \u2013 FCUL (Ph.D. in Informatics) Universidade de Lisboa, Instituto Superior T\u00e9cnico \u2013 IST (Ph.D. in Computer Science and Engineering, Ph.D. in Electrical and Computer Engineering, Ph.D. in Information Security) Universidade Nova de Lisboa, Faculdade de Ci\u00eancias e Tecnologia \u2013 FCTUNL (Ph.D. in Computer Science) Universidade de Coimbra, Faculdade de Ci\u00eancias e Tecnologia \u2013 FCTUC (Ph.D. in Information Science and Technology) Students jointly enrolled in the LTI Ph.D program spend a year in Portugal, then two years at Carnegie Mellon taking classes in linguistics, computer science, statistical learning and task orientation. After completing the majority of their academic requirements, students return to Portugal for the next two years to conduct extensive research, ultimately leading to a dissertation topic that will be publicly defended. One adviser from each institution co-supervises their student\u2019s progress and helps to define their final thesis topic.|Undergraduate LT Concentration: Human language technologies have become an increasingly central component of computer science. Information retrieval, machine translation and speech technology are used daily by the general public, while text mining, natural language processing and language-based tutoring are common within more specialized professional or educational environments. The LTI prepares students for this world by offering a minor that gives you the opportunity to not only learn about language technologies, but to also apply that knowledge through a directed project.",
+        "retrieved_relevant_part": true,
+        "model_answer": ":  The dual-degree Ph.D. program in Language and Information Technologies (Portugal Partnership) consists of spending the first year in Portugal, followed by two years at Carnegie Mellon University to complete coursework in linguistics, computer science, statistical learning, and task orientation. After finishing most academic requirements, students return to Portugal for the final two years to conduct research and write a dissertation. Students are jointly enrolled in universities such as Universidade de Aveiro, Universidade do Minho, Universidade do Porto, Universidade de Lisboa, Universidade Nova de Lisboa, Universidade de Coimbra, and have co-supervisors from each institution",
+        "actual_answer": "Students in the dual-degree Ph.D. program spend their first year in Portugal, followed by two years in Pittsburgh to complete coursework. They then return to Portugal for their last two years to conduct research and complete their dissertation.",
+        "exact_match": false,
+        "f1_max_min_avg": [
+            0.33,
+            0.33,
+            0.33
+        ],
+        "recall_max_min_avg": [
+            0.58,
+            0.58,
+            0.58
+        ]
+    },
+    {
+        "question": "Are fee waivers available for the dual-degree Ph.D. program application, and under what circumstances?",
+        "context": "\nDual-Degree Ph.D. in Language and Information Technologies (Portugal Partnership) Admission: \n\nStudents applying to the dual degree program must apply through Carnegie Mellon's online application. In addition to the requirements listed below, prospective students must also contact Stacey Young when applying.\n\nCarnegie Mellon's School of Computer Science has a centralized online application process. Applications and all supporting documentation for fall admission to any of the LTI's graduate programs must be received by the application deadline. Incomplete applications will not be considered. The application period for Fall 2024 will open on September 6, 2023.\n\nFinal Application Deadline\n\nDecember 13, 2023 3:00 p.m. EST.\n\nCost\n\n    $100 per program, $80 for applications submitted by November 29, 2023 at 3:00 p.m. EST (early deadline).\n\nFee Waivers\n\nFee waivers may be available in cases of financial hardship, or for participants in select programs. For more information, please refer to the School of Computer Science Fee Waiver page.\n\nRequirements\n\nThe School of Computer Science requires the following for all Ph.D. applications.\n\n    GRE scores: These must be less than five years old. The GRE Subject Test is not required, but is recommended. Our Institution Code is 2074; Department Code is 0402.\n    English Proficiency Requirement: If you will be studying on an F-1 or J-1 visa, and English is not a native language for you (native language\u2026meaning spoken at home and from birth), an official copy of an English proficiency score report is required. The English proficiency requirement cannot be waived for any reason. Find more information under Test Scores",
+        "retrieved_doc": "Summer 1/Summer All offering: Course: 48704 Title: Internship (MS & PhD) Units: 0-18 Lec/Sec: Section R Days: To be announced Begin: nan End: nan Bldg/Room: DNM DNM Location: Pittsburgh, Pennsylvania Instructor(s): Cochran, Lee, Bard, Loftness, Krishnamurti, Cupkova, Cardoso Llach |Summer 1/Summer All offering: Course: 48490 Title: Undergraduate Internship Units: 3.0 Lec/Sec: Section A Days: To be announced Begin: nan End: nan Bldg/Room: DNM DNM Location: Pittsburgh, Pennsylvania Instructor(s): Arscott |Undergraduate LT Concentration Admission: Students interested in earning a minor in language technologies must apply for admission no later than September 30 of their senior year. An admission decision will usually be made within one month. Students may petition the LTI undergraduate program director to be admitted to the minor earlier or later in their undergraduate careers. To apply, contact the program's director, Carolyn Ros\u00e9.",
+        "retrieved_relevant_part": false,
+        "model_answer": ":  The context does not provide any information about fee waivers for the dual-degree Ph.D. program application",
+        "actual_answer": "Fee waivers for the dual-degree Ph.D. program application may be available in cases of financial hardship or for participants in select programs.",
+        "exact_match": false,
+        "f1_max_min_avg": [
+            0.36,
+            0.36,
+            0.36
+        ],
+        "recall_max_min_avg": [
+            0.32,
+            0.32,
+            0.32
+        ]
+    },
+    {
+        "question": "Who were the individuals involved in creating the first artificial intelligence program, Logic Theorist?",
+        "context": "1. Artificial intelligence, 1955-56\u00a0Can you write a working computer program without a computer? Herb Simon (H\u201990), at left, Allen Newell (IA\u201957), at right, and Cliff Shaw did. The team created the first artificial intelligence program, Logic Theorist, which could solve logic puzzles in the same way that a human might solve them. Newell demonstrated that it worked by writing the instructions on 3-by-5 index cards that were manipulated on the kitchen table by Newell, his wife, and a group of Carnegie Tech grad students.",
+        "retrieved_doc": " \nLaunching a Robotics Institute\n\nIn 1979, an executive at Pittsburgh\u2019s Westinghouse Electric Corp., Tom Murrin, collaborated with Jordan and Reddy to create the Robotics Institute, with Reddy as its first director. By 1982, the Computer Science Department included more than 30 faculty members and 100 graduate students.\n|4. Speech recognition, 1976If you have an iPhone, ask Siri to look up \u201cHearsay I,\u201d the first computer system capable of continuous speech recognition. It was developed by future Turing Award winner and future SCS dean Raj Reddy along with his students. Their work on subsequent systems established many of the principles that still underlie speech recognition software.|12. Java, 1991 As a CMU grad student, James Gosling (CS\u201983) worked on the Andrew project, which stressed interoperability between computers, whether they were Macs, IBMs or Unix machines. Those lessons served Gosling well when he developed Java, the first programming language able to run on almost any platform.",
+        "retrieved_relevant_part": false,
+        "model_answer": ":  The context provided does not mention any information about who created the first artificial intelligence program, Logic Theorist. Therefore, the output should be an empty response",
+        "actual_answer": "Herb Simon (H'90), Allen Newell (IA'57), and Cliff Shaw.",
+        "exact_match": false,
+        "f1_max_min_avg": [
+            0,
+            0,
+            0.0
+        ],
+        "recall_max_min_avg": [
+            0,
+            0,
+            0.0
+        ]
+    },
+    {
+        "question": "Who developed the first computer system capable of continuous speech recognition, known as ,Hearsay I?",
+        "context": "4. Speech recognition, 1976If you have an iPhone, ask Siri to look up \u201cHearsay I,\u201d the first computer system capable of continuous speech recognition. It was developed by future Turing Award winner and future SCS dean Raj Reddy along with his students. Their work on subsequent systems established many of the principles that still underlie speech recognition software.",
+        "retrieved_doc": "4. Speech recognition, 1976If you have an iPhone, ask Siri to look up \u201cHearsay I,\u201d the first computer system capable of continuous speech recognition. It was developed by future Turing Award winner and future SCS dean Raj Reddy along with his students. Their work on subsequent systems established many of the principles that still underlie speech recognition software.|12. Java, 1991 As a CMU grad student, James Gosling (CS\u201983) worked on the Andrew project, which stressed interoperability between computers, whether they were Macs, IBMs or Unix machines. Those lessons served Gosling well when he developed Java, the first programming language able to run on almost any platform.|23. Question-answering computers, 2011 Searching the Web for information is rarely as simple as asking a question in plain English. So-called \u201cquestion-answering\u201d machines moved from laboratories to TV screens when an IBM computer called \u201cWatson\u201d defeated two human champions on the game show \u201cJeopardy!\u201d At the heart of Watson was computer architecture developed by CMU\u2019s Eric Nyberg and his students.",
+        "retrieved_relevant_part": true,
+        "model_answer": ":  Raj Reddy and his students at Carnegie Mellon University developed the first computer system capable of continuous speech recognition, known as Hearsay I",
+        "actual_answer": "Raj Reddy and his students",
+        "exact_match": false,
+        "f1_max_min_avg": [
+            0.34,
+            0.34,
+            0.34
+        ],
+        "recall_max_min_avg": [
+            1.0,
+            1.0,
+            1.0
+        ]
+    },
+    {
+        "question": "Question: What institute is involved in pioneering systems for machine translation?",
+        "context": "9. Machine translation, 1984Every \u201cStar Trek\u201d fan knows about the universal translator. Scientists in the Language Technologies Institute are moving those gadgets from science fiction to real life. Their pioneering systems include handheld, portable speech-to-speech translators, just like those depicted on the USS Enterprise",
+        "retrieved_doc": "9. Machine translation, 1984Every \u201cStar Trek\u201d fan knows about the universal translator. Scientists in the Language Technologies Institute are moving those gadgets from science fiction to real life. Their pioneering systems include handheld, portable speech-to-speech translators, just like those depicted on the USS Enterprise.|21. RNA sequencing via videogames, 2010 Thanks to crowdsourcing, science isn\u2019t just for scientists any more. People without formal training in molecular biology are producing new insights into genetic encoding through a videogame called EteRNA, developed by researchers at CMU and Stanford, that allows players to fold and shift RNA molecules to solve on-screen puzzles.|Undergraduate LT Concentration: Human language technologies have become an increasingly central component of computer science. Information retrieval, machine translation and speech technology are used daily by the general public, while text mining, natural language processing and language-based tutoring are common within more specialized professional or educational environments. The LTI prepares students for this world by offering a minor that gives you the opportunity to not only learn about language technologies, but to also apply that knowledge through a directed project.",
+        "retrieved_relevant_part": false,
+        "model_answer": ":  The Language Technologies Institute (LTI) is involved in pioneering systems for machine translation",
+        "actual_answer": "Language Technologies Institute",
+        "exact_match": false,
+        "f1_max_min_avg": [
+            0.35,
+            0.35,
+            0.35
+        ],
+        "recall_max_min_avg": [
+            1.0,
+            1.0,
+            1.0
+        ]
+    },
+    {
+        "question": "Question: What technological innovation related to video cameras was showcased during Super Bowl XXXV?",
+        "context": "Robotic video cameras, 2001When Baltimore Ravens quarterback Trent Dilfer dropped back to pass, TV viewers of Super Bowl XXXV saw something they\u2019d never seen before --- the motion froze and the view suddenly rotated to show Dilfer\u2019s opposite side. CBS called it Eyevision. The synchronized system of robotic cameras and advanced image processing was the brainchild of CMU\u2019s Takeo Kanade, one of many advances he pioneered in computer vision",
+        "retrieved_doc": "17. Robotic video cameras, 2001When Baltimore Ravens quarterback Trent Dilfer dropped back to pass, TV viewers of Super Bowl XXXV saw something they\u2019d never seen before --- the motion froze and the view suddenly rotated to show Dilfer\u2019s opposite side. CBS called it Eyevision. The synchronized system of robotic cameras and advanced image processing was the brainchild of CMU\u2019s Takeo Kanade, one of many advances he pioneered in computer vision.|21. RNA sequencing via videogames, 2010 Thanks to crowdsourcing, science isn\u2019t just for scientists any more. People without formal training in molecular biology are producing new insights into genetic encoding through a videogame called EteRNA, developed by researchers at CMU and Stanford, that allows players to fold and shift RNA molecules to solve on-screen puzzles.|25. Smart, adaptable traffic signals, 2012 Smart traffic lights developed at CMU\u2019s Robotics Institute are saving time and energy, and cutting down on the amount of air pollution created by idling cars. First rolled out in Pittsburgh\u2019s East Liberty neighborhood, the new signals are being studied around the country.",
+        "retrieved_relevant_part": false,
+        "model_answer": ":  The technological innovation related to video cameras that was showcased during Super Bowl XXXV was Eyevision, which was a synchronized system of robotic cameras and advanced image processing developed by Takeo Kanade from Carnegie Mellon University (CMU)",
+        "actual_answer": "a synchronized system of robotic cameras and advanced image processing",
+        "exact_match": false,
+        "f1_max_min_avg": [
+            0.42,
+            0.42,
+            0.42
+        ],
+        "recall_max_min_avg": [
+            1.0,
+            1.0,
+            1.0
+        ]
+    },
+    {
+        "question": "What was developed at CMU's Robotics Institute in 2012 to improve traffic efficiency and reduce pollution?",
+        "context": "Smart, adaptable traffic signals, 2012 Smart traffic lights developed at CMU\u2019s Robotics Institute are saving time and energy, and cutting down on the amount of air pollution created by idling cars. First rolled out in Pittsburgh\u2019s East Liberty neighborhood, the new signals are being studied around the country.",
+        "retrieved_doc": "25. Smart, adaptable traffic signals, 2012 Smart traffic lights developed at CMU\u2019s Robotics Institute are saving time and energy, and cutting down on the amount of air pollution created by idling cars. First rolled out in Pittsburgh\u2019s East Liberty neighborhood, the new signals are being studied around the country.|Sweepstakes. \"Our team's philosophy is to teach everyone how to do everything,\" Girdhar said. \"But I came to CMU wanting to drive. I wanted to drive so badly.\" Amy Chen demonstrates how a driver is positioned inside of Boson, a Fringe buggy built in|21. RNA sequencing via videogames, 2010 Thanks to crowdsourcing, science isn\u2019t just for scientists any more. People without formal training in molecular biology are producing new insights into genetic encoding through a videogame called EteRNA, developed by researchers at CMU and Stanford, that allows players to fold and shift RNA molecules to solve on-screen puzzles.",
+        "retrieved_relevant_part": false,
+        "model_answer": ":  The context mentions that smart, adaptable traffic signals were developed at CMU's Robotics Institute in 2012. These signals save time and energy, and help cut down on air pollution caused by idling cars",
+        "actual_answer": "Smart traffic lights",
+        "exact_match": false,
+        "f1_max_min_avg": [
+            0.05,
+            0.05,
+            0.05
+        ],
+        "recall_max_min_avg": [
+            0.33,
+            0.33,
+            0.33
+        ]
+    },
+    {
+        "question": "Who are credited with defining the term computer science",
+        "context": "\nFirst freshman-level computer science course\n\nIn 1956 and 1957, Simon, Allen Newell (IA'57) and Cliff Shaw of RAND designed the Logic Theorist, a computer program that could develop proofs for theorems in much the same way a human would work. They also developed linked-list data structures, the foundation of computer programming. Perlis, Simon and Newell are credited with defining the term \u201ccomputer science\u201d as \u201cthe theory and design of computers,\u201d as well as (in Newell\u2019s words) \u201cthe study of the phenomena arising from them.\u201d In 1958, Perlis began teaching the first freshman-level computer programming course in the United States at Carnegie Tech.\n",
+        "retrieved_doc": "\nFirst freshman-level computer science course\n\nIn 1956 and 1957, Simon, Allen Newell (IA'57) and Cliff Shaw of RAND designed the Logic Theorist, a computer program that could develop proofs for theorems in much the same way a human would work. They also developed linked-list data structures, the foundation of computer programming. Perlis, Simon and Newell are credited with defining the term \u201ccomputer science\u201d as \u201cthe theory and design of computers,\u201d as well as (in Newell\u2019s words) \u201cthe study of the phenomena arising from them.\u201d In 1958, Perlis began teaching the first freshman-level computer programming course in the United States at Carnegie Tech.\n|15. Model checking, 1994CMU professor Edmund Clarke had long stressed the importance of verifying computer hardware and software through a formal problem-solving technique called \u201cmodel checking.\u201d In 1994, his arguments gained new weight with the discovery that Intel\u2019s amazing new Pentium chip made errors on certain math problems. Clarke would go on to receive the Turing Award for his role in the development of model checking.|12. Java, 1991 As a CMU grad student, James Gosling (CS\u201983) worked on the Andrew project, which stressed interoperability between computers, whether they were Macs, IBMs or Unix machines. Those lessons served Gosling well when he developed Java, the first programming language able to run on almost any platform.",
+        "retrieved_relevant_part": true,
+        "model_answer": ":  Perlis, Simon, and Newell are credited with defining the term \"computer science\" as \"the theory and design of computers.\"",
+        "actual_answer": "Perlis, Simon and Newell",
+        "exact_match": false,
+        "f1_max_min_avg": [
+            0.25,
+            0.25,
+            0.25
+        ],
+        "recall_max_min_avg": [
+            0.75,
+            0.75,
+            0.75
+        ]
+    },
+    {
+        "question": "How many faculty members did the School of Computer Science have in 2013?",
+        "context": "\nCommitted to extending our founders\u2019 vision\n\nThe School of Computer Science at Carnegie Mellon University enters its second quarter century as a world-leading educational and research institution, embracing all facets of computing. Its graduate programs are consisted ranked with the best in the world by a leading U.S. magazine, while its undergraduate programs are also rated the best in the U.S. by corporate recruiters. In 2013, SCS had 284 faculty members and a total student enrollment of nearly 1,700, including undergraduate, master\u2019s and Ph.D. students, and conducted $124 million in research. Indeed, by itself, the Robotics Institute is the largest university robotics research group in the world, with more than 500 people and more than 100 ongoing research projects. A half-century ago, Perlis, Simon and Newell outlined a vision for computer science. The School of Computer Science at CMU remains committed to continuing and extending their vision in the context of big data and connected computing in the 21st century.\n",
+        "retrieved_doc": " \nCommitted to extending our founders\u2019 vision\n\nThe School of Computer Science at Carnegie Mellon University enters its second quarter century as a world-leading educational and research institution, embracing all facets of computing. Its graduate programs are consisted ranked with the best in the world by a leading U.S. magazine, while its undergraduate programs are also rated the best in the U.S. by corporate recruiters. In 2013, SCS had 284 faculty members and a total student enrollment of nearly 1,700, including undergraduate, master\u2019s and Ph.D. students, and conducted $124 million in research. Indeed, by itself, the Robotics Institute is the largest university robotics research group in the world, with more than 500 people and more than 100 ongoing research projects. A half-century ago, Perlis, Simon and Newell outlined a vision for computer science. The School of Computer Science at CMU remains committed to continuing and extending their vision in the context of big data and connected computing in the 21st century.\n| \nNew departments, new areas of study\n\nAlong the way, the Center for Machine Translation became the Language Technologies Institute, and other new departments were formed, including the Human-Computer Interaction Institute (1993), the Institute for Software Research (1999), the Machine Learning Department (2006) and the Ray and Stephanie Lane Center for Computational Biology (2009). SCS\u2019s seven degree-granting departments draw faculty and students from a wide variety of disciplines, including engineering, mathematics, social sciences, linguistics and design.\n| \nLaunching a Robotics Institute\n\nIn 1979, an executive at Pittsburgh\u2019s Westinghouse Electric Corp., Tom Murrin, collaborated with Jordan and Reddy to create the Robotics Institute, with Reddy as its first director. By 1982, the Computer Science Department included more than 30 faculty members and 100 graduate students.\n",
+        "retrieved_relevant_part": false,
+        "model_answer": ":  The School of Computer Science had 284 faculty members in 2013",
+        "actual_answer": "284",
+        "exact_match": false,
+        "f1_max_min_avg": [
+            0.15,
+            0.15,
+            0.15
+        ],
+        "recall_max_min_avg": [
+            1.0,
+            1.0,
+            1.0
+        ]
+    },
+    {
+        "question": "Who received the A.M. Turing Award in 1975 for their work in artificial intelligence?",
+        "context": "\nTuring Awards and a Nobel Prize\n\nIn 1975, Simon and Newell were awarded the A.M. Turing Award for their work in artificial intelligence. (As of 2014, 12 CMU alumni or faculty have been awarded Turings, sometimes considered the Nobel Prize of computing.) Three years later, Simon received the Nobel Prize in Economics for his work on decision-making theory. As the 1970s progressed, Newell became interested in human-computer interaction, and began a long relationship with Xerox\u2019s Palo Alto Research Center, or PARC, which released the Xerox Alto in 1973. Considered a forerunner to many of the computing environments that followed, Alto featured a graphical-user interface and was among the first commercially available workstations controlled with a mouse. Inspired by Alto, Reddy launched a drive for development of CMU\u2019s own \u201cthree-M\u201d machine\u2014a personal workstation with a megabyte of memory, a megapixel display and at least one million instructions per second of processing power.\n",
+        "retrieved_doc": "15. Model checking, 1994CMU professor Edmund Clarke had long stressed the importance of verifying computer hardware and software through a formal problem-solving technique called \u201cmodel checking.\u201d In 1994, his arguments gained new weight with the discovery that Intel\u2019s amazing new Pentium chip made errors on certain math problems. Clarke would go on to receive the Turing Award for his role in the development of model checking.| \nTuring Awards and a Nobel Prize\n\nIn 1975, Simon and Newell were awarded the A.M. Turing Award for their work in artificial intelligence. (As of 2014, 12 CMU alumni or faculty have been awarded Turings, sometimes considered the Nobel Prize of computing.) Three years later, Simon received the Nobel Prize in Economics for his work on decision-making theory. As the 1970s progressed, Newell became interested in human-computer interaction, and began a long relationship with Xerox\u2019s Palo Alto Research Center, or PARC, which released the Xerox Alto in 1973. Considered a forerunner to many of the computing environments that followed, Alto featured a graphical-user interface and was among the first commercially available workstations controlled with a mouse. Inspired by Alto, Reddy launched a drive for development of CMU\u2019s own \u201cthree-M\u201d machine\u2014a personal workstation with a megabyte of memory, a megapixel display and at least one million instructions per second of processing power.\n|4. Speech recognition, 1976If you have an iPhone, ask Siri to look up \u201cHearsay I,\u201d the first computer system capable of continuous speech recognition. It was developed by future Turing Award winner and future SCS dean Raj Reddy along with his students. Their work on subsequent systems established many of the principles that still underlie speech recognition software.",
+        "retrieved_relevant_part": false,
+        "model_answer": ":  The A.M. Turing Award in 1975 was received by Herbert A. Simon and Allen Newell for their work in artificial intelligence",
+        "actual_answer": "Herbert Simon and Allen Newell",
+        "exact_match": false,
+        "f1_max_min_avg": [
+            0.37,
+            0.37,
+            0.37
+        ],
+        "recall_max_min_avg": [
+            1.0,
+            1.0,
+            1.0
+        ]
+    },
+    {
+        "question": "How many CMU alumni or faculty have been awarded the Turing Award as of 2014?",
+        "context": "\nTuring Awards and a Nobel Prize\n\nIn 1975, Simon and Newell were awarded the A.M. Turing Award for their work in artificial intelligence. (As of 2014, 12 CMU alumni or faculty have been awarded Turings, sometimes considered the Nobel Prize of computing.) Three years later, Simon received the Nobel Prize in Economics for his work on decision-making theory. As the 1970s progressed, Newell became interested in human-computer interaction, and began a long relationship with Xerox\u2019s Palo Alto Research Center, or PARC, which released the Xerox Alto in 1973. Considered a forerunner to many of the computing environments that followed, Alto featured a graphical-user interface and was among the first commercially available workstations controlled with a mouse. Inspired by Alto, Reddy launched a drive for development of CMU\u2019s own \u201cthree-M\u201d machine\u2014a personal workstation with a megabyte of memory, a megapixel display and at least one million instructions per second of processing power.\n",
+        "retrieved_doc": "real-world problems and for interdisciplinary collaboration. Its alumni can be found across the globe \u2014 from Tony Award winners to Nobel Prize and Turing Award winners, from CEOs to entrepreneurs, from professors to artists. In the 2000s, in|You can find our official tartan on various items in the University Store. Source: \"Tartan: Romancing the Plaid,\" by Jeffrey Banks and Doria De La Chapelle Official Mascot? More than a century after Carnegie Mellon University opened its doors, an|Yonatan Bisk Assistant Professor Email: ybisk@cs.cmu.edu Office: Gates & Hillman Centers Research Areas: Grounding, RoboNLP, Vision and Language, Embodiment, Unsupervised Learning",
+        "retrieved_relevant_part": false,
+        "model_answer": ":  According to the context provided, there is no specific mention of any CMU alumni or faculty who have been awarded the Turing Award as of 2014. The context does mention several notable alumni, including Tony Award winners and Nobel Prize laureates, but it does not provide a list or mention the Turing Award specifically in relation to them. Therefore, the output should be \"None, according to the context provided.\"",
+        "actual_answer": "12",
+        "exact_match": false,
+        "f1_max_min_avg": [
+            0,
+            0,
+            0.0
+        ],
+        "recall_max_min_avg": [
+            0,
+            0,
+            0.0
+        ]
+    },
+    {
+        "question": "When did Scotty's journey from popular icon to official mascot of the university begin?",
+        "context": "Scotty's road from popular icon to official mascot of the university began in 2006. Carnegie Mellon formed a Mascot Identity Task Force in November 2006, which consisted of students, faculty, staff and alumni. The Task Force was co-chaired by Director of Athletics Susan Bassett and Dean of Student Affairs Jennifer Church.",
+        "retrieved_doc": "a Scottish terrier as his pet. Scotty's road from popular icon to official mascot of the university began in 2006. Carnegie Mellon formed a Mascot Identity Task Force in November 2006, which consisted of students, faculty, staff and alumni. The Task|wasn't until 2007 that Carnegie Mellon officially welcomed the Scottish terrier as the university's first mascot. In keeping with tradition, students, faculty, staff and alumni voted to name the new official mascot Scotty. But it's not just the|Carnegie Mellon University opened its doors, an official mascot finally made its mark. Although students have dressed as a Scottish terrier \u2014 typically referred to as Scotty \u2014 for 50 years, it wasn't until 2007 that Carnegie Mellon officially",
+        "retrieved_relevant_part": false,
+        "model_answer": ":  The journey of Scotty, the Scottish terrier, from being a popular icon to becoming the official mascot of Carnegie Mellon University began in 2006",
+        "actual_answer": "2006",
+        "exact_match": false,
+        "f1_max_min_avg": [
+            0.08,
+            0.08,
+            0.08
+        ],
+        "recall_max_min_avg": [
+            1.0,
+            1.0,
+            1.0
+        ]
+    },
+    {
+        "question": "When was Carnegie Mellon's official mascot debut?",
+        "context": "Carnegie Mellon's official mascot debuted at the Nov. 10, 2007 home football game. The graphic features a profile of a distinguished, bold Scottish terrier sporting a plaid scarf around his neck. The dog is contained in a shield, representing Carnegie Mellon's Scottish heritage.",
+        "retrieved_doc": "universities \u2014 to develop the graphics for the mascot. During October, students and alumni reviewed potential mascot images in focus groups. Carnegie Mellon's official mascot debuted at the Nov. 10, 2007 home football game. The graphic features a|Carnegie Mellon University opened its doors, an official mascot finally made its mark. Although students have dressed as a Scottish terrier \u2014 typically referred to as Scotty \u2014 for 50 years, it wasn't until 2007 that Carnegie Mellon officially|a Scottish terrier as his pet. Scotty's road from popular icon to official mascot of the university began in 2006. Carnegie Mellon formed a Mascot Identity Task Force in November 2006, which consisted of students, faculty, staff and alumni. The Task",
+        "retrieved_relevant_part": false,
+        "model_answer": ":  The official mascot of Carnegie Mellon University debuted at the Nov. 10, 2007 home football game",
+        "actual_answer": "Nov. 10, 2007",
+        "exact_match": false,
+        "f1_max_min_avg": [
+            0.3,
+            0.3,
+            0.3
+        ],
+        "recall_max_min_avg": [
+            1.0,
+            1.0,
+            1.0
+        ]
+    },
+    {
+        "question": "What is the graphic representation of Carnegie Mellon's official mascot?",
+        "context": "Carnegie Mellon's official mascot debuted at the Nov. 10, 2007 home football game. The graphic features a profile of a distinguished, bold Scottish terrier sporting a plaid scarf around his neck. The dog is contained in a shield, representing Carnegie Mellon's Scottish heritage.",
+        "retrieved_doc": "a Scottish terrier as his pet. Scotty's road from popular icon to official mascot of the university began in 2006. Carnegie Mellon formed a Mascot Identity Task Force in November 2006, which consisted of students, faculty, staff and alumni. The Task|Carnegie Mellon University opened its doors, an official mascot finally made its mark. Although students have dressed as a Scottish terrier \u2014 typically referred to as Scotty \u2014 for 50 years, it wasn't until 2007 that Carnegie Mellon officially|universities \u2014 to develop the graphics for the mascot. During October, students and alumni reviewed potential mascot images in focus groups. Carnegie Mellon's official mascot debuted at the Nov. 10, 2007 home football game. The graphic features a",
+        "retrieved_relevant_part": false,
+        "model_answer": ":  The graphic representation of Carnegie Mellon's official mascot is not explicitly stated in the context. However, it is mentioned that the graphic features a Scottish terrier. Therefore, the output should be:",
+        "actual_answer": "The graphic features a profile of a distinguished, bold Scottish terrier sporting a plaid scarf around his neck.",
+        "exact_match": false,
+        "f1_max_min_avg": [
+            0.24,
+            0.24,
+            0.24
+        ],
+        "recall_max_min_avg": [
+            0.33,
+            0.33,
+            0.33
+        ]
+    },
+    {
+        "question": "When did the Kiltie Band begin?",
+        "context": "The Kiltie Band began in 1908 with a group of just seven students dedicated to supporting Carnegie Tech football, and today's Kiltie Band continues a tradition of excellence originated over a century ago. The Band took the field for its first official performance on November 25th, 1922, on what would have been Andrew Carnegie's 87th birthday.",
+        "retrieved_doc": "The Kiltie Band The Kiltie Band began in 1908 with a group of just seven students dedicated to supporting Carnegie Tech football, and today's Kiltie Band continues a tradition of excellence originated over a century ago. The Band took the field for|over a century ago. The Band took the field for its first official performance on November 25th, 1922, on what would have been Andrew Carnegie's 87th birthday. The Kiltie Marching Band consists of musicians and colorguard and plays at all Carnegie|was born in Dunfermline, Scotland, in 1835. Carnegie came to the United States in 1848 and founded Carnegie Technical Schools in Pittsburgh in 1900. The Scottish terrier mascot performer sports Carnegie tartan attire, while the graphic mascot is",
+        "retrieved_relevant_part": false,
+        "model_answer": ":  The Kiltie Band began in 1908",
+        "actual_answer": "1908",
+        "exact_match": false,
+        "f1_max_min_avg": [
+            0.25,
+            0.25,
+            0.25
+        ],
+        "recall_max_min_avg": [
+            1.0,
+            1.0,
+            1.0
+        ]
+    },
+    {
+        "question": "On whose birthday did the Kiltie Band have its first official performance?",
+        "context": "The Kiltie Band began in 1908 with a group of just seven students dedicated to supporting Carnegie Tech football, and today's Kiltie Band continues a tradition of excellence originated over a century ago. The Band took the field for its first official performance on November 25th, 1922, on what would have been Andrew Carnegie's 87th birthday.",
+        "retrieved_doc": "over a century ago. The Band took the field for its first official performance on November 25th, 1922, on what would have been Andrew Carnegie's 87th birthday. The Kiltie Marching Band consists of musicians and colorguard and plays at all Carnegie|The Kiltie Band The Kiltie Band began in 1908 with a group of just seven students dedicated to supporting Carnegie Tech football, and today's Kiltie Band continues a tradition of excellence originated over a century ago. The Band took the field for|was born in Dunfermline, Scotland, in 1835. Carnegie came to the United States in 1848 and founded Carnegie Technical Schools in Pittsburgh in 1900. The Scottish terrier mascot performer sports Carnegie tartan attire, while the graphic mascot is",
+        "retrieved_relevant_part": false,
+        "model_answer": ":  The Kiltie Band had its first official performance on Andrew Carnegie's 87th birthday, which was on November 25th, 1922",
+        "actual_answer": "Andrew Carnegie's 87th birthday",
+        "exact_match": false,
+        "f1_max_min_avg": [
+            0.25,
+            0.25,
+            0.25
+        ],
+        "recall_max_min_avg": [
+            0.75,
+            0.75,
+            0.75
+        ]
+    },
+    {
+        "question": "when are kilite band rehersal?",
+        "context": "Q: When are rehearsals? A: Football season: Mondays and Thursdays from 5:30 p.m.-7:30 p.m. and Game Day 9:30-11:00a.m. Concert Season: Mondays and Thursdays from 5:30-6:30 p.m. Location is the CUC Studio Theater.",
+        "retrieved_doc": "The Kiltie Band The Kiltie Band began in 1908 with a group of just seven students dedicated to supporting Carnegie Tech football, and today's Kiltie Band continues a tradition of excellence originated over a century ago. The Band took the field for|over a century ago. The Band took the field for its first official performance on November 25th, 1922, on what would have been Andrew Carnegie's 87th birthday. The Kiltie Marching Band consists of musicians and colorguard and plays at all Carnegie|April 12, 2024: Event Name: Tartans Got Talent 8:30 PM-10:00 PMET Open to entire CMU community Join the Spring Carnival Committee (SCC) in celebrating talented students with the annual \"Tartans Got Talent!\" show. Note: No registration required. No event fee. This event is open to the entire CMU community and their guests.",
+        "retrieved_relevant_part": false,
+        "model_answer": ":  Based on the context provided, there is no information about the specific schedule or days for Kiltie Band rehearsals",
+        "actual_answer": "Football season: Mondays and Thursdays from 5:30 p.m.-7:30 p.m. and Game Day 9:30-11:00a.m. Concert Season: Mondays and Thursdays from 5:30-6:30 p.m.",
+        "exact_match": false,
+        "f1_max_min_avg": [
+            0,
+            0,
+            0.0
+        ],
+        "recall_max_min_avg": [
+            0,
+            0,
+            0.0
+        ]
+    },
+    {
+        "question": "Are there auditions for kilite band?",
+        "context": "Q: Are there auditions? A: No, any member of the campus community with music experience is able to join the Kiltie Band!",
+        "retrieved_doc": "at the first practice. Q: Are there auditions? A: No, any member of the campus community with music experience is able to join the Kiltie Band! Q: Do I have to memorize music? A: No, the music is changed for every show. You should invest in a good|Membership is open to all members of the campus/community without audition. Participants must do their best to promote the success of the ensemble through attendance, attitude, and dependability. FAQs Q: When are rehearsals? A: Football season:|CUC Studio Theater. Q: When are performances? A: The Kiltie Band performs at all home football games, a holiday concert, and two spring concerts. Times and dates for all performances are announced at the first practice. Q: Are there auditions? A:",
+        "retrieved_relevant_part": false,
+        "model_answer": ":  Based on the context provided, membership in the Kiltie Band does not require auditions. Anyone with music experience from the campus or community can join",
+        "actual_answer": "No, any member of the campus community with music experience is able to join the Kiltie Band!",
+        "exact_match": false,
+        "f1_max_min_avg": [
+            0.37,
+            0.37,
+            0.37
+        ],
+        "recall_max_min_avg": [
+            0.47,
+            0.47,
+            0.47
+        ]
+    },
+    {
+        "f1": 0.3271794871794872,
+        "recall": 0.6153846153846154,
+        "retrieval_acc": 0.1282051282051282
+    }
+]

@@ -55,7 +55,7 @@ def add_special_token(tokenizer):
     if tokenizer.unk_token is None:
         tokenizer.add_special_tokens({"unk_token": DEFAULT_UNK_TOKEN})
 
-def train():
+def main():
     model_args, data_args, training_args = transformers.HfArgumentParser((ModelArguments, DataArguments, TrainingArguments)).parse_args_into_dataclasses()
     if training_args.report_to == "wandb":
         wandb.init(project="11711-RAG", config=training_args, reinit=True)
@@ -117,7 +117,10 @@ def train():
     )
     trainer.train()
     trainer.save_state()
-    trainer.save_model(output_dir=training_args.output_dir)
+    trainer.save_model(output_dir=training_args.output_dir+model_args.qa_model_name_or_path)
+    #model.save_pretrained(training_args.output_dir+model_args.qa_model_name_or_path)
+    
+    
 
 if __name__ == '__main__':
-    train()
+    main()

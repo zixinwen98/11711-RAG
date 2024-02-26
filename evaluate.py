@@ -37,7 +37,7 @@ def prompt_formatting(question, documents, model_name):
     elif 'alpaca' in model_name:
         return PROMPT_DICT["alpaca"].format_map({"question":question, "documents":documents})
     elif 'mistral' in model_name:
-        return PROMPT_DICT["mistralai/Mistral-7B-Instruct-v0.2"].format_map({"question":question, "documents":documents})
+        return PROMPT_DICT["mistralai/Mistral-7B-Instruct-v0.2"].format_map({"question":question, "context": documents})
     else: 
         raise NotImplementedError
 
@@ -85,9 +85,13 @@ def main():
     seed_everything()
     data_args, inference_args, model_args = HfArgumentParser((DataArguments, InferenceArguments, ModelArguments)).parse_args_into_dataclasses()
 
-    retriever_model = RetrieverModel(model_args, data_args) # TODO: Use HF models or define in a different file
-    tokenizer = AutoTokenizer.from_pretrained(model_args.qa_model_name_or_path, trust_remote_code=True) # TODO: Add tokenizer
+    retriever_model = RetrieverModel(model_args, data_args) 
 
+    #tokenizer
+    tokenizer_path = model_args.tokenizer_path if model_args.tokenizer_path is not None else model_args.qa_model_name_or_path
+    tokenizer = AutoTokenizer.from_pretrained(tokenizer_path, trust_remote_code=True)
+
+    #qa model
     qa_model = AutoModelForCausalLM.from_pretrained(model_args.qa_model_name_or_path, 
                                                     trust_remote_code=True, 
                                                     torch_dtype=model_args.qa_model_dtype).to(model_args.qa_model_device)
@@ -124,10 +128,11 @@ def main():
     recall_all = []
     retrieval_acc = []
     evaluate_output = []
+    qa_model.eval()
     for idx, question in tqdm(enumerate(questions), total= len(questions)):
         
         related_documents = retriever_model.retrieve(question, database)
-        question = query_engineer(question, model_args.doc_encoder_model_name_or_path)
+        #question = query_engineer(question, model_args.doc_encoder_model_name_or_path)
         model_answer, related_doc = retrieval_augmented_answer(question, related_documents, 
                                             model=qa_model, 
                                             tokenizer=tokenizer, 
@@ -151,6 +156,11 @@ def main():
         model_answer = model_answer[0].split('\n')
         model_answer = [m for m in model_answer if 'Output' in m][0][7:]
         
+        model_answer = model_answer.replace('[/INST]', '')
+        model_answer = model_answer.replace('</s>', '')
+        model_answer = model_answer.strip()
+        if model_answer[-1] == '.': model_answer = model_answer[:-1]
+
         evaluate_str = ''
         evaluate_dict = dict()
         for answer in answers[idx]:
@@ -199,6 +209,10 @@ def main():
     #     overall_result += f'recall: {np.mean(recall_all)}\n'
     #     overall_result += f'retrieval_acc: {np.mean(retrieval_acc)}'
     #     f.write(overall_result)
+        if idx % 10 == 0:
+            print(f'step: {idx}')
+            print(f'f1: {np.mean(f1_all)}')
+            print(f'recall: {np.mean(recall_all)}')
     overall_result = dict()
     overall_result['f1'] = np.mean(f1_all)
     overall_result['recall'] = np.mean(recall_all)
