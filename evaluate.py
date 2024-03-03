@@ -114,11 +114,10 @@ def main():
                                                     trust_remote_code=True, 
                                                     torch_dtype=model_args.qa_model_dtype).to(model_args.qa_model_device)
     
-    if model_args.use_reranker:
-        reranker_tokenizer = AutoTokenizer.from_pretrained('BAAI/bge-reranker-large',trust_remote_code=True)
-        reranker_model = AutoModelForSequenceClassification.from_pretrained('BAAI/bge-reranker-large', 
-                                                                            trust_remote_code=True).to(model_args.qa_model_device)
-        reranker_model.eval()
+    reranker_tokenizer = AutoTokenizer.from_pretrained('BAAI/bge-reranker-large',trust_remote_code=True)
+    reranker_model = AutoModelForSequenceClassification.from_pretrained('BAAI/bge-reranker-large', 
+                                                                        trust_remote_code=True).to(model_args.qa_model_device)
+    reranker_model.eval()
 
     generation_config = GenerationConfig(
         max_length=inference_args.max_length, temperature=0.01, top_p=0.95, repetition_penalty=1.1,
