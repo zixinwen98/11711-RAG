@@ -141,6 +141,91 @@
     "context": "Smart, adaptable traffic signals, 2012 Smart traffic lights developed at CMU\u2019s Robotics Institute are saving time and energy, and cutting down on the amount of air pollution created by idling cars. First rolled out in Pittsburgh\u2019s East Liberty neighborhood, the new signals are being studied around the country."
 },
 {
+    "question": "Who developed an encryption scheme that contributes to the safety of credit card numbers and other online data?", 
+    "answer": "CMU alumna Shafi Goldwasser",
+    "context": "24. Encrypting online information, 2012 Credit card numbers and other data used online is safer thanks to an encryption scheme developed by CMU alumna Shafi Goldwasser (S\u201979). She shared the 2012 Turing Award for her role in developing practical encoding schemes that are difficult to break."
+},
+{
+    "question": "Who developed the computer architecture at the heart of IBM's Watson?",
+    "answer": "Eric Nyberg and his students",
+    "context": "23. Question-answering computers, 2011 Searching the Web for information is rarely as simple as asking a question in plain English. So-called \u201cquestion-answering\u201d machines moved from laboratories to TV screens when an IBM computer called \u201cWatson\u201d defeated two human champions on the game show \u201cJeopardy!\u201d At the heart of Watson was computer architecture developed by CMU\u2019s Eric Nyberg and his students"
+},
+{
+    "question": "Which institutions were involved in developing the videogame EteRNA?",
+    "answer": "CMU and Stanford University",
+    "context": "21. RNA sequencing via videogames, 2010 Thanks to crowdsourcing, science isn\u2019t just for scientists any more. People without formal training in molecular biology are producing new insights into genetic encoding through a videogame called EteRNA, developed by researchers at CMU and Stanford, that allows players to fold and shift RNA molecules to solve on-screen puzzles."
+},
+{
+    "question": "What does CAPTCHA stand for?",
+    "answer": "Completely Automated Public Turing test to tell Computers and Humans Apart",
+    "context": "16. CAPTCHAs, 2000 \u201cSpam\u201d and malicious attacks were a growing problem on the Internet when hackers developed automated \u201cbots\u201d that could sign up for email and other Web services without human intervention. Luis von Ahn (CS\u201903,\u201905), Nick Hopper (CS\u201904), John Langford (CS\u201902) and CMU professor Manuel Blum invented a \u201cCompletely Automated Public Turing Test to tell Computers and Humans Apart,\u201d or CAPTCHA, to help foil the bots. A later variation, reCAPTCHA, is helping digitize old books and newspapers."
+},
+{
+    "question": "What was considered the holy grail of artificial intelligence in the context of chess?",
+    "answer": "computer play chess at the level of the world's best players",
+    "context": "11. Computer chess, 1990Could a computer play chess at the level of the world\u2019s best players? For many years, it was considered the \u201choly grail\u201d of artificial intelligence. Hitech, developed by CMU researcher Hans Berliner (CS\u201974), was the first computer to achieve grandmaster status. CMU alumni played key roles in developing \u201cDeep Blue,\u201d the IBM machine that beat human chess champion Garry Kasparov in 1997."
+},
+{
+    "question": "Who developed Hitech, the first computer to achieve grandmaster status in chess?",
+    "answer": "CMU researcher Hans Berliner",
+    "context": "11. Computer chess, 1990Could a computer play chess at the level of the world\u2019s best players? For many years, it was considered the \u201choly grail\u201d of artificial intelligence. Hitech, developed by CMU researcher Hans Berliner (CS\u201974), was the first computer to achieve grandmaster status. CMU alumni played key roles in developing \u201cDeep Blue,\u201d the IBM machine that beat human chess champion Garry Kasparov in 1997."
+},
+{
+    "question": "Who developed Java?",
+    "answer": "James Gosling",
+    "context": "12. Java, 1991 As a CMU grad student, James Gosling (CS\u201983) worked on the Andrew project, which stressed interoperability between computers, whether they were Macs, IBMs or Unix machines. Those lessons served Gosling well when he developed Java, the first programming language able to run on almost any platform."
+},
+{
+    "question": "What was the name of the computer that CMU researchers built by linking 50 processors?",
+    "answer": "Cm*",
+    "context": "2. Multi-core processors, 1971\u00a0Multi-core processors are common in today\u2019s computers, but they were still science fiction in the early 1970s. But when CMU researchers found their existing machines too slow to keep pace with the advance of speech and graphics programs, they knew they had to do something. They solved the problem by ganging together 16 processors to build a pioneering computer called C.mmp\u2014then topped the feat by linking 50 processors into Cm*."
+},
+{
+    "question": "When did Carnegie Mellon begin developing cognitive tutoring programs?",
+    "answer": "1970s",
+    "context": "3. Tutoring machines, 1973Games and drills, such as flash cards, have long been used to help students learn tough subjects. But the cognitive tutoring programs developed at Carnegie Mellon, beginning in the 1970s, did more than simply drill students on math problems. Cognitive tutors were able to adapt, presenting harder or easier problems as students learned or stumbled. Today, cognitive tutors teach subjects such as algebra to hundreds of thousands of students every year."
+},
+{
+    "question": "How do cognitive tutors differ from traditional games and drills used for learning?",
+    "answer": "Cognitive tutors were able to adapt, presenting harder or easier problems as students learned or stumbled",
+    "context": "3. Tutoring machines, 1973Games and drills, such as flash cards, have long been used to help students learn tough subjects. But the cognitive tutoring programs developed at Carnegie Mellon, beginning in the 1970s, did more than simply drill students on math problems. Cognitive tutors were able to adapt, presenting harder or easier problems as students learned or stumbled. Today, cognitive tutors teach subjects such as algebra to hundreds of thousands of students every year."
+},
+{
+    "question": "Who created emoticons?",
+    "answer": "Scott Fahlman",
+    "context": "5. Emoticons, 1982Sure, it was just a joke, but (for better or worse) it\u2019s endured for more than three decades. CMU researcher Scott Fahlman created the emoticon to clear up misunderstandings on computer message boards. We\u2019ve been looking at the world sideways ever since. :-)"
+},
+{
+    "question": "Who lead the development of Mach kernel?",
+    "answer": "Rick Rashid",
+    "context": "10. Mach kernel, 1985In computer parlance, a \u201ckernel\u201d is the heart of an operating system, passing input and output requests to and from the processor. At the core of all modern Apple devices --- including iPhones, iPads and MacBooks --- is the Mach kernel, developed at CMU under the leadership of then-professor Rick Rashid."
+},
+{
+    "question": "What is at the core of all modern Apple devices?",
+    "answer": "Mach kernel",
+    "context": "10. Mach kernel, 1985In computer parlance, a \u201ckernel\u201d is the heart of an operating system, passing input and output requests to and from the processor. At the core of all modern Apple devices --- including iPhones, iPads and MacBooks --- is the Mach kernel, developed at CMU under the leadership of then-professor Rick Rashid."
+},
+{
+    "question": "What did Steve Jobs attempt to do regarding Nathaniel Borenstein and his team?",
+    "answer": "He tried to hire Nathaniel Borenstein and the rest of his team to create an email program for Apple",
+    "context": "Steve Jobs liked the email system built into CMU's Andrew so much that he tried to hire Nathaniel Borenstein (CS'81,'85) and the rest of his team to create a similar program for Apple. Borenstein didn't take the offer, but he did like Jobs' idea about attaching documents to email. Borenstein went on to develop the MIME standard that's used by all email programs to send photos and other files over the Internet."
+},
+{
+    "question": "What idea of Steve Jobs did Nathaniel Borenstein like?",
+    "answer": "attaching documents to email",
+    "context": "Steve Jobs liked the email system built into CMU's Andrew so much that he tried to hire Nathaniel Borenstein (CS'81,'85) and the rest of his team to create a similar program for Apple. Borenstein didn't take the offer, but he did like Jobs' idea about attaching documents to email. Borenstein went on to develop the MIME standard that's used by all email programs to send photos and other files over the Internet."
+},
+{
+    "question": "Which CMU researchers are decoding brain scans and making progress at reading people's thoughts?",
+    "answer": "Tom Mitchell and Marcel Just",
+    "context": "19. Thought reading programs, 2007Your brain reacts in different ways, depending on what words you\u2019re thinking about --- ways that are measurable with magnetic-resonance imaging, or MRI, machines. CMU researchers Tom Mitchell and Marcel Just are decoding those brain scans and are making progress at reading people\u2019s thoughts."
+},
+{ 
+    "question": "What is the name of the vihecle that Red Whittaker developed to inspect and clean up the contaminated reactor building at the crippled Three Mile Island nuclear plant?",
+    "answer": "The Remote Reconnaissance Vehicle",
+    "context": "7. Autonomous robots, 1983Thanks to Red Whittaker (E'75,'79), robots moved off of the assembly lines and into places no human ever could go. His Robotic Reconnaissance Vehicle spent four years inspecting and cleaning up the contaminated reactor building at the crippled Three Mile Island nuclear plant."
+},
+{
     "_comment": "from scs history",
     "question": "Who are credited with defining the term computer science",
     "answer": "Perlis, Simon and Newell",
@@ -160,6 +245,26 @@
     "question": "How many CMU alumni or faculty have been awarded the Turing Award as of 2014?",
     "answer": "12",
     "context": "\nTuring Awards and a Nobel Prize\n\nIn 1975, Simon and Newell were awarded the A.M. Turing Award for their work in artificial intelligence. (As of 2014, 12 CMU alumni or faculty have been awarded Turings, sometimes considered the Nobel Prize of computing.) Three years later, Simon received the Nobel Prize in Economics for his work on decision-making theory. As the 1970s progressed, Newell became interested in human-computer interaction, and began a long relationship with Xerox\u2019s Palo Alto Research Center, or PARC, which released the Xerox Alto in 1973. Considered a forerunner to many of the computing environments that followed, Alto featured a graphical-user interface and was among the first commercially available workstations controlled with a mouse. Inspired by Alto, Reddy launched a drive for development of CMU\u2019s own \u201cthree-M\u201d machine\u2014a personal workstation with a megabyte of memory, a megapixel display and at least one million instructions per second of processing power.\n"
+},
+{
+    "question": "What was the Center for Machine Translation renamed to?",
+    "answer": "Language Technologies Institute",
+    "context": " \nNew departments, new areas of study\n\nAlong the way, the Center for Machine Translation became the Language Technologies Institute, and other new departments were formed, including the Human-Computer Interaction Institute (1993), the Institute for Software Research (1999), the Machine Learning Department (2006) and the Ray and Stephanie Lane Center for Computational Biology (2009). SCS\u2019s seven degree-granting departments draw faculty and students from a wide variety of disciplines, including engineering, mathematics, social sciences, linguistics and design.\n"
+},
+{
+    "question": "When was the Human-Computer Interaction Institute formed?",
+    "answer": "1993",
+    "context": " \nNew departments, new areas of study\n\nAlong the way, the Center for Machine Translation became the Language Technologies Institute, and other new departments were formed, including the Human-Computer Interaction Institute (1993), the Institute for Software Research (1999), the Machine Learning Department (2006) and the Ray and Stephanie Lane Center for Computational Biology (2009). SCS\u2019s seven degree-granting departments draw faculty and students from a wide variety of disciplines, including engineering, mathematics, social sciences, linguistics and design.\n"
+},
+{
+    "question": "When was the Ray and Stephanie Lane Center for Computational Biology established?",
+    "answer": "2009",
+    "context": " \nNew departments, new areas of study\n\nAlong the way, the Center for Machine Translation became the Language Technologies Institute, and other new departments were formed, including the Human-Computer Interaction Institute (1993), the Institute for Software Research (1999), the Machine Learning Department (2006) and the Ray and Stephanie Lane Center for Computational Biology (2009). SCS\u2019s seven degree-granting departments draw faculty and students from a wide variety of disciplines, including engineering, mathematics, social sciences, linguistics and design.\n"
+},
+{
+    "question": "How did the Andrew Project transform Carnegie Mellon University?",
+    "answer": "It turned CMU into the best-connected, most-wired university in the world",
+    "context": "The best-wired campus in the world: Working with IBM in the early 1980s, the university and the Computer Science Department established another new research frontier: Development of a high-speed computer network that would reach virtually every room on campus, along with a GUI-based computing environment, and providing networked PCs or workstations for 7,000 students, faculty members and employees. Called the Andrew Project, it turned Carnegie Mellon into the best-connected, most-wired university in the world—a process Newell called “greening up the campus with computer science.” CMU also became home to a new Software Engineering Institute, funded by the Defense Department, to study computer security and develop best practices in the design of operating systems. Between 1982 and 1985, the amount of sponsored research in the Computer Science Department doubled, from $7.2 million to $15.3 million—more than the other four departments in the Mellon College of Science combined."
 },
 {
     "_conmment": "from scotty fact",
@@ -197,6 +302,57 @@
     "question": "Are there auditions for kilite band?",
     "answer": "No, any member of the campus community with music experience is able to join the Kiltie Band!",
     "context": "Q: Are there auditions? A: No, any member of the campus community with music experience is able to join the Kiltie Band!"
+},
+{
+    "_comment": "from tartan fact",
+    "question": "Why are Carnegie Mellon athletic teams nicknamed the 'Tartans'?",
+    "answer": "They are nicknamed the 'Tartans' as a nod to Andrew Carnegie's Scottish heritage",
+    "context": "What is a Tartan? The Carnegie Mellon athletic teams are nicknamed the 'Tartans' as a nod to Andrew Carnegie's Scottish heritage. A tartan is often misrepresented as a fierce warrior from either the Asian tundra or Scottish highlands. In actuality, a Tartan is a twilled woolen fabric with a plaid design. It is of Scottish origin and consists of stripes of various colors and widths against a solid ground, denoting a particular family lineage. The school's founder, Andrew Carnegie, was born in Dunfermline, Scotland, in 1835. Carnegie came to the United States in 1848 and founded Carnegie Technical Schools in Pittsburgh in 1900. The Scottish terrier mascot performer sports Carnegie tartan attire, while the graphic mascot is wearing a plaid scarf around its neck. So what's the difference between tartan and plaid?"
+},
+{
+    "question": "What is a Tartan actually?",
+    "answer": "A twilled woolen fabric with a plaid design",
+    "context": "What is a Tartan? The Carnegie Mellon athletic teams are nicknamed the 'Tartans' as a nod to Andrew Carnegie's Scottish heritage. A tartan is often misrepresented as a fierce warrior from either the Asian tundra or Scottish highlands. In actuality, a Tartan is a twilled woolen fabric with a plaid design. It is of Scottish origin and consists of stripes of various colors and widths against a solid ground, denoting a particular family lineage. The school's founder, Andrew Carnegie, was born in Dunfermline, Scotland, in 1835. Carnegie came to the United States in 1848 and founded Carnegie Technical Schools in Pittsburgh in 1900. The Scottish terrier mascot performer sports Carnegie tartan attire, while the graphic mascot is wearing a plaid scarf around its neck. So what's the difference between tartan and plaid?"
+},
+{
+    "question": "Where and when was Andrew Carnegie born?",
+    "answer": "Andrew Carnegie was born in Dunfermline, Scotland, in 1835",
+    "context": "What is a Tartan? The Carnegie Mellon athletic teams are nicknamed the 'Tartans' as a nod to Andrew Carnegie's Scottish heritage. A tartan is often misrepresented as a fierce warrior from either the Asian tundra or Scottish highlands. In actuality, a Tartan is a twilled woolen fabric with a plaid design. It is of Scottish origin and consists of stripes of various colors and widths against a solid ground, denoting a particular family lineage. The school's founder, Andrew Carnegie, was born in Dunfermline, Scotland, in 1835. Carnegie came to the United States in 1848 and founded Carnegie Technical Schools in Pittsburgh in 1900. The Scottish terrier mascot performer sports Carnegie tartan attire, while the graphic mascot is wearing a plaid scarf around its neck. So what's the difference between tartan and plaid?"
+},
+{
+    "question": "When did Andrew Carnegie come to the United States?",
+    "answer": "Andrew Carnegie came to the United States in 1848",
+    "context": "What is a Tartan? The Carnegie Mellon athletic teams are nicknamed the 'Tartans' as a nod to Andrew Carnegie's Scottish heritage. A tartan is often misrepresented as a fierce warrior from either the Asian tundra or Scottish highlands. In actuality, a Tartan is a twilled woolen fabric with a plaid design. It is of Scottish origin and consists of stripes of various colors and widths against a solid ground, denoting a particular family lineage. The school's founder, Andrew Carnegie, was born in Dunfermline, Scotland, in 1835. Carnegie came to the United States in 1848 and founded Carnegie Technical Schools in Pittsburgh in 1900. The Scottish terrier mascot performer sports Carnegie tartan attire, while the graphic mascot is wearing a plaid scarf around its neck. So what's the difference between tartan and plaid?"
+},
+{
+    "question": "What name was chosen for the official mascot of Carnegie Mellon University?",
+    "answer": "Scotty",
+    "context": "Official Mascot? More than a century after Carnegie Mellon University opened its doors, an official mascot finally made its mark. Although students have dressed as a Scottish terrier — typically referred to as Scotty — for 50 years, it wasn't until 2007 that Carnegie Mellon officially welcomed the Scottish terrier as the university's first mascot. In keeping with tradition, students, faculty, staff and alumni voted to name the new official mascot Scotty. But it's not just the costumed mascot that voters named. The live dog is also known as Scotty to the Carnegie Mellon community."
+},
+{
+    "question": "How long had students been dressing as a Scottish terrier before it became the official mascot?",
+    "answer": "50 years",
+    "context": "Official Mascot? More than a century after Carnegie Mellon University opened its doors, an official mascot finally made its mark. Although students have dressed as a Scottish terrier — typically referred to as Scotty — for 50 years, it wasn't until 2007 that Carnegie Mellon officially welcomed the Scottish terrier as the university's first mascot. In keeping with tradition, students, faculty, staff and alumni voted to name the new official mascot Scotty. But it's not just the costumed mascot that voters named. The live dog is also known as Scotty to the Carnegie Mellon community."
+},
+{
+    "question": "What is the enrollment of undergraduates at Carnegie Mellon University for Fall 2021?",
+    "answer": "6982 Students",
+    "context": "Name of School: Carnegie Mellon University; City/Zip: Pittsburgh, PA 15213; Founded: 1900; Enrollment (undergrad): 6,982- Fall 2021; Enrollment (graduate and doctoral): 7,062 - Fall 2021; Alumni: 102,577; Nickname: Tartans; Mascot: Scottie Dog; School Colors: Cardinal and Gray; Football Stadium and Track and Field: Gesling Stadium; Capacity: 3,500; Surface: FieldTurf; Basketball/Volleyball Gym: Wiegand Gymnasium; Capacity: 500; Soccer Stadium: CMU Soccer Field; Capacity: 250; Surface: FieldTurf; Affiliation: NCAA Division III; Conference: University Athletic Association | Presidents' Athletic Conference (Football Only); President: Dr. Farnam Jahanian; Alma Mater, Year: University of Texas at Austin; Athletic Director: Dr. Josh Centor; Alma Mater, Year: Brandeis, 2004; Athletic Department Phone: 412-268-8054; Mailing Address:  5000 Forbes Avenue / Pittsburgh, PA 15213"
+},
+{
+    "question": "Who is the President of Carnegie Mellon University?",
+    "answer": "Dr. Farnam Jahanian",
+    "context": "Name of School: Carnegie Mellon University; City/Zip: Pittsburgh, PA 15213; Founded: 1900; Enrollment (undergrad): 6,982- Fall 2021; Enrollment (graduate and doctoral): 7,062 - Fall 2021; Alumni: 102,577; Nickname: Tartans; Mascot: Scottie Dog; School Colors: Cardinal and Gray; Football Stadium and Track and Field: Gesling Stadium; Capacity: 3,500; Surface: FieldTurf; Basketball/Volleyball Gym: Wiegand Gymnasium; Capacity: 500; Soccer Stadium: CMU Soccer Field; Capacity: 250; Surface: FieldTurf; Affiliation: NCAA Division III; Conference: University Athletic Association | Presidents' Athletic Conference (Football Only); President: Dr. Farnam Jahanian; Alma Mater, Year: University of Texas at Austin; Athletic Director: Dr. Josh Centor; Alma Mater, Year: Brandeis, 2004; Athletic Department Phone: 412-268-8054; Mailing Address:  5000 Forbes Avenue / Pittsburgh, PA 15213"
+},
+{
+    "question": "What are the school colors of Carnegie Mellon University?",
+    "answer": "Cardinal and Gray",
+    "context": "Name of School: Carnegie Mellon University; City/Zip: Pittsburgh, PA 15213; Founded: 1900; Enrollment (undergrad): 6,982- Fall 2021; Enrollment (graduate and doctoral): 7,062 - Fall 2021; Alumni: 102,577; Nickname: Tartans; Mascot: Scottie Dog; School Colors: Cardinal and Gray; Football Stadium and Track and Field: Gesling Stadium; Capacity: 3,500; Surface: FieldTurf; Basketball/Volleyball Gym: Wiegand Gymnasium; Capacity: 500; Soccer Stadium: CMU Soccer Field; Capacity: 250; Surface: FieldTurf; Affiliation: NCAA Division III; Conference: University Athletic Association | Presidents' Athletic Conference (Football Only); President: Dr. Farnam Jahanian; Alma Mater, Year: University of Texas at Austin; Athletic Director: Dr. Josh Centor; Alma Mater, Year: Brandeis, 2004; Athletic Department Phone: 412-268-8054; Mailing Address:  5000 Forbes Avenue / Pittsburgh, PA 15213"
+},
+{
+    "question": "What is the capacity of Gesling Stadium at Carnegie Mellon University?",
+    "answer": "3500",
+    "context": "Name of School: Carnegie Mellon University; City/Zip: Pittsburgh, PA 15213; Founded: 1900; Enrollment (undergrad): 6,982- Fall 2021; Enrollment (graduate and doctoral): 7,062 - Fall 2021; Alumni: 102,577; Nickname: Tartans; Mascot: Scottie Dog; School Colors: Cardinal and Gray; Football Stadium and Track and Field: Gesling Stadium; Capacity: 3,500; Surface: FieldTurf; Basketball/Volleyball Gym: Wiegand Gymnasium; Capacity: 500; Soccer Stadium: CMU Soccer Field; Capacity: 250; Surface: FieldTurf; Affiliation: NCAA Division III; Conference: University Athletic Association | Presidents' Athletic Conference (Football Only); President: Dr. Farnam Jahanian; Alma Mater, Year: University of Texas at Austin; Athletic Director: Dr. Josh Centor; Alma Mater, Year: Brandeis, 2004; Athletic Department Phone: 412-268-8054; Mailing Address:  5000 Forbes Avenue / Pittsburgh, PA 15213"
 }
 
 ]
