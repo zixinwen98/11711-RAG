@@ -58,6 +58,8 @@ def load_documents(text_path, chunk_size=1000, chunk_overlap=150):
         files = listdir(text_path)
         docs = []
         for file in files:
+            if "DS" in file:
+                continue
             doc = jload(text_path + '/' + file)
             doc = [Document(page_content = s) for s in doc]
             if file not in truncate_files:

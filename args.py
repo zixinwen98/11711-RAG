@@ -30,6 +30,7 @@ class ModelArguments:
     )
     vector_db_name_or_path: str = field(default='FAISS')
     apply_lora: Optional[bool] = field(default=False)
+    use_reranker: Optional[bool] = field(default=False)
 
 @dataclass
 class TrainingArguments(transformers.TrainingArguments):

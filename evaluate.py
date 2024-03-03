@@ -7,6 +7,7 @@ from transformers import (
     Trainer,
     HfArgumentParser,
     GenerationConfig,
+    AutoModelForSequenceClassification
 )
 import numpy as np
 from tqdm import tqdm 
@@ -18,14 +19,16 @@ from args import *
 
 
 PROMPT_DICT = {
-            "phi-2" : ("Background Information: {documents}\nInstruct: {question}\n Output:"),
+            "phi-2" : ("Background Information: {context}\nInstruct: {question}\n Output:"),
             "alpaca": (
                 "Below is an question, paired with an document to supply important information. "
                 "Write an response that appropriately answers the question.\n\n"
-                "### Instruction:\n{question}\n\n### Input:\n{documents}\n\n### Response:"
+                "### Instruction:\n{question}\n\n### Input:\n{context}\n\n### Response:"
             ),
-            "microsoft/phi-2": "Background Information: {documents}\nInstruct: {question}\n Output:",
-            "mistralai/Mistral-7B-Instruct-v0.2": "<s>[INST]You are asked to answer a question by extracting related facts from a given context.\nIt is very important to keep the generated answer to include only the facts that have appeared in the context. Below is the context and the question.\n Context: {context}\nQuestion: {question}\n Output: [/INST]",
+            "microsoft/phi-2": "Background Information: {context}\nInstruct: {question}\n Output:",
+            #"mistralai/Mistral-7B-Instruct-v0.2": "<s>[INST]You are asked to answer a question by extracting related facts from a given context.\nIt is very important to keep the generated answer to include only the facts that have appeared in the context. Below is the context and the question.\n Context: {context}\nQuestion: {question}\n Output: [/INST]",
+            "mistralai/Mistral-7B-Instruct-v0.2": "<s>[INST]Please answer a question by information in context. Below is the context and the question.\n Context: {context}\nQuestion: {question}\n Output: [/INST]",
+
         }
 
 def prompt_formatting(question, documents, model_name):
@@ -35,17 +38,22 @@ def prompt_formatting(question, documents, model_name):
     if 'phi-2' in model_name:
         return f"Background Information: {documents}\nInstruct: {question}\n Output:"
     elif 'alpaca' in model_name:
-        return PROMPT_DICT["alpaca"].format_map({"question":question, "documents":documents})
-    elif 'mistral' in model_name:
-        return PROMPT_DICT["mistralai/Mistral-7B-Instruct-v0.2"].format_map({"question":question, "context": documents})
+        return PROMPT_DICT["alpaca"].format_map({"question":question, "context":documents})
+    elif 'mistral' in model_name or 'sfr' in model_name.lower():
+        return PROMPT_DICT["mistralai/Mistral-7B-Instruct-v0.2"].format_map({"question":question, "context":documents})
     else: 
         raise NotImplementedError
 
-def retrieval_augmented_answer(question, related_docs, model, tokenizer, generation_config, model_args, return_doc=False):
+def retrieval_augmented_answer(question, related_docs, model, tokenizer, generation_config, model_args, reranker_model, reranker_tokenizer, return_doc=False, rerank=True):
     '''
     Generates an answer to the question using the related documents as context 
     using .generate() api of the model.
     '''
+    if rerank:
+        #assume we know there will be 6 docs 
+        scores = reranker(reranker_model, reranker_tokenizer, question, related_docs)
+        rank = scores.argsort(descending=True)[:3]
+        related_docs = [related_docs[i] for i in rank]
 
     inputs_with_doc = prompt_formatting(question, related_docs, model_name=model_args.qa_model_name_or_path)
     inputs_with_doc = tokenizer(inputs_with_doc, return_tensors="pt", return_attention_mask=False).to(model.device)
@@ -81,6 +89,16 @@ def compute_metrics(prediction, truth):
     f1 = 2 * (prec * rec) / (prec + rec)
     return f1, rec
 
+def reranker(reranker_model, tokenizer, question, documents):
+    '''
+    Reranks the documents based on the question
+    '''
+    pairs = [[question, doc] for doc in documents]
+    with torch.no_grad():
+        inputs = tokenizer(pairs, padding=True, truncation=True, return_tensors='pt', max_length=512).to(reranker_model.device)
+        scores = reranker_model(**inputs, return_dict=True).logits.view(-1, ).float()
+        return scores
+
 def main():
     seed_everything()
     data_args, inference_args, model_args = HfArgumentParser((DataArguments, InferenceArguments, ModelArguments)).parse_args_into_dataclasses()
@@ -96,6 +114,12 @@ def main():
                                                     trust_remote_code=True, 
                                                     torch_dtype=model_args.qa_model_dtype).to(model_args.qa_model_device)
     
+    if model_args.use_reranker:
+        reranker_tokenizer = AutoTokenizer.from_pretrained('BAAI/bge-reranker-large',trust_remote_code=True)
+        reranker_model = AutoModelForSequenceClassification.from_pretrained('BAAI/bge-reranker-large', 
+                                                                            trust_remote_code=True).to(model_args.qa_model_device)
+        reranker_model.eval()
+
     generation_config = GenerationConfig(
         max_length=inference_args.max_length, temperature=0.01, top_p=0.95, repetition_penalty=1.1,
         do_sample=True, use_cache=True,
@@ -138,7 +162,10 @@ def main():
                                             tokenizer=tokenizer, 
                                             generation_config=generation_config, 
                                             model_args=model_args,
-                                            return_doc=True)
+                                            reranker_model=reranker_model,
+                                            reranker_tokenizer=reranker_tokenizer,
+                                            return_doc=True,
+                                            rerank=model_args.use_reranker)
         
         #check whether the retrieved document contains the actual context
         related_doc_str = '|'.join(related_doc)
@@ -155,6 +182,13 @@ def main():
         retrieval_acc.append(retrieved)
         model_answer = model_answer[0].split('\n')
         model_answer = [m for m in model_answer if 'Output' in m][0][7:]
+
+        model_answer = model_answer.replace('[/INST]', '')
+        model_answer = model_answer.replace('</s>', '')
+        model_answer = model_answer.strip()
+        if model_answer[-1] == '.': model_answer = model_answer[:-1]
+        if model_answer.startswith(':'): model_answer = model_answer[1:]
+        model_answer = model_answer.strip()
         
         model_answer = model_answer.replace('[/INST]', '')
         model_answer = model_answer.replace('</s>', '')
