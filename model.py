@@ -42,20 +42,12 @@ class RetrieverModel(nn.Module):
                                         # encode_kwargs=encode_kwargs # TODO: write for normalize embedding 
                                         model_kwargs={'device': self.config.doc_encoder_model_device},
                                         )
-        
         if self.config.vector_db_name_or_path == 'FAISS':
-            try:
-                vector_database = FAISS.load_local(f"/home/scratch/yifuc/data/{self.text_retriever}_FAISS", embeddings)
-            except:
-                print(f'create new FAISS index for {self.text_retriever}')
-                vector_database = FAISS.from_documents(docs, embeddings)
-                vector_database.save_local(f".cache/{self.text_retriever}_FAISS")
+            vector_database = FAISS.from_documents(docs, embeddings)
         elif self.config.vector_db_name_or_path == 'Chroma':
             vector_database = Chroma.from_documents(docs, embeddings)
-            vector_database.save_local(f".cache/data/{self.text_retriever}_Chroma")
         else:
             raise ValueError('Invalid vector store name')
-        
         return vector_database
     
     def retrieve(self, question:str, database):
