@@ -120,7 +120,7 @@ def main():
     reranker_model.eval()
 
     generation_config = GenerationConfig(
-        max_length=inference_args.max_length, temperature=0.01, top_p=0.95, repetition_penalty=1.1,
+        max_new_tokens=inference_args.max_length, temperature=0.01, top_p=0.95, repetition_penalty=1.1,
         do_sample=True, use_cache=True,
         eos_token_id=tokenizer.eos_token_id, pad_token_id=tokenizer.pad_token_id,
     )

@@ -49,10 +49,10 @@ class RetrieverModel(nn.Module):
             except:
                 print(f'create new FAISS index for {self.text_retriever}')
                 vector_database = FAISS.from_documents(docs, embeddings)
-                vector_database.save_local(f"/home/scratch/yifuc/data/{self.text_retriever}_FAISS")
+                vector_database.save_local(f".cache/{self.text_retriever}_FAISS")
         elif self.config.vector_db_name_or_path == 'Chroma':
             vector_database = Chroma.from_documents(docs, embeddings)
-            vector_database.save_local(f"/home/scratch/yifuc/data/{self.text_retriever}_Chroma")
+            vector_database.save_local(f".cache/data/{self.text_retriever}_Chroma")
         else:
             raise ValueError('Invalid vector store name')
         
