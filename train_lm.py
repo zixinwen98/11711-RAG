@@ -42,7 +42,7 @@ PROMPT_DICT = {
         "### Instruction:\n{instruction}\n\n### Input:\n{input}\n\n### Response:"
     ),
     "microsoft/phi-2": "Background Information: {context}\nInstruct: {question}\n Output: ",
-    "mistralai/Mistral-7B-Instruct-v0.2": "<s>[INST]Context: {context}\nQuestion: {question}\n Output: [/INST]"
+    "mistralai/Mistral-7B-Instruct-v0.2": "<s>[INST]Please answer a question by information in context. Below is the context and the question.\n Context: {context}\nQuestion: {question}\n Output: [/INST]"
 }
 
 def add_special_token(tokenizer):

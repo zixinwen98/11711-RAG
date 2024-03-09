@@ -11,11 +11,12 @@ from transformers import (
 )
 import numpy as np
 from tqdm import tqdm 
-from utils import *
+import pdb
 
 # Load From Local
 from model import RetrieverModel
 from args import *
+from utils import *
 
 
 PROMPT_DICT = {
@@ -28,6 +29,7 @@ PROMPT_DICT = {
             "microsoft/phi-2": "Background Information: {context}\nInstruct: {question}\n Output:",
             #"mistralai/Mistral-7B-Instruct-v0.2": "<s>[INST]You are asked to answer a question by extracting related facts from a given context.\nIt is very important to keep the generated answer to include only the facts that have appeared in the context. Below is the context and the question.\n Context: {context}\nQuestion: {question}\n Output: [/INST]",
             "mistralai/Mistral-7B-Instruct-v0.2": "<s>[INST]Please answer a question by information in context. Below is the context and the question.\n Context: {context}\nQuestion: {question}\n Output: [/INST]",
+            "google/gemma-7b-it": "{context}\nGiven the context above, answer the following question: {question}\n Below is my answer: ",
 
         }
 
@@ -41,6 +43,8 @@ def prompt_formatting(question, documents, model_name):
         return PROMPT_DICT["alpaca"].format_map({"question":question, "context":documents})
     elif 'mistral' in model_name or 'sfr' in model_name.lower():
         return PROMPT_DICT["mistralai/Mistral-7B-Instruct-v0.2"].format_map({"question":question, "context":documents})
+    elif 'gemma' in model_name:
+        return PROMPT_DICT["google/gemma-7b-it"].format_map({"question":question, "context":documents})
     else: 
         raise NotImplementedError
 
@@ -107,10 +111,13 @@ def main():
 
     #tokenizer
     tokenizer_path = model_args.tokenizer_path if model_args.tokenizer_path is not None else model_args.qa_model_name_or_path
-    tokenizer = AutoTokenizer.from_pretrained(tokenizer_path, trust_remote_code=True)
-
+    access_token = "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"
+    
+    tokenizer = AutoTokenizer.from_pretrained(tokenizer_path, trust_remote_code=True,token=access_token,)
+    
     #qa model
-    qa_model = AutoModelForCausalLM.from_pretrained(model_args.qa_model_name_or_path, 
+    qa_model = AutoModelForCausalLM.from_pretrained(model_args.qa_model_name_or_path,
+                                                    token=access_token, 
                                                     trust_remote_code=True, 
                                                     torch_dtype=model_args.qa_model_dtype).to(model_args.qa_model_device)
     
@@ -180,11 +187,13 @@ def main():
         recall = []
         retrieval_acc.append(retrieved)
         model_answer = model_answer[0].split('\n')
-        model_answer = [m for m in model_answer if 'Output' in m][0][7:]
+        #pdb.set_trace()
+        model_answer = [m for m in model_answer if 'Output:' in m][0][7:]
 
         model_answer = model_answer.replace('[/INST]', '')
         model_answer = model_answer.replace('</s>', '')
         model_answer = model_answer.strip()
+        #print(model_answer)
         if model_answer[-1] == '.': model_answer = model_answer[:-1]
         if model_answer.startswith(':'): model_answer = model_answer[1:]
         model_answer = model_answer.strip()
