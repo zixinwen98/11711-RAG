@@ -1,3 +1,4 @@
+import re
 import torch
 import torch.nn as nn
 import transformers
@@ -33,9 +34,14 @@ PROMPT_DICT = {
 
         }
 
+def strip_punctuation(text):
+    pattern = re.compile(r'^[^\w\s]+|[^\w\s]+$')
+    return pattern.sub('', text)
+
 def prompt_formatting(question, documents, model_name):
     '''Formats the prompt for the model to generate the answer'''
-
+    if isinstance(documents, list):
+        documents = [doc+'\n' for doc in documents]
     documents = ''.join(documents) if isinstance(documents, list) else documents
     if 'phi-2' in model_name:
         return f"Background Information: {documents}\nInstruct: {question}\n Output:"
@@ -77,6 +83,9 @@ def compute_metrics(prediction, truth):
     '''
     pred_tokens = prediction.split()
     truth_tokens = truth.split()
+
+    pred_tokens = [strip_punctuation(pred_token.lower()) for pred_token in pred_tokens]
+    truth_tokens = [strip_punctuation(token.lower()) for token in truth_tokens]
     
     # if either the prediction or the truth is no-answer then f1 = 1 if they agree, 0 otherwise
     if len(pred_tokens) == 0 or len(truth_tokens) == 0:
@@ -146,7 +155,7 @@ def main():
     #d
     result_name = data_args.result_path +\
         data_args.test_data_path.split('/')[-1].split('.')[0] +\
-        f'_{model_args.qa_model_name_or_path.split("/")[-1]}' +\
+        f'_{model_args.qa_model_name_or_path}' +\
         f'_{model_args.vector_db_name_or_path}' +\
         f'_{model_args.doc_encoder_model_name_or_path.split("/")[-1]}' +\
         f'_{data_args.chunk_size}' +\
@@ -192,16 +201,11 @@ def main():
 
         model_answer = model_answer.replace('[/INST]', '')
         model_answer = model_answer.replace('</s>', '')
+        if model_answer.startswith(':'): model_answer = model_answer[1:]
+        
         model_answer = model_answer.strip()
         #print(model_answer)
-        if model_answer[-1] == '.': model_answer = model_answer[:-1]
-        if model_answer.startswith(':'): model_answer = model_answer[1:]
-        model_answer = model_answer.strip()
         
-        model_answer = model_answer.replace('[/INST]', '')
-        model_answer = model_answer.replace('</s>', '')
-        model_answer = model_answer.strip()
-        if model_answer[-1] == '.': model_answer = model_answer[:-1]
 
         evaluate_str = ''
         evaluate_dict = dict()
