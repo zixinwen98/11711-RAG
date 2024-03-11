@@ -32,8 +32,8 @@ unless specified otherwise, a .json file will be created under, with detailed an
 
 ## Here we breifly describe the usage of each file/folder
 
-- data/: this contains all test sets/knowledge pile
-- /RAG_data_aug.py: generate trainset by few-shot prompting to mistral
-- /args.py: contain argument to all inference/evaluate files
-- /generate_dataset_from_tabular.py: generate dataset for tabular documents (see report for details)
-- /paired-bootstrap.py: a slightly modified version to do paired-boostrap on our own file format and f-1/recall/em score
+- 'data/': this contains all test sets/knowledge pile
+- 'RAG_data_aug.py': generate trainset by few-shot prompting to mistral
+- 'args.py': contain argument to all inference/evaluate files
+- 'generate_dataset_from_tabular.py': generate dataset for tabular documents (see report for details)
+- 'paired-bootstrap.py': a slightly modified version to do paired-boostrap on our own file format and f-1/recall/em score
