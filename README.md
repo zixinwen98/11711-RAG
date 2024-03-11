@@ -1,13 +1,14 @@
 ## Example to run inference (i.e. generate a file corresponding to required system output)
 
-`python inference.py \
+```
+python inference.py \
     --doc_encoder_model_name_or_path avsolatorio/GIST-large-Embedding-v0\
     --qa_model_name_or_path microsoft/phi-2 \
     --test_data_path "data/questions.txt" \
     --chunk_size 250 --overlap 50 --retriever_topk 3 \
     --document_path "data/cmu_cleaned/" \
     --max_length 512 
-`
+```
 
 unless specified otherwise, a .txt file will be created under 
 
@@ -15,7 +16,7 @@ unless specified otherwise, a .txt file will be created under
 
 ## Example to run evaluate (i.e. on our created test set
 
-`
+```
 python evaluate.py \
     --doc_encoder_model_name_or_path avsolatorio/GIST-large-Embedding-v0\
     --qa_model_name_or_path mistralai/Mistral-7B-Instruct-v0.2 \
@@ -23,7 +24,7 @@ python evaluate.py \
     --chunk_size 250 --overlap 50 --retriever_topk 3 \
     --document_path "data/cmu_cleaned/" \
     --max_length 2048
-`
+```
 
 unless specified otherwise, a .json file will be created under, with detailed analytical information for each sample, containing model answer, extracted context, sample f1, sample recall, sample exact match
 
