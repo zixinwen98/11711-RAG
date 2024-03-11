@@ -30,10 +30,16 @@ unless specified otherwise, a .json file will be created under, with detailed an
 
 `result/[model_name]/[qa model_document embedding model_chunksize_overlap_topk.json]`
 
-## Here we breifly describe the usage of each file/folder
+## Usage of the files and folders.
 
-- 'data/': this contains all test sets/knowledge pile
-- 'RAG_data_aug.py': generate trainset by few-shot prompting to mistral
-- 'args.py': contain argument to all inference/evaluate files
-- 'generate_dataset_from_tabular.py': generate dataset for tabular documents (see report for details)
-- 'paired-bootstrap.py': a slightly modified version to do paired-boostrap on our own file format and f-1/recall/em score
+- `data/`: this contains all test sets/knowledge pile
+- `experiments/`: this contains some evaluation results on our human-annotated datasets.
+- `inference.py`: this file is used to generate our submission given the test questions.
+- `evaluate.py`: this file is for the evaluation of our RAG pipeline, it reports f-measure for each evaluation.
+- `model.py`: this file contains the retriever model class.
+- `dataset.py`: this file contains the training dataset for instruction finetuning, based on the Stanford-Alpaca implementation.
+- `train_lm.py`: this file contains the instruction finetuning pipeline, based on the Stanford-Alpaca implementation.
+- `RAG_data_aug.py`: this file generate training dataset by doing few-shot prompting to mistral and formatting the outputs.
+- `args.py`: this file contain arguments to all files that uses the RAG pipeline.
+- `generate_dataset_from_tabular.py`: this file is used to generate dataset for tabular documents (see report for details).
+- `paired-bootstrap.py`: this is a slightly modified version to do paired-boostrap on our own file format and f-1/recall/em score.
